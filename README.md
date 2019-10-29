@@ -36,7 +36,7 @@ Requirements:
 * Internet connection for first build (to fetch all Maven and DEFINER dependencies)
 
 Get the source and external dependencies
-```
+```shell
 git clone https://liyistc@bitbucket.org/liyistc/gitslice.git definer
 cd definer
 git submodule init
@@ -60,14 +60,13 @@ Build options:
 
 Find executable jar files at ```definer/target``` and all dependencies at ```definer/target/lib```. Run DEFINER using
  
-```
+```shell
 java -jar cslicer-XXX-jar-with-dependencies.jar -c <CONFIG_FILE_PATH>
 ```
 
 The target project configuration file specifies the location, target commits (history), path to source code root, etc. An example of a configuration file (with extension .properties) is as follows.
 
-```
-#!properties
+```properties
 # This is an example project configuration file project.properties.
 # Assume example repository is located within <EXAMPLE_DIRECTORY>
 # Path to target repository (required)
@@ -92,7 +91,7 @@ excludePaths = pom.xml,src/changes/changes.xml,.gitignore,CONTRIBUTING.md,NOTICE
 
 See detailed usage by entering the command
 
-```
+```shell
 java -jar cslicer-XXX-jar-with-dependencies.jar -h
 ```
 
