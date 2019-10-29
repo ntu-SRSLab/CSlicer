@@ -42,7 +42,7 @@ import cslicer.utils.PrintUtils.TAG;
 
 public class ProjectConfiguration {
 
-	public enum BUILD_SYSTEM {
+  public enum BUILD_SYSTEM {
 		MAVEN, ANT
 	}
 
@@ -86,6 +86,8 @@ public class ProjectConfiguration {
 	private static final boolean DEFAULT_ENABLE_JSON = false;
 	private static final String DEFAULT_JSON_PATH = null;
 	private static final String DEFAULT_TEST_CLASS_ROOT = null;
+
+	private static final Set<String> DEFAULT_CHERRY_PICK_COMMITS = Collections.emptySet();
 
 	// private fields
 	private String fRepoPath = DEFAULT_REPO_PATH;
@@ -132,6 +134,8 @@ public class ProjectConfiguration {
 	private boolean fEnableIntersection = DEFAULT_ENABLE_INTERSETION;
 	private boolean fEnableJson = DEFAULT_ENABLE_JSON;
 	private String fJsonPath = DEFAULT_JSON_PATH;
+
+	private Set<String> fCherryPickCommits = DEFAULT_CHERRY_PICK_COMMITS;
 
 	public ProjectConfiguration() {
 	}
@@ -184,6 +188,8 @@ public class ProjectConfiguration {
 					config.getProperty("jdkVersion", DEFAULT_JDK));
 
 			this.setJsonPath(config.getProperty("jsonPath", null));
+			this.setCherryPickCommits(
+							config.getProperty("cherryPick", null));
 
 		} catch (IOException e) {
 			PrintUtils.print("Error loading project configuration file at: "
@@ -609,6 +615,18 @@ public class ProjectConfiguration {
 		this.fJsonPath = p;
 		return this;
 	}
+
+	public ProjectConfiguration setCherryPickCommits(String picks) {
+		if (picks == null)
+			return this;
+
+		fCherryPickCommits = new HashSet<String>();
+		for (String s : Arrays.asList(picks.split(",")))
+			fCherryPickCommits.add(FilenameUtils.normalize(s.trim()));
+		return this;
+	}
+
+	public Set<String> getCherryPickCommits() { return fCherryPickCommits; }
 
 	/**
 	 * @return the fTestClassRootPath

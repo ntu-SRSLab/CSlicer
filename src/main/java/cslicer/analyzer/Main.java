@@ -25,22 +25,6 @@ package cslicer.analyzer;
  * #L%
  */
 
-import java.io.IOException;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.Arrays;
-import java.util.List;
-
-import org.apache.commons.cli.CommandLine;
-import org.apache.commons.cli.DefaultParser;
-import org.apache.commons.cli.HelpFormatter;
-import org.apache.commons.cli.Option;
-import org.apache.commons.cli.Options;
-import org.apache.commons.cli.ParseException;
-import org.apache.commons.io.FilenameUtils;
-import org.codehaus.plexus.util.FileUtils;
-import org.eclipse.jgit.revwalk.RevCommit;
-
 import cslicer.CSlicer;
 import cslicer.analyzer.Refiner.SCHEME;
 import cslicer.builder.BuildScriptInvalidException;
@@ -48,15 +32,20 @@ import cslicer.callgraph.ClassPathInvalidException;
 import cslicer.coverage.CoverageControlIOException;
 import cslicer.coverage.CoverageDataMissingException;
 import cslicer.coverage.TestFailureException;
-import cslicer.jgit.AmbiguousEndPointException;
-import cslicer.jgit.BranchNotFoundException;
-import cslicer.jgit.CheckoutBranchFailedException;
-import cslicer.jgit.CheckoutFileFailedException;
-import cslicer.jgit.CommitNotFoundException;
-import cslicer.jgit.RepositoryInvalidException;
+import cslicer.jgit.*;
 import cslicer.utils.PrintUtils;
 import cslicer.utils.PrintUtils.TAG;
 import cslicer.utils.StatsUtils;
+import org.apache.commons.cli.*;
+import org.apache.commons.io.FilenameUtils;
+import org.codehaus.plexus.util.FileUtils;
+import org.eclipse.jgit.revwalk.RevCommit;
+
+import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * Main entry for the GitRef tool.
@@ -165,21 +154,31 @@ public class Main {
 				config.setEnableIntersection(line.hasOption("intersection"));
 				config.setEnableJson(line.hasOption("savetojson"));
 
-				if (line.getOptionValue("engine").equals("slicer")) {
-					invokeSlicer(line, config);
-				} else if (line.getOptionValue("engine").equals("refiner")) {
-					invokeRefiner(line, config);
-				} else if (line.getOptionValue("engine").equals("delta")) {
-					invokePlainDD(line, config);
-				} else if (line.getOptionValue("engine").equals("srr")) {
-					invokeSRR(line, config);
-				} else if (line.getOptionValue("engine").equals("hunker")) {
-					invokeHunker(line, config);
-				} else if (line.getOptionValue("engine").equals("metrics")) {
-					invokeMetricsCollector(line, config);
-				} else {
-					PrintUtils.print("Invalid engine name!");
-					System.exit(1);
+				switch (line.getOptionValue("engine")) {
+					case "slicer":
+						invokeSlicer(line, config);
+						break;
+					case "refiner":
+						invokeRefiner(line, config);
+						break;
+					case "delta":
+						invokePlainDD(line, config);
+						break;
+					case "srr":
+						invokeSRR(line, config);
+						break;
+					case "hunker":
+						invokeHunker(line, config);
+						break;
+					case "metrics":
+						invokeMetricsCollector(line, config);
+						break;
+					case "cherry":
+						invokeCherryPicking(line, config);
+						break;
+					default:
+						PrintUtils.print("Invalid engine name!");
+						System.exit(1);
 				}
 
 				StatsUtils.stop("total.time");
@@ -189,6 +188,17 @@ public class Main {
 		} catch (ParseException | IOException e1) {
 			PrintUtils.print(e1.getMessage(), TAG.WARNING);
 			System.exit(0);
+		}
+	}
+
+	private static void invokeCherryPicking(CommandLine line, ProjectConfiguration config) {
+		try {
+			CherryPicker picker = new CherryPicker(config);
+			picker.doSlicing(config.getCherryPickCommits());
+		} catch (IOException | RepositoryInvalidException | CommitNotFoundException | BuildScriptInvalidException
+						| CoverageControlIOException | AmbiguousEndPointException | ProjectConfigInvalidException
+						| BranchNotFoundException | CoverageDataMissingException e) {
+			e.printStackTrace();
 		}
 	}
 

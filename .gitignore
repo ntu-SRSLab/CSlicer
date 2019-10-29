@@ -14,6 +14,7 @@
 
 *~
 .idea/
+*.iml
 resources/file-level/_repos
 resources/file-level/jacoco-files
 _downloads
