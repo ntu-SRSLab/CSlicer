@@ -1,0 +1,89 @@
+04b08431a3446300f4715cf135f0e60f85e5bf5a F HDFS-6581. Update CHANGES.txt in preparation for trunk merge
+e431d054cb545bdf0ddc5f486aea69bcb32012db M Merge branch 'trunk' into HDFS-6581
+a45ad330facc56f06ed42eb71304c49ef56dc549 F HDFS-7171. Fix Jenkins failures in HDFS-6581 branch. (Arpit Agarwal)
+65ef35bbabefc665897589bf92feae2ebf9da10f R Merge branch 'trunk' into HDFS-6581
+dde2ed13c24e8906ee135719342acf9faea59ade R Merge branch 'trunk' into HDFS-6581
+5e8b6973527e5f714652641ed95e8a4509e18cfa F HDFS-7129. Metrics to track usage of memory for writes. (Contributed by Xiaoyu Yao)
+bb84f1fccb18c6c7373851e05d2451d55e908242 F HDFS-7159. Use block storage policy to set lazy persist preference. (Arpit Agarwal)
+368e2423a57702a264ec2e2a0bea4b2fef05fbf8 M Merge branch 'trunk' into HDFS-6581
+7f0422be763b7ab6a60a0e90670e12661683f835 M Merge branch 'trunk' into HDFS-6581
+1e6b4b9b2ee20decbcc8a623260b6faf76162f3e M Merge branch 'trunk' into HDFS-6581
+d45e7c7e856c7103752888c0395fa94985cd7670 F HDFS-7153. Add storagePolicy to NN edit log during file creation. (Arpit Agarwal)
+9a53c3699b52a0bbeb0f723ac409ac189aa00f7f M Merge branch 'trunk' into HDFS-6581
+9cbb2c55d586e104fd988814ef4244c13468546e M Merge branch 'trunk' into HDFS-6581
+d96396627f9843ed81d86fe8ef7158da4e765728 M Merge branch 'trunk' into HDFS-6581
+a2d4edacea943c98fe4430e295627cd7535948fc F HDFS-7155. Bugfix in createLocatedFileStatus caused by bad merge. (Arpit Agarwal)
+7060502edbd66b433d78956651875a05649f4807 M Merge branch 'trunk' into HDFS-6581
+263977969b98a2d7a26a7c11e4467c9de836fbe6 F Fix test build break after merging from trunk
+032e0eba6b5acda3e33f4b99b48845eedb5ed149 R Merge branch 'trunk' into HDFS-6581
+5a5a7da3a3564c6adf08f4f775cc4c0b4ec02645 M Merge branch 'trunk' into HDFS-6581
+364e60b1691a4d7b2f745b8ebf78177f254a4287 F HDFS-7144. Fix findbugs warnings in RamDiskReplicaTracker. (Contributed by Tsz Wo Nicholas Sze)
+e9edafc731f20b4b996bdf788e3f289785335523 M Merge branch 'trunk' into HDFS-6581
+e8e7fbe81abc64a9ae3d2f3f62c088426073b2bf F HDFS-6932. Balancer and Mover tools should ignore replicas on RAM_DISK. (Contributed by Xiaoyu Yao)
+feda4733a8279485fc0ff1271f9c22bc44f333f6 F HDFS-7143. Fix findbugs warnings in HDFS-6581 branch. (Contributed by Tsz Wo Nicholas Sze)
+b1000fbba43786a8d1da129bc7c7a1bf253a9e7e R Merge branch 'trunk' into HDFS-6581
+bfc7b7e6a03fd875b3660950287b156fbacaf589 M Merge branch 'trunk' into HDFS-6581
+8b139b0800b2724178d5c155842588e9593a939f F HDFS-6990. Add unit test for evict/delete RAM_DISK block with open handle. (Contributed by Xiaoyu Yao)
+889122bd5580b6a83d35ef945db7ec001b7b550a M Merge branch 'trunk' into HDFS-6581
+8c9860f7c96322908f344d25ef31939739e7df9d F HDFS-7071. Undo accidental commit of binary file editsStored.
+486a76a39ba236072c2bb22af509a1ae8081093e F HDFS-7071. Updated editsStored and editsStored.xml to bump layout version and add LazyPersist flag. (Contributed by Xiaoyu Yao and Arpit Agarwal)
+e257b6dbb11fdb6404a759f69d5252bc46d49c00 M Merge branch 'trunk' into HDFS-6581
+50b321068d32d404cc9b5d392f0e20d48cabbf2b F HDFS-7108. Fix unit test failures in SimulatedFsDataset. (Arpit Agarwal)
+b2d5ed36bcb80e2581191dcdc3976e825c959142 F HDFS-7100. Make eviction scheme pluggable. (Arpit Agarwal)
+09dab88d3eeb9947211b075d8103f9b836a61e8a M Merge branch 'trunk' into HDFS-6581
+222bf0fe6706ee43964fd39b8315c1a339fbc84a M Merge branch 'trunk' into HDFS-6581
+e4d29fda72fbaac0ec85f022155689131dd1a62e M Merge branch 'trunk' into HDFS-6581
+f8bbf80067ac03400acae4655615c9808c538ca8 R Merge branch 'trunk' into HDFS-6581
+e79c98c11fa8b4ddd8c63b613698d2d508135e83 F HDFS-7091. Add forwarding constructor for INodeFile for existing callers. (Arpit Agarwal)
+22295b4783f2b1789a0df53c7c9915eaaef627dd M Merge branch 'trunk' into HDFS-6581
+0b10e5a0f7ce3eda6d48a0463a5170cb7061835c M Merge branch 'trunk' into HDFS-6581
+5e4627d0fb2a2d608c0e67fd6ad835523ed3259d F HDFS-7084. FsDatasetImpl#copyBlockFiles debug log can be improved. (Contributed by Xiaoyu Yao)
+849ccfa699d77856eafb31f11e1af9ea764df12e M Merge branch 'trunk' into HDFS-6581
+4eab083b1b7faf4485274d1d30256cde08e11915 F HDFS-7080. Fix finalize and upgrade unit test failures. (Arpit Agarwal)
+900f6e52ec33ca82edb0d306d0bfecc1ba4d60e6 M Merge branch 'trunk' into HDFS-6581
+a186d514bd0c5c5446faa6dd4896a8136d627837 R Merge branch 'trunk' into HDFS-6581
+24f81568868d4db1bcbe628d9ebd7bff7b7315de M Merge branch 'trunk' into HDFS-6581
+dcbc46730131a1bdf8416efeb4571794e5c8e369 F HDFS-7079. Few more unit test fixes for HDFS-6581. (Arpit Agarwal)
+a24a9331d4f06f1a6aca00bc3d9c498a7f7ba5aa M Merge branch 'trunk' into HDFS-6581
+4603e4481f0486afcce6b106d4a92a6e90e5b6d9 F HDFS-7064. Fix unit test failures in HDFS-6581 branch. (Contributed by Xiaoyu Yao)
+e0d7fb48fbe872ef47803ceecdae654ab8c9d8af R Merge branch 'trunk' into HDFS-6581
+a7814e1aa440066ee20fde4c4992173d0b1514c1 M Merge branch 'trunk' into HDFS-6581
+a4dcbaa33255cd1dd8d6c54763f55486c9e4317c F HDFS-7066. LazyWriter#evictBlocks misses a null check for replicaState. (Contributed by Xiaoyu Yao)
+fdf0542d8e69ab1202a1655f318019f6ae972ec3 M Merge branch 'trunk' into HDFS-6581
+9f22fb8c9a10952225e15c7b67b5f77fa44b155d F HDFS-6978. Directory scanner should correctly reconcile blocks on RAM disk. (Arpit Agarwal)
+ebdd5e50d5819b4ec704c6d6156ba2944bbab513 R Merge branch 'trunk' into HDFS-6581 (XXX modified to avoid reconstructing complex histories)
+7aeda47bd94fa9570dcd861ecb45c3aa9d0161e0 M Merge branch 'trunk' into HDFS-6581
+de20cf286bcbc0e74a857ebe0e7f6c01e2b542fa M Merge branch 'trunk' into HDFS-6581
+0d2f6b4600dc2144ee4a5a3a1ddadb1504fddbfa M Merge branch 'trunk' into HDFS-6581
+be30c86cc9f71894dc649ed22983e5c42e9b6951 F HDFS-6482. Fix CHANGES.txt in trunk
+61ccd503624457035759e8b605d93dacb6135fce R Merge branch 'trunk' into HDFS-6581
+4ff128af1223f44a5982fdd8717263ee0b930239 M Merge branch 'trunk' into HDFS-6581
+a18caf7753623a94a7cdb1c607cda79586de08dc F HDFS-6991. Notify NN of evicted block before deleting it from RAM disk. (Arpit Agarwal)
+6e5f780d1dea8e87bc956801477e409dce5997f3 M Merge branch 'trunk' into HDFS-6581
+ccdf0054a354fc110124b83de742c2ee6076449e F HDFS-6977. Delete all copies when a block is deleted from the block space. (Arpit Agarwal)
+eb8284d50e1aa9f196556ed20b4b5e3f330e65fe R Merge trunk into HDFS-6581
+31bbeaf383a728a0453f5dbe93eed0ab18b5b992 M Merge remote-tracking branch 'apache-commit/trunk' into HDFS-6581
+339d21f273a7c32be989c2cc2b3b1f0dd8a2ec0f R Merge trunk into HDFS-6581
+cb9b485075ce773f2d6189aa2f54bbc69aad4dab F HDFS-6930. Improve replica eviction from RAM disk. (Arpit Agarwal)
+08a8f2be81d38cfe8aa1d05e4c63683ff062c8c8 M Merge trunk into HDFS-6581
+762b04e9943d6a05e1130fc81ada5b5dc8baab2c F HDFS-6950. Add Additional unit tests for HDFS-6581. (Contributed by Xiaoyu Yao)
+a6b32a3e7846df52f4b3cd3cd4e458969038501c M Merge trunk into HDFS-6581
+217dea7794872d666e9f5bb6b73c0320a490abdc M Merge remote-tracking branch 'apache-commit/trunk' into HDFS-6581
+f65183eba3495c200fd25ac946552d1bbd5ed5fb R Merge remote-tracking branch 'apache-commit/trunk' into HDFS-6581
+c92837aeab5188f6171d4016f91b3b4936a66beb F HDFS-6931. Move lazily persisted replicas to finalized directory on DN startup. (Arpit Agarwal)
+4cf9afacbe3d0814fb616d238aa9b16b1ae68386 F HDFS-6960. Bugfix in LazyWriter, fix test case and some refactoring. (Arpit Agarwal)
+7e32be8768b5ad20d1745e9de17e3fd4fd9a7d99 R Merge remote-tracking branch 'apache-commit/trunk' into HDFS-6581
+fef8554be80c01519870ad2969f6c9f3df4d6a7f F Fix typos in log messages. Contributed by Ray Chiang
+2ca93d1fbf0fdcd6b4b5a151261052ac106ac9e1 F Fix up CHANGES.txt for HDFS-6134, HADOOP-10150 and related JIRAs following merge to branch-2
+bc6ce2cb34a638851d3530ca31979db30a8a50bd F Fixing CHANGES.txt, moving HADOOP-8815 to 2.6.0 release
+6bf16d115637c7761123e3b92186daa675c4769c F HADOOP-10880. Move HTTP delegation tokens out of URL querystring to a header. (tucu)
+bbaa7dc28db75d9b3700c6ff95222d8e1de29c15 F HDFS-6928. 'hdfs put' command should accept lazyPersist flag for testing. (Arpit Agarwal)
+722cc92fa50def1c05e2daaa7c249f4d73eb80d4 M Merge remote-tracking branch 'apache-commit/trunk' into HDFS-6581
+2e987148e02d0087fc70ce5b1ce571d3324bf1dd F HDFS-6929. NN periodically unlinks lazy persist files with missing replicas from namespace. (Arpit Agarwal)
+3f64c4aaf00d92659ae992bfe7fe8403b4013ae6 F HDFS-6927. Initial unit tests for Lazy Persist files. (Arpit Agarwal)
+eb448e14399e17f11b9e523e4050de245b9b0408 F HDFS-6926. DN support for saving replicas to persistent storage and evicting in-memory replicas. (Arpit Agarwal)
+a317bd7b02c37bd57743bfad59593ec12f53f4ed F HDFS-6925. DataNode should attempt to place replicas on transient storage first if lazyPersist flag is received. (Arpit Agarwal)
+c2354a7f81ff5a48a5b65d25e1036d3e0ba86420 F HDFS-6923. Propagate LazyPersist flag to DNs via DataTransferProtocol. (Arpit Agarwal)
+042b33f20b01aadb5cd03da731ae7a3d94026aac F HDFS-6922. Add LazyPersist flag to INodeFile, save it in FsImage and edit logs. (Arpit Agarwal)
+7f49537ba18f830dff172f5f9c4a387fe7ab410f F HDFS-6924. Add new RAM_DISK storage type. (Arpit Agarwal)
+a7bcc9535860214380e235641d1d5d2dd15aee58 F HDFS-6921. Add LazyPersist flag to FileStatus. (Arpit Agarwal)

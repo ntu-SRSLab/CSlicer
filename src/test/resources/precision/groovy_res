@@ -1,0 +1,51 @@
+DROP: 5f70b962 : top_hits aggregation: Fail with a parse exception if `top_hits` agg is defined under a `nested` agg.
+DROP: cd11621e : Test: predefine sort fields in mapping, otherwise during the test the field may not be found if it were to be introduced dynamically at index time.
+DROP: b863ea8e : Test: CorruptedFileTest.testCorruptionOnNetworkLayer used node settings when creating an index
+DROP: e3196ad1 : Docs: Additional info about _score calculation
+DROP: 43182dde : Update daterange-aggregation.asciidoc
+DROP: d529dd9f : [TESTS] Fix NPE in FreqTermsEnumTests.
+DROP: e19e33c6 : Docs: Grammar correction
+DROP: 985adca1 : [TEST] Ensure that all flushes happen on PeerRecovery tests
+DROP: 26fe71b7 : Fixing typo
+DROP: 304757e1 : [TEST] Ensure we have a mapping for all types on open/close
+DROP: f31de3a7 : Typo in error message with too few points for geo polygon filter.
+DROP: b8561f8b : Docs: Added a command to start elasticsearch on bootup on Debian.
+DROP: 1a503317 : Docs: Add instructions to start elasticsearch on bootup on RHEL/Fedora.
+DROP: 90b6ae8c : [TEST] wait unitl all machines joined the cluster
+TEST: 0b04a5b0 : Add TRACE logging to translog operations
+DROP: df56460c : docs: add pgp key to repositories page
+DROP: e705dcf6 : Docs: use https to download the gpg public key
+TEST: 9064bd7a : Core: don't forcefully release IndexWriter lock on engine start
+DROP: 0f06461c : [SCRIPT] ScriptService can deadlock entire nodes if script index is recovering
+DROP: b8226c71 : Core: don't block shard stats when phase 3 of recovery is running
+TEST: 72f4aa7b : [TRANSLOG] Never delete translog file from a snapshot
+DROP: d3a54045 : Update repositories.asciidoc
+DROP: 588e3025 : Docs: typo on "frequent"
+TEST: 3042293e : release [1.3.7]
+TEST: e82c4983 : Switch to 1.3.8-SNAPSHOT
+DROP: 9971bd6f : Mappings: Reencode transformed result with same xcontent
+TEST: d49086c8 : Mappings: Include currentFieldName into ObjectMapper errors
+TEST: 126b569d : Core: Terms filter lookup caching should cache values, not filters.
+DROP: 1bd7a26d : [TESTS] Make sure to wait for all shards to be allocated before running the test.
+DROP: a1f0a2b5 : Doc has store "false" not store "true"
+DROP: 94943294 : [Docs] fix curl examples in Nodes Stats docs
+TEST: aab07c7b : [index] Prevent duplication of documents when retry indexing after fail
+DROP: 90ce5076 : [TEST] mute ExceptionRetryTests
+TEST: 81293baa : [ALLOCATION] Weight deltas must be absolute deltas
+TEST: 462fd230 : Don't verify adler32 for buggy legacy checksums.
+DROP: 3edf07c2 : Fixed a bug that was caused by specifying routing on a multi percolate request causing an ArrayIndexOutOfBoundsException.
+DROP: 93cf4850 : Made sure that named filters and queries defined in a wrapped query and filter are not lost.
+TEST: f57a9abf : core: Fix Store.checkIntegrity() for lucene 3.x index files.
+TEST: b3b2fabf : Add validator for `cluster.routing.allocation.disk` boolean settings
+DROP: 0a1f6a74 : Tribe node: remove closed indices from cluster state
+DROP: 1a933c1d : Closes #9398
+DROP: 6ad9a8ab : aggs: The `nested` aggregator's parent filter is n't resolved properly in the case the nested agg gets created on the fly for buckets that are constructed during query execution.
+DROP: 95322411 : Aggs: fix handling of the same child doc id being processed multiple times in the `reverse_nested` aggregation.
+TEST: c54b60c1 : Relax restrictions on filesystem size reporting
+DROP: a8945572 : #9444 throw StrictDynamicMappingException exception if dynamic is 'strict' and undeclared field value is NULL, test for this
+DROP: 8cc74533 : #9444 join lines
+TEST: 64d8e2ae : Make groovy sandbox method blacklist dynamically additive
+TEST: 68f5ee22 : Avoid NullPointerException if optional Groovy jar is removed
+TEST: 647327f4 : Make `script.groovy.sandbox.method_blacklist_patch` truly append-only
+TEST: 9b871571 : Disallow method pointer expressions in Groovy scripting
+DROP: 82e0c576 : Docs: Updated documentation for query-string-syntax to include '>' '<' and '=' as reserved characters

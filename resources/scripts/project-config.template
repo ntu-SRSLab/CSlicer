@@ -1,0 +1,11 @@
+# CSlicer Project Configuration File
+
+repoPath = REPO_PATH
+execPath = EXEC_PATH
+historyLength = HISTORY_LENGTH
+endCommit = END_COMMIT
+sourceRoot = SOURCE_ROOT
+classRoot = CLASS_ROOT
+buildScriptPath = BUILD_PATH
+callGraphPath = CALL_GRAPH_PATH
+touchSetPath = TOUCH_SET_PATH

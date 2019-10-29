@@ -1,0 +1,30 @@
+
+import java.util.List;
+import java.util.LinkedList;
+
+class Boo {
+  int boo1() {
+ 	int x = 1;
+ 	int y = 2;
+ 	List<> l = new LinkedList<Integer>();
+  	return x;
+  }
+}
+class Bar {
+  static int bar1(int x)
+  {return x + 1;}
+}
+
+class Dog {
+	static String color = DEFAULT_COLOR; 
+	int age;
+	public Dog (int aoa) { age = aoa; }
+	void barking ( ) {
+	System.out.println("bark!");
+	}
+	boolean fighting (Dog other ) {
+		barking();
+		return !(age<1 || age>5) && age>other.age;
+		}
+		
+		}

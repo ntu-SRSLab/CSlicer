@@ -1,0 +1,345 @@
+DROP: 72d64415 : [TEST] don't cache store stats in tests that ensure stats are correct
+DROP: dd5ee6df : [TEST] prevent stackoverflow in mockInternalEngine
+DROP: 61d88f96 : [TEST] Add percolate type to the mapping
+DROP: f67a9839 : Testing: Added REST tests to check if expression scripting works
+DROP: 2d7998bf : Build: Check that all packages contain the same jar files
+DROP: 12e22a7a : [TEST] Never flush in the test where we rely on recovering from translog
+TEST: e309e8cb : Versioning: Adding 1.3.9 and 1.4.5 versions
+DROP: 23ef4e8a : add static bwc indexes for 1.3.9 and 1.4.4
+HUNK: 9bce8c92 : [RECOVERY] Only iterate the files that we recovered from the commit
+DROP: 004f3fbd : Testing: Remove plus sign from YAML test due to encoding issue
+DROP: b6c7988a : Core: include timestamp and params in hot threads
+DROP: 7cd9ffbb : inner hits: Don't fail if an object is specified as a nested value instead of an array.
+TEST: a2bd34f6 : Add shadow replicas for shared filesystems
+TEST: 4f3f3ca2 : [STORE] Use DistributorDirectory only if there are more than one data direcotry
+TEST: 88c506ab : Fix tests for shadow replicas
+TEST: bb9cacb2 : Use index name rather than Index.java to lookup IndexService
+DROP: 622e60b8 : Test: Remove use of globalTempDir() and forbid it from future use.
+DROP: f8902e12 : [TEST] Fix StoreTest.testRenameFile()
+DROP: 5aee2c85 : Fix ShadowEngineTests.testFailStart by closing searcherManager after exception
+COMP: f9710b51 : [RESTORE] Refactor how restore cleans up files after snapshot was restored
+TEST: be685123 : [INDICES] Retry if shard deletes fail due to IOExceptions
+HUNK: e8f276b2 : Add missing segments file to the lucene file listing
+TEST: 4d264926 : New aggregations feature - “PercentageScore” heuristic for significant_terms aggregation provides simple “per-capita” type measures.
+DROP: 7ac94630 : [GEO] Adds randomization to geo test suite
+TEST: d6621e9d : [ENV] NodeEnv should lock all shards for an index
+HUNK: 4e329af2 : Prune all segment_N files not just newer ones
+DROP: ba123e7b : fix test bug
+TEST: b168cae2 : add more logging and fix pending delete removal
+TEST: c2ee77e4 : [CORE] close all resources even if #beforeIndexShardClosed throws an exception
+DROP: 04d5b509 : Muted testParentFieldToNonExistingType test
+DROP: fc2cb96b : Docs: Document that the fielddata loading defaults to eager on the _parent field.
+TEST: 9001770c : Remove redundant fs metadata ops.
+DROP: b18d98b3 : Tests: Remove global shared cluster
+DROP: 188acb1c : Remove unused constant
+DROP: c78dac65 : Core: don't listAll twice
+DROP: 78f02020 : Aggs: Fix rounding issues when using `date_histogram` and time zones
+DROP: e0c1c1c3 : Adding tests for timezone rounding: 1. Test using the pre_zone_adjust_large_interval option. 2. Test rounding of ambiguous timestamps in local time (after DST switch)
+DROP: 94581c31 : [DOCS] update script docs to use preferred script parameter names
+DROP: 40050046 : [Discovery] Prevent stale master nodes from sharing dated cluster states to nodes that have moved to a different master node.
+DROP: f829670f : Aggs: Fix rounding issue using `date_histogram` with `pre_zone_adjust_large_interval`
+HUNK: 24e904eb : some more simple fs cleanups (backport to 1.x apis).
+DROP: 49d88880 : Remove Triple Negative!
+HUNK: fec85bd6 : [STORE] add debug logging if delete fails
+DROP: 8c58dd5d : [TEST] Don't reuse single node tests node instance across tests
+DROP: 50875f13 : Test: log all deletions in this test until we debug the rare missing .si failures
+DROP: 119751e3 : Add String to the default whitelisted receivers
+DROP: f45cd7f0 : Revert "Add String to the default whitelisted receivers"
+DROP: df63f9c5 : Simplify SingleNodeTest and close propperly instead of calling stop
+TEST: 2bb9db3a : Tests: Remove thread leak filter
+COMP: 2478a96f : mappings: update cluster state with type mapping also for failed indexing request
+DROP: 881b2620 : Tests: Use all found index files instead of static list for static bwc tests
+DROP: 74a72ccd : Snapshot/Restore: Allow deletion of snapshots with corrupted snapshot files
+TEST: f0403512 : [STORE] Improve safety when deleting files from the store
+DROP: 63f310b6 : Tests: make sure that repository is not stored when old index file is created
+DROP: 86305cfd : [TEST] write.lock is a valid file on a cleaned index
+TEST: 5fd19716 : ClusterService: improve update thread shutdown logic.
+DROP: df01220b : [DOCS] added a note for the default shard_size value
+TEST: 5aab02d5 : [INDICES] Schedule pending delete if index store delete fails
+TEST: e9f00ba8 : API: add pending tasks count to cluster health
+TEST: 98219875 : [CORE] Allow primary promotion on shadow replica without failing the shard
+TEST: b85080ea : Recovery: RecoveryState clean up
+DROP: b3450f8e : Test: adapt BWC testReusePeerRecovery to new recovery state semantics
+DROP: 125b512c : Add support for `minimum_should_match` to `simple_query_string`
+DROP: 5b1cad22 : Test: cluster.health rest test should use 0 replicas
+TEST: 4f7adaa8 : Transport: added a simple request tracer, logging incoming and outgoing requests
+DROP: 48cb1d62 : Add a .toString() method to RoutingNode
+DROP: 8391b51f : DateMath: Fix using time zone when rounding.
+TEST: 3148b545 : Add ClusterHealthResponse constructor needed for plugin BWC
+DROP: f3837289 : Test: fix sync issues in AbstractSimpleTransportTests.testTracerLog
+DROP: 6075158c : [TEST] Remove global scope mentions
+DROP: 17924eef : [TEST] filter out unassigned shards
+TEST: f5b1ba45 : [ENGINE] Upgrade 3.x segments on engine startup
+DROP: 369dbfde : [TEST] resolved a few compiler warnings in ElasticsearchIntegrationTest
+DROP: 3d7e712b : Test: put back old-codec impersonation after testNeedsUpgrading
+DROP: 27e565b9 : Test: restore whatever previous value for OLD_FORMAT_IMPERSONATION_IS_ACTIVE was
+DROP: 8881045a : [TEST] Adding 'AwaitsFix' annotation to randomGeoCollection test
+DROP: 19e30cce : [TEST] Fix NPE in ElasticsearchIntegrationTest if no indexer is provided
+TEST: f1a5fdf3 : Mappings: Add enabled flag for _field_names to replace disabling through index=no
+DROP: 823673c1 : fix bwc test to be more lenient on error message when _field_names is not supported
+DROP: 28776e64 : remove thread leak filter, should have been removed in #9843
+DROP: ee69fefc : Tests: check node ports availability when using unicast discovery
+TEST: f27b08b5 : Engine: close snapshots before recovery counter
+DROP: d59f5a3d : Tests: Add back tests.cluster
+DROP: 1e039a34 : Docs: Update snapshots.asciidoc
+DROP: 175e1d1b : Core: we use Lucene bugfix releases now for 1.x, so we don't need Lucene snapshot repository
+TEST: 3e7d94a9 : Recovery: unify RecoveryState management to IndexShard and clean up semantics
+DROP: 04fc73fe : Test: InternalEngineTests - close translogs on tear down
+DROP: 9a577164 : Netty HTTP Transport: Change access modifiers to protected
+DROP: 54203ca1 : [doc] Link mapper-attachment type documentation to its repo
+DROP: 61f4abe3 : Docs: Default distance unit in geo distance agg is metres, not km
+DROP: 6346b387 : Update span-multi-term-query.asciidoc
+DROP: f492ff0f : Updated copyright years to include 2015
+DROP: 3b21e7cc : Update search.asciidoc
+DROP: 5cd109ca : Test: ShadowEngineTests - close translogs on tear down here too
+DROP: 5da8f427 : REST test: Fixed expressions test
+DROP: d0a3979c : REST tests - disable expressions test for now
+DROP: 89ea5a3c : Test: InternalEngineTests - JVM specific paths + retry to clean up translogs on startUp
+DROP: a9780e40 : Test: InternalEngineTests.testSimpleRecover should close snapshot
+DROP: 1ca2d6bb : Test: add LoggingListener to ElasticsearchLuceneTestCase
+DROP: 7f61b154 : Test: testOldIndexes start nodes async
+DROP: bddb067e : Test: InternalEngineTests.testSegmentsWithMergeFlag should close it's translog
+DROP: 4076471e : Spelling out the sort order options
+DROP: e6f98377 : Update getting-started.asciidoc
+DROP: 9fee0811 : REST: Fix script-expressions test to work with Perl
+TEST: cce2157e : Recovery: synchronize RecoveryState.timer methods
+DROP: 265042e9 : Update search-type.asciidoc
+DROP: 338e5092 : [Native] Use direct mapping call in Kernel32Library
+DROP: f322385f : Store: renaming temp files should log errors of delete in trace
+DROP: 3dc64ae4 : [TEST] add Tests suffix
+DROP: f65b69e8 : [TEST] add Tests suffix
+DROP: 3896cf2a : Test: use assertBusy to fix timing issue
+COMP: dd783704 : [RECOVERY] Don't recover from buggy version
+DROP: b395544f : Test: fix npe
+DROP: fad6ce7c : [TESTS] Make sure test end with ..Tests
+DROP: 972f3b6c : [TEST] Make sure we restart the suite cluster after each test failure
+DROP: b86f5cfb : Test: increased logging
+DROP: 1befb018 : Test: fix DiscoveryWithServiceDisruptionsTests#isolatedUnicastNodes by starting a 4 node cluster instead of a 3 node cluster.
+DROP: e2f1cffd : [TESTS] remove AwaitsFix from CircuitBreakerServiceTests
+DROP: f0486c61 : CliTool: Add command to warn on permission/owner change
+DROP: 39a84098 : CliTool: CheckFileCommand checks for file existence
+DROP: bd19b506 : Test: fix testStaleMasterNotHijackingMajority by waiting for the old master node to step down.
+DROP: 63b45181 : Docs: Added default value
+DROP: 9e8d94f5 : [TEST] Work around URI encode limitations in RestClient
+DROP: 634d8d21 : [TEST] use context classloader to load testclasses
+DROP: 9d11afeb : [TEST] increase suite timeout for OldIndexBackwardsCompatibilityTests
+TEST: 6ff87a39 : Core: upgrade to Lucene 4.10.4 bugfix release
+DROP: d7afece9 :  [CORE] Handle truncated translog gracefully
+DROP: 4d299b8a : Update query-string-syntax.asciidoc
+DROP: cfd8c5db : [TESTS] Flush and refresh before querying in IndexWithShadowReplicasTests
+DROP: 8d883f9d : [TEST] Enable trace logging for translog recovery
+DROP: bad88587 : Test: muted testStaleMasterNotHijackingMajority
+DROP: 78d42596 : Search: fixed log to print throwable correctly
+HUNK: 2fc81f2b : [GATEWAY] copy translog file if rename fails after retries.
+DROP: ec106f8c : Revert "[TEST] Enable trace logging for translog recovery"
+DROP: 45dc2894 : [TEST] make sure update task is actually executed
+TEST: 4505abaf : Aggregations: deprecate `pre_zone` and `post_zone` in `date_histogram`
+HUNK: 04a802a2 : Core: throttle delete-by-query when merges are falling behind
+DROP: e506f56e : [TEST] removed custom index settings for all DateHistogram tests
+DROP: 8320c6da :  fixing typo in expDecayFunction and adding offset to all dacay functions
+HUNK: 6e0c6441 : Store: Delete index folder if all shards were allocated away from a data only node
+DROP: d4ba16df : Test: added health call to will hold when wait when there is a cluster block, so that the refresh call doesn't fail if that is the case.
+DROP: 91b39a18 : [ENGINE] Inc store reference before reading segments info
+HUNK: 00735d2f : [ENGINE] Inc store reference before reading segments info
+DROP: b6a10754 : Revert "[TESTS] remove AwaitsFix from CircuitBreakerServiceTests"
+DROP: a6dfb910 : Zen: Node receiving a cluster state with a wrong master node should reject and throw an error.
+DROP: e23dce42 : Add missing imports
+DROP: d34941d4 : [TEST] wait until mappings are added to cluster state to make sure they are persisted
+DROP: 2c7a25ad : Tests: added more logging
+TEST: 1397c538 : Fix Java 8 _ variable warning The _ variable causes a warning when compiling with Java 8, noting that it might be removed in a future version
+TEST: acef8c98 : Use provided cluster state for indices service validations Since the method can be called in an #execute event of the cluster service, we need the ability to use the cluster state that will be provided in the ClusterChangedEvent, have the ClusterState be provided as a parameter
+DROP: a944da09 : Tests: wait for discovery to be completed after both majority nodes follow a new master
+DROP: d7424654 : [mappings] update dynamic fields in mapping on master even if parsing fails for the rest of doc
+TEST: 61e07ad5 : significant terms: add scriptable significance heuristic
+DROP: 02d44881 : [significant terms] Use 'script_file' instead of 'script' if the script is a file
+DROP: 7d8d9493 : Revert "[mappings] update dynamic fields in mapping on master even if parsing fails for the rest of doc"
+DROP: cab7aba3 : Mark shadow replicas with 's' in _cat/shards output
+TEST: ccd6b5d4 : Internal: Fix equality check of timevalue after serialization
+TEST: b182b9f7 : Tribe node: system properties and configuration settings must not be forwarded to tribe clients
+TEST: 9663fa42 : Scripting: cleanup ScriptService & friends in preparation for #6418
+TEST: a7119ef8 : Gateway: improve assertion at the end of shard recovery
+DROP: 4418686c : Fix extra logging parameter in RecoverySourceHandler
+DROP: cf8a06d1 : Docs: Typo
+TEST: 49c1ca2f : Improve reporting of assert in IndexShard
+DROP: f185f34e : [doc] Cat API: show open and closed indices in _cat/indices
+DROP: 16c64e8f : [TEST] more logging for testIndexWithFewDocuments
+DROP: ff2df21a : [DOCS] missing curly brace in ip_range aggregation example
+DROP: 3a5cbbae : [DOCS] Adjusted geo_distance aggregation example
+DROP: 041e4498 : [DOCS] add missing comma in percentile_rank aggregation example
+DROP: bc683627 : [DOCS] fix typo in BoolQueryBuilder javadocs
+TEST: 81c51606 : Snapshot/Restore: delete operation should ignore finalizing shards on nodes that no longer exist
+TEST: b55dd3ce : [SHARD] make assert less strict to ensure local node is not null
+DROP: 1fd3e531 : [DOCS] fix typo in scripting docs
+TEST: d7ffa9fd : Scripting: File scripts cache key to include language to prevent conflicts
+DROP: b3a72005 : Translog: make sure stats's op count and size are in sync
+DROP: e5889a21 : Core: don't rethrow merge exceptions
+DROP: 4ceb5639 : Core: deprecate delete-by-query
+DROP: 4734c9cc : [TEST] removed duplicated file creation from ScriptServiceTests
+DROP: fb874fb5 : [TEST] renamed variables in ScriptServiceTests
+DROP: de0172a5 : trying to fix doc link
+DROP: a9711403 : Core: deprecate index.fail_on_merge_failure
+DROP: fcbc592b : [TEST] Fix test to use correct type in the mapping
+DROP: 0e91c1a5 : Test: testClusterFormingWithASlowNode - make delays less aggressive
+TEST: 75ddd836 : Engine: update index buffer size during recovery and allow configuring version map size.
+DROP: 32c4cda1 : [TEST] Add `-Pdev` to the TESTING.asciidoc guide
+DROP: f39ba34c : Aggregations: Be lenient when converting local to utc time in time zone roundings
+TEST: 3557d21d : Internal: Fix PageCacheRecycler's max page size computation.
+TEST: 3fb5895f : [ENGINE] Remove reflection call to waitForMerges
+DROP: e8b3a450 : Translog: stats fail to serialize size
+DROP: 56b91986 : [STORE] Add filename to corruption message
+DROP: 29e5e8e7 : Fixes ignore_malformed behaviour for ip fields
+DROP: d480db41 : [TEST] Ban @Seed from test
+DROP: 7459b507 : Add license header to signature files
+DROP: b5288d83 : inner_hits: Nested parent field should be resolved based on the parent inner hit definition, instead of the nested parent field in the mapping.
+DROP: 730bb014 : percolator: Take filters from index aliases into account when selecting queries to run on a document.
+TEST: 6e8a9c19 : Recovery: add total operations to the `_recovery` API
+DROP: c7b225c4 : [PLUGINS] Always send current ES version when downloading plugins
+DROP: df647d52 : _cat/nodes: Thread null handling through stats and info
+DROP: 3fc0a275 : [release script] Check for //NORELEASE in code before release
+DROP: bdbf64d3 : [TEST] muste test, we have an issue for it and know what is going on
+DROP: 9ef002ba : Fix typo in UnavailableShardsException message
+DROP: eed7162e : [HTTP] add option to only return simple exception messages
+TEST: 44c2d4a9 : [GEO] Fix orientation persistence
+DROP: 97b4bac8 : [TEST] Fix geo orientation integration test
+DROP: 3ced40b7 : [TEST] Add local gateway to GeoShapeIntegrationTest
+DROP: fab1f7b3 : [TEST] Add tests that triggers truncated files on recovery
+DROP: 1687ef3c : [TEST] RepeatOnExceptionRule to rethrow unexpected exception
+DROP: f621166b : [DOCS] added instructions on how to write parameterized tests
+DROP: 0248e138 : Deprecate async replication
+DROP: 5dedbd4f : [DOCS] added note about dynamic scriptings and updated links in getting started page
+DROP: f93c0f92 : Merge pull request #10161 from clintongormley/deprecate_async_1.5
+DROP: 47d0ae63 : return an HTTP code representing the error when a suggest request failed instead of 200
+DROP: 562c0f21 : [FIX] fix compile error
+DROP: 09bad23e : [TEST] Remove 'gtelte' feature from yaml tests
+DROP: d63bd722 : Deprecated the thrift and memcached transports
+DROP: 7f690164 : Merge pull request #10167 from clintongormley/deprecate_thrift_memcached
+HUNK: ecfeade1 : Transport: fix potential NPE in new tracer log if request timeout
+TEST: 77be1d85 : [LIFECYCLE] Add before/afterIndexShardDelete callback
+DROP: 7173b203 : remove unused method. close() is neither needed nor called anywhere
+DROP: fe05d8c3 : [TEST] Use less shards in testShadowReplicaNaturalRelocation
+DROP: 9ba787f2 : [TEST] Add additional logging to testCorruptTranslogFiles
+TEST: 3a9a33ec : Recovery: add throttle stats
+TEST: af01eef3 : Benchmark api: removed leftovers
+DROP: 6ff1e53e : [DOCS] clarify no-master-block docs
+DROP: b81fd5e1 : remove left over recovery log
+DROP: 5370450a : Test: testCancelRecoveryAndResume - add network hook before bumping replicas
+DROP: 27b6015a : Update templates.asciidoc
+TEST: 4afa41df : Core: increase default rate limiting for snapshot, restore and recovery to 40 MB/sec
+DROP: 15838ead : Filter indices stats for translog
+DROP: 89e5a9bf : [Bootstrap] Throw exception if the JVM will corrupt data.
+DROP: dfbe0618 : [DOCS] add -i flag to curl HEAD call
+DROP: 8c20276d : [DOCS] add -i flag to more curl HEAD calls
+DROP: 57deaa99 : [DOCS] Add ElasticOcean mobile app to monitoring.asciidoc
+DROP: de2149f9 : [DOCS] Fix typos in percolate.asciidoc
+DROP: fdec90b7 : TEST: use the random variable we have to use the variable instead of the static methods to reproduce failing tests
+DROP: 013f54cc : [SPEC] Remove duplicated timeout param from bulk REST spec
+DROP: ef07a315 : change url to use elastic organization
+DROP: 011aa88c : Test: Moved AwaitFix annotation to Ignore annotation.
+DROP: ca52d414 : Disable marvel as it may fail the tests, because it creates indices.
+DROP: a3dab492 : change elasticsearch.org into elastic.co
+DROP: 2d77bdbe : undo elastic elasticsearch
+TEST: 46418b35 : release [1.5.0]
+HUNK: 54481604 : Update Documentation Feature Flags [1.5.0]
+DROP: 851d2ebc : Tests: Add static bwc index for 1.5.0
+COMP: c0efaa7b : Transport: fix racing condition in timeout handling
+TEST: 5dedb8fc : Set next development version
+DROP: c8e08ba7 : [GEO] fix docs for geo_point "validate" option
+HUNK: 746ab797 : Docs: clearer MLT documentation
+TEST: aa13a1df : fix build with java 9
+DROP: 71baabb4 : [TEST] Add back permGen space tuning for now
+DROP: 02ac37b8 : [TEST] only use perm gen space on java 1.7.x
+DROP: e542c35c : [TEST] explicitly map fields in SignificantTermsBWCTests
+DROP: b140e9f6 : [GEO] Fix validate_* merge policy for GeoPointFieldMapper
+DROP: db06bb45 : function_score: undo "Remove explanation of query score from functions"
+DROP: cbc88be2 : Deprecate delete-by-query client/action/transport APIs
+DROP: 884d72b9 : [DOCS] Added explicit "lang" field to documentation of script score definition
+TEST: 5711281b : Mappings: Fix _field_names to be disabled on pre 1.3.0 indexes
+DROP: fe7ecf83 : Mappings: Fix exists filter on 1.x to check enabled() on _field_names.
+DROP: 0004699c : Tests: improve back compat tests by adding delete-by-query in the transaction log on upgrade
+HUNK: 5cdacbde : Reset current version in docs to 1.5.0
+DROP: a008fc17 : Fix BigLongArray.fill to account for an empty range
+TEST: 2d5f0ce0 : Fix thread leak in Hunspell service
+DROP: 7b7b3b1b : [TEST] remove GlobalScopeClusterTests
+TEST: c61b32f2 : Fail shard when index service/mappings fails to instantiate When the index service (which holds shards) fails to be created as a result of a shard being allocated on a node, we should fail the relevant shard, otherwise, it will remain stuck. Same goes when there is a failure to process updated mappings form the master.
+DROP: 34a90553 : inner_hits: Fix nested stored field support.
+DROP: 06980ee5 : aggs: Fix 2 bug in `children` agg
+DROP: 1d18746c : Test: add await fix to RecoveryBackwardsCompatibilityTests.testReusePeerRecovery
+DROP: fe0d8d9f : [DOCS] added table with supported scripting languages to scripting docs
+DROP: 7068876b : fix wrong use of currentFieldName outside of a parsing loop
+DROP: d84a6a6e : [DOCS] Fix multi percolate response sample in percolate.asciidoc
+DROP: ed54be31 : Internal: don't try to send a mapping refresh if there is no master
+DROP: 0b681086 : Recovery: RecoveryState.File.toXContent reports file length as recovered bytes
+DROP: 35bcc5ec : Core: deletions (alone) should also force a refresh when version map is using too much RAM
+DROP: 9f3b586b : merge
+DROP: adb10079 : fix test concurrency bug
+TEST: 4d46e4d3 : Automatically add "index." prefix to the settings are changed on restore if the prefix is missing
+DROP: f6f29427 : Update prefix-filter.asciidoc
+HUNK: 50fa0f6a : Update scripting.asciidoc
+DROP: 2ded4eb6 : [function_score] apply min_score to sub query score if no function provided
+DROP: 1d3a55df : inner hits: Fix bug where parse error is thrown if a inner filter is used in a nested filter/query.
+COMP: 07079a4f : [STATE] Refactor state format to use incremental state IDs
+DROP: 01c7698d : [DOCS] Update readme with direct link to the upgrade section
+DROP: 8f1f5c31 : [RESTORE] Don't reuse source index UUID on restore
+DROP: d628232e : fix compile error
+DROP: b75b6aee : [TEST] don't restrict index to nodes
+DROP: 90d5f2ca : [DOCS] add wait_for_active_shards option to health.asciidoc
+DROP: a2cf0ed3 : [TEST] increase logging for SharedClusterSnapshotRestoreTests.basicWorkFlowTest
+DROP: 220842a1 : [TEST] set mmn to avoid split brain
+DROP: 1203b548 : recovery state: add test for concurrent access to file list
+DROP: b97f2462 : [TEST] more restrictive logging
+DROP: d42934a4 : [DOCS] Add verify parameter to snapshot documentation
+DROP: b1b73041 : inner hits: Make sure `size` of `0` works on the `inner_hits` level.
+DROP: e45f70e2 : service.bat file will explicitly use the Windows find command.
+DROP: 4172ebd4 : Mapping: add consistent serialization order for field data settings
+DROP: 09c06f65 : [TEST] Turn on more logging for testDataPathCanBeChanged
+TEST: 91b013ae : Snapshot/Restore: separate repository registration
+DROP: 8e354f9c : inner hits: Make sure inner hits also work for nested fields defined in object field
+DROP: 8483f51f : Update core-types.asciidoc
+DROP: 8d5f2e03 : Test: Not all shards maybe in a started state after the initial scroll search, but are after we do the stats call, so add ensureGreen to ensure we don't up with this discrepancy
+DROP: e05b8f8a : Tests: Skip Version.CURRENT for static bwc indexes
+DROP: 4c0a3bb7 : Update indices.asciidoc
+DROP: b32f9552 : Document `doc_values` for field type `ip`
+DROP: 0f4fd0da : Docs: Elasticsearch will refuse to start with a known bad JVM
+DROP: 15f80918 : Update repositories.asciidoc
+DROP: 064b0c6d : Update for clarification
+DROP: f0b677d4 : Documentation: Add note about not having sources in repositories
+DROP: d5557dd4 : Warning in documentation for deprecation of rivers
+DROP: d9777f1f : Queries: Avoid NPE during query parsing
+DROP: 36114ee6 : [DOCS] Document `indices.recovery.concurrent_small_file_streams`
+DROP: 9ee8156e : Tests: Revamp static bwc test framework to use dangling indexes
+DROP: d1e68b75 : Test: make httpClient() helper not rely on internalCluster (which may be read only)
+DROP: b2eaa7c2 : Tests: fix lucene needs upgrading test
+DROP: 852e848c : fix compile oops from backport in b2eaa7c
+DROP: f8ad290c : Test: mute testOldIndexes
+DROP: 9a82c0d9 : Test: increase timeout in  UnicastZenPingTests#testSimplePings
+DROP: 744ac4db : Un-deprecate delete-by-query
+DROP: 42165af7 : AbstractBlobContainer.deleteByPrefix() should not list all blobs
+DROP: 38cd3407 : Docs: Missing 1 escape character in example
+HUNK: 2ec48be7 : Docs: Note on shard vs. index level doc frequencies.
+TEST: a0051280 : Internal: Fix snapshot status of version 1.1.2.
+DROP: 9e1143c5 : [DOCS] update versions in java api module.xml
+TEST: 70039598 : Core: Lucene merges must run on target shard during recovery
+DROP: 426be523 : Docs: fix typos in example JSON data
+DROP: 7b280cfd : Test: increasing replicas timeout to avoid slowness on virtualized hardware (aka jenkins)
+TEST: 74d9c205 : [ENGINE] sync translog before closing engine
+DROP: 5844b07e : Tests: Fix static bwc replicas at 1
+DROP: 19de3a49 : Tests: allow up to 30s to delete indexes in old static tests
+TEST: 52401acb : [LOGGING] Use static logger name in Engine.java
+DROP: 59a83f33 : [TEST] ignore OldIndexBackwardsCompatibilityTests#testOldIndexes for now
+HUNK: 023c9e20 : Docs: Updated version annotations for 1.5.1
+TEST: 5e38401b : release [1.5.1]
+TEST: b81e8ad2 : Prepare next development iteration
+DROP: d7d9bc32 : [TEST] add 1.5.1 index for bw comp tests
+DROP: 56169645 : [TEST] restore AwaitsFix on OldIndexBackwardsCompatibilityTests
+DROP: 85ee6174 : Add missing hashCode method to RecoveryState#File
+DROP: 2273b611 : Revert "Tests: allow up to 30s to delete indexes in old static tests"
+DROP: 440a0813 : Only flush for checkindex if we have uncommitted changes
+DROP: 90084fe5 : [TEST] Reenable OldIndexBackwardsCompatibilityTests
+DROP: 318265e3 : Tests: increasing timeout for replicas in static bwc tests, to account for reallySlowJenkinsWhenIndexHasLotsOfSegments
+DROP: dfd02a79 : Tests: Add multi data path testing to static bwc tests
+DROP: 04216a38 : Fix to pom.xml to allow eclipse maven integration using m2e
+DROP: dd9a2f6b : removed erroneous tab character
+DROP: 51efc4a6 : [BUILD] Add sigar binaries when running unittests
+DROP: b18a25a0 : Fix m2e Eclipse Integration
+DROP: de7d4ffd : [GEO] Fix hole intersection at tangential coordinate
+TEST: 7fa47811 : [GEO] Add merge conflicts to GeoShapeFieldMapper

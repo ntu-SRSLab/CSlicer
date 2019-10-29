@@ -1,0 +1,51 @@
+class Management
+{	
+	public static final int WRONG = -1;
+	
+	private int[] people;
+	
+	public Management(int[] people)
+	{
+		this.people = people;
+	}
+	
+	public int calculateSumSalary(int months, int position, int bonus)
+	{	
+		int salary = 0;
+		salary += calculateBasicSalary(months, position);	
+		return salary;
+	}
+	
+	public int calculateBasicSalary(int months, int position)
+	{
+		if(months <= 0)
+		{
+			return WRONG;
+		}
+		
+		int basicSalary = 0;
+		//switch a position
+		if(position == Positions.MANAGER)
+		{
+			basicSalary += months * 10000;
+		}
+		else if(position == Positions.EMPLOYEE)
+		{
+			basicSalary += months * 5000;
+		}
+		else if(position == Positions.DRIVER)
+		{
+			basicSalary += months * 8000;
+		}
+		else if(position == Positions.PROGRAMMER)
+		{
+			basicSalary += months * 30000;
+		}
+		else
+		{
+			return WRONG;
+		}
+		
+		return basicSalary;
+	}
+}

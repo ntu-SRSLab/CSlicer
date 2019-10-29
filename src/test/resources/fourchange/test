@@ -1,0 +1,13 @@
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+public class TestFoo {
+	@Test
+	public void test1() {
+		Boo b = new Boo();
+		assertEquals(-1, b.boo2());
+	}
+}

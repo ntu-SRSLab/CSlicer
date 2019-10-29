@@ -1,0 +1,15 @@
+Script Bugs:
+
+1. Our scripts was written in a way that work with single module maven projects,
+did not work with multi-module projects (Fixed)
+2. PDFBOX has many binary file changes in the history, so our splitting-by-hunk
+scripts used to not working on it (Fixed)
+3. PDFBOX has many test resources files that have special characters in the
+file names, our splitting script was not working (Fixed)
+4. Commons-configuration does not ignore target dir in their repo, our processing
+script stuck there. (Fixed)
+5. There is one example (CALCITE-655) in our repo does not work with CSlicer
+because the tests fail when run with Jacoco. We have only tried running Definer on
+this example before. (Ingored this example for now)
+6. PDFBOX-3069 exposed a bug in CSlicer, it seems to be related to changedistiller,
+the library we used to extract AST changes.

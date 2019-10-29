@@ -1,0 +1,49 @@
+<!-- Standard Build Script: assume standard Maven default project structure -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                      http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>edu.toronto.se</groupId>
+	<artifactId>test-project</artifactId>
+	<version>1.0</version>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+			<plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.16</version>
+                <configuration>
+                    <skipTests>false</skipTests>
+                    <additionalClasspathElements>
+                        <additionalClasspathElement>/home/polaris/Desktop/daikonparent/daikon-5.2.22/daikon.jar</additionalClasspathElement>
+                    </additionalClasspathElements>
+                    <argLine>-javaagent:/home/polaris/Desktop/daikonparent/daikon-5.2.22/java/ChicoryPremain.jar=--dtrace-file=JUnitCore.dtrace.gz</argLine>
+                    <workingDirectory>${project.basedir}/target</workingDirectory>
+                </configuration>
+            </plugin>
+		</plugins>
+	</build>
+	<dependencies>
+			<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+			</dependency>
+		</dependencies>
+</project>
+

@@ -1,0 +1,76 @@
+CSlicer
+
+1.0b (2018-07-17)
+
+- [FIX] Now growing hunk dependency set and compute side-effects of those hunk 
+  commits until reaching a fixed-point. This has been a known issue for a long
+  time and it has not been manifested in any experiments before. The issue was
+  first observed in NET-525 and NET-527: the history slice produced by CSlicer
+  misses several commits which would provide the compilation dependencies of
+  some hunk commits.
+
+- [FIX] A bug in '-t' (verify cherry-picking results) pollutes pom.xml and 
+  interfers with the normal cherry-picking process. This issue was observed in
+  running 'cslicer -t' on the history slice of IO-173.
+
+1.0a (2018-07-12)
+
+-----------------
+
+- [NEW] Count and output the number of changed lines at the AST atomic change
+  level. This is a very rough over-approximation -- the length of the whole
+  method is counted if the method body is modified (even if a single line gets
+  changed).
+
+- [FIX] Enable whole class call graph analysis (generating dependencies between
+  all classes, methods and fields). A partial call graph analysis was used
+  before and this resulted in some missing compilation dependencies in CSV-159,
+  CSV-175, and CSV-180. The history slices produced for those examples cannot be
+  compiled due to this bug.
+  Reported by Chenguang on Jun 11, 2018.
+
+- [FIX] When running the configuration 'cslicer-split-cslicer', CSlicer reuses
+  Jacoco files generated for the first stage history. Now we simply reuse the
+  functional/compilation set generated at the first stage in the second stage.
+
+=================
+
+Definer
+
+1.0b (2018-08-12)
+
+- [NEW] Implement multi-round Definer. Run Definer loop multiple times.
+  Subsequent Definer runs avoid combinations which have already been tried
+  before and won't try them again.
+
+1.0a (2018-07-09)
+
+- [FIX] A bug which prevents Definer from getting 1-minimal slice was observed
+  in IO-288 and a few others. The issue was that the 'target' directory which
+  contains the compiled source code and test code was purged after running
+  Definer for a while. The cause of this issue is still unknown (possibly due to
+  calling 'reset HEAD --hard' at some point). The solution was to back up the
+  compile test code in the test script and recover them when the 'target' folder
+  is found empty. 
+
+- [FIX] When manually compiling the test suite, 'mvn test' was used. This
+  command would compile and run all the tests once and this time was counted
+  towards the total running time of Definer. Now we only run necessary tests in
+  the slicing criteria.
+
+=================
+
+Experiment
+
+2018-07-18
+
+- cslicer-split-definer still times out on NET-525 and NET-527. One reason is
+  that there is a commmit which introduces bad pom syntax. A lot of the
+  partitions are ill-formed due to this reason. We would like to restore pom.xml
+  to the correct version before running every test.
+
+2018-07-15
+
+- cslicer-split-definer times out on NET-525 and NET-527. The history slice
+  produced after the first stage misses several commits due to a known issue.
+  This was then fixed in 1.0b.

@@ -1,0 +1,19 @@
+class A {
+    int f() {
+        B b = new B();
+        return b.g();
+    }
+}
+
+class B {
+    String s = "abc";
+
+    int g() {
+        int z = h(s, 1);
+        return z;
+    }
+    
+    int h(String s, int t) {
+        return s == null ? 0 : t;
+    }
+}

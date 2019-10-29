@@ -1,0 +1,50 @@
+public class Main {
+
+	public static int foo(int x) {
+		if (x > 10) {
+			return x - 10;
+		}
+		return x + 10;
+	}
+	
+	public static int bar(int y) {
+		if (y <= 10) {
+			for (int i=0; i<20; i++) {
+				System.out.println(y-i);
+			}
+		}
+		
+		return y - 10;
+	}
+}
+
+class Hoop {
+	
+	int x = 0;
+	
+	void h (){
+		x = 10;
+	}
+}
+
+class Boo {
+
+	public Boo (int x) {}
+
+	class Foo {
+		private int field; 
+	
+		public Foo (int x) { 
+			field = x + 1; 
+		}
+	
+		public String foo(String x, int y){
+			y = 0;
+		
+			if (y > 10 && x.equals("false"))
+				return "fail";
+			else
+				return "succ";
+		}
+	}
+}

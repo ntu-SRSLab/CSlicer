@@ -1,0 +1,8 @@
+class Bar {
+  // bar1
+  static int bar1(int x)
+  {return x - 1;}
+  // bar2
+  static int bar2(int y)
+  {return y + 1;}
+}

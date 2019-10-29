@@ -1,0 +1,106 @@
+Daikon version 5.2.22, released February 1, 2016; http://plse.cs.washington.edu/daikon.
+Reading declaration files 
+[3:07:25 PM]:                                                                  
+                                                                               
+
+                                                                               
+Processing trace data; reading 1 dtrace file:
+
+[3:07:26 PM]: Reading /home/polaris/Desktop/gitslice/src/test/resources/daikon/
+[3:07:27 PM]: Reading /home/polaris/Desktop/gitslice/src/test/resources/daikon/
+[3:07:28 PM]: Reading /home/polaris/Desktop/gitslice/src/test/resources/daikon/
+[3:07:29 PM]: Reading /home/polaris/Desktop/gitslice/src/test/resources/daikon/
+[3:07:30 PM]: Reading /home/polaris/Desktop/gitslice/src/test/resources/daikon/
+No return from procedure observed 3 times.  Unmatched entries are ignored!
+Unterminated calls:
+  org.apache.maven.surefire.booter.ForkedBooter$1.run() : 1 invocation
+  org.apache.maven.surefire.booter.ForkedBooter.exit(int) : 1 invocation
+  org.apache.maven.surefire.booter.ForkedBooter.main(java.lang.String[]) : 1 invocation
+End of report for procedures not returned from.  Unmatched entries are ignored!
+
+[3:07:30 PM]: Finished reading /home/polaris/Desktop/gitslice/src/test/resource
+
+                                                                               
+
+                                                                               
+Daikon version 5.2.22, released February 1, 2016; http://plse.cs.washington.edu/daikon.
+Reading declaration files 
+                                                                               
+
+[3:07:35 PM]:                                                                  
+                                                                               
+Processing trace data; reading 1 dtrace file:
+
+[3:07:36 PM]: Reading /home/polaris/Desktop/gitslice/src/test/resources/daikon/
+[3:07:37 PM]: Reading /home/polaris/Desktop/gitslice/src/test/resources/daikon/
+[3:07:38 PM]: Reading /home/polaris/Desktop/gitslice/src/test/resources/daikon/
+No return from procedure observed 4 times.  Unmatched entries are ignored!
+Unterminated calls:
+  org.apache.maven.surefire.booter.ForkedBooter$1.run() : 2 invocations
+  org.apache.maven.surefire.booter.ForkedBooter.exit(int) : 1 invocation
+  org.apache.maven.surefire.booter.ForkedBooter.main(java.lang.String[]) : 1 invocation
+End of report for procedures not returned from.  Unmatched entries are ignored!
+
+[3:07:38 PM]: Finished reading /home/polaris/Desktop/gitslice/src/test/resource
+
+                                                                               
+
+                                                                               
+[DEBUG] {A.h():::EXIT
+<VarInfo return: type=int,file_rep_type=int,rep_type=int,comparability=no-comparability,value_index=2,varinfo_index=2,is_static_constant=false,static_constant_value=null,derived=null,derivees=[],ppt=A.h():::EXIT,canBeMissing=false,equal_to=Equality: size=3 leader: return with this.x[1] == return[2]L == orig(this.x)[4] samples: 1,isCanonical()=true>
+return
+METHOD_POSTCOND,A.h():::EXIT
+<VarInfo this: type=A,file_rep_type=hashcode,rep_type=int,comparability=no-comparability,value_index=0,varinfo_index=0,is_static_constant=false,static_constant_value=null,derived=null,derivees=[],ppt=A.h():::EXIT,canBeMissing=false,equal_to=Equality: size=2 leader: orig(this) with this[0] == orig(this)[3]L samples: 1,isCanonical()=false>
+this
+FIELD_VALUE,A.h():::EXIT
+<VarInfo Field{x}[this]: type=int,file_rep_type=int,rep_type=int,comparability=no-comparability,value_index=1,varinfo_index=1,is_static_constant=false,static_constant_value=null,derived=null,derivees=[],ppt=A.h():::EXIT,canBeMissing=false,equal_to=Equality: size=3 leader: return with this.x[1] == return[2]L == orig(this.x)[4] samples: 1,isCanonical()=false>
+this.x
+FIELD_VALUE,A.h():::ENTER
+<VarInfo this: type=A,file_rep_type=hashcode,rep_type=int,comparability=no-comparability,value_index=0,varinfo_index=0,is_static_constant=false,static_constant_value=null,derived=null,derivees=[],ppt=A.h():::ENTER,canBeMissing=false,equal_to=Equality: size=1 leader: this with this[0]L samples: 0,isCanonical()=true>
+this
+FIELD_VALUE,A.h():::ENTER
+<VarInfo Field{x}[this]: type=int,file_rep_type=int,rep_type=int,comparability=no-comparability,value_index=1,varinfo_index=1,is_static_constant=false,static_constant_value=null,derived=null,derivees=[],ppt=A.h():::ENTER,canBeMissing=false,equal_to=Equality: size=1 leader: this.x with this.x[1]L samples: 0,isCanonical()=true>
+this.x
+FIELD_VALUE}
+Soot started on Sun Mar 27 15:07:43 EDT 2016
+Unknown tag in constant pool: 16 at entry 39
+Warning: java.lang.CharSequence is a phantom class!
+Unknown tag in constant pool: 16 at entry 67
+Warning: java.lang.reflect.AnnotatedElement is a phantom class!
+Warning: java.dyn.InvokeDynamic is a phantom class!
+Transforming C... 
+[DEBUG] A.A()
+[DEBUG] A.h()
+Transforming B... 
+[DEBUG] java.lang.Object.Object()
+Transforming A... 
+[DEBUG] java.lang.Object.Object()
+Time measurements
+
+      Building graphs: 00.0s (00.3%)
+  Computing LocalDefs: 00.0s (01.4%)
+  Computing LocalUses: 00.0s (00.0%)
+     Cleaning up code: 00.0s (00.0%)
+Computing LocalCopies: 00.0s (00.0%)
+ Computing LiveLocals: 00.0s (01.7%)
+Coading coffi structs: 00.0s (00.0%)
+
+       Resolving classfiles: 00.0s (00.0%)
+ Bytecode -> jimple (naive): 00.0s (13.2%)
+        Splitting variables: 00.0s (03.1%)
+            Assigning types: 00.0s (02.3%)
+  Propagating copies & csts: 00.0s (00.6%)
+      Eliminating dead code: 00.0s (00.0%)
+                Aggregation: 00.0s (01.4%)
+            Coloring locals: 00.0s (00.0%)
+     Generating jasmin code: 00.0s (00.0%)
+          .jasmin -> .class: 00.0s (00.0%)
+totalTime:00.4s (100.0%)
+stmtCount: 23(64.78 stmt/s)
+totalFlowNodes: 147 totalFlowComputations: 147 avg: 1.0
+Soot finished on Sun Mar 27 15:07:44 EDT 2016
+Soot has run for 0 min. 0 sec.
+[DEBUG] {h : r0.<A: int x> = 0 : [r0],h : $i0 = r0.<A: int x> : [r0]}
+[DEBUG] {h :  : []}
+[DEBUG] {}
+

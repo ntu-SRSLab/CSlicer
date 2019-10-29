@@ -1,0 +1,267 @@
+DROP: 7a167311 : HADOOP-10957. The globber will sometimes erroneously return a permission denied exception when there is a non-terminal wildcard.
+TEST: a7bcc953 : HDFS-6921. Add LazyPersist flag to FileStatus. (Arpit Agarwal)
+TEST: d8309fe1 : HDFS-6924. Add new RAM_DISK storage type. (Arpit Agarwal)
+TEST: 40935aed : HDFS-6922. Add LazyPersist flag to INodeFile, save it in FsImage and edit logs. (Arpit Agarwal)
+TEST: 23e888fd : HDFS-6923. Propagate LazyPersist flag to DNs via DataTransferProtocol. (Arpit Agarwal)
+TEST: 9d75f7af : HDFS-6925. DataNode should attempt to place replicas on transient storage first if lazyPersist flag is received. (Arpit Agarwal)
+TEST: f2908164 : HDFS-6926. DN support for saving replicas to persistent storage and evicting in-memory replicas. (Arpit Agarwal)
+DROP: 5c4abe9e : HDFS-6927. Initial unit tests for Lazy Persist files. (Arpit Agarwal)
+TEST: 59dfe5bd : HDFS-6929. NN periodically unlinks lazy persist files with missing replicas from namespace. (Arpit Agarwal)
+DROP: ab2ba153 : HADOOP-11001. Fix test-patch to work with the git repo. (kasha)
+HUNK: 77c13e87 : HDFS-6928. 'hdfs put' command should accept lazyPersist flag for testing. (Arpit Agarwal)
+DROP: e807ae54 : HADOOP-10880. Move HTTP delegation tokens out of URL querystring to a header. (tucu)
+DROP: 8448ab52 : Fixing CHANGES.txt, moving HADOOP-8815 to 2.6.0 release
+DROP: f1568e44 : Fix up CHANGES.txt for HDFS-6134, HADOOP-10150 and related JIRAs following merge to branch-2
+DROP: 84be7c6c : Fix typos in log messages. Contributed by Ray Chiang
+TEST: 6b349315 : Merge remote-tracking branch 'apache-commit/trunk' into HDFS-6581
+TEST: a1b4b6eb : HDFS-6960. Bugfix in LazyWriter, fix test case and some refactoring. (Arpit Agarwal)
+TEST: fc905478 : HDFS-6931. Move lazily persisted replicas to finalized directory on DN startup. (Arpit Agarwal)
+TEST: 861b624d : Merge remote-tracking branch 'apache-commit/trunk' into HDFS-6581
+DROP: bc560f9a : HADOOP-10994. KeyProviderCryptoExtension should use CryptoCodec for generation/decryption of keys. (tucu)
+DROP: 077c74ac : HADOOP-11021. Configurable replication factor in the hadoop archive command. Contributed by Zhe Zhang.
+DROP: 01eca7c4 : Add CHANGES.txt for HADOOP-11021.
+DROP: 5053ad4f : HDFS-6972. TestRefreshUserMappings.testRefreshSuperUserGroupsConfiguration doesn't decode url correctly. Contributed by Yongjun Zhang.
+HUNK: f3ada6e9 : HADOOP-11030. Define a variable jackson.version instead of using constant at multiple places. (Juan Yu via kasha)
+DROP: 162a44f1 : YARN-2360. Fair Scheduler: Display dynamic fair share for queues on the scheduler page. (Ashwin Shankar and Wei Yan via kasha)
+HUNK: 3a6468a3 : YARN-1506. Changed RMNode/SchedulerNode to update resource with event notification. Contributed by Junping Du
+DROP: bf32e005 : YARN-2395. FairScheduler: Preemption timeout should be configurable per queue. (Wei Yan via kasha)
+DROP: 6e04f683 : HADOOP-10833. Remove unused cache in UserProvider. (Benoy Antony)
+DROP: 9c209cff : HADOOP-11036. Add build directory to .gitignore (Tsuyoshi OZAWA via aw)
+DROP: 81fe002c : HADOOP-11012. hadoop fs -text of zero-length file causes EOFException. Contributed by Eric Payne
+DROP: 38db77fe : HADOOP-10990. Add missed NFSv3 request and response classes. Contributed by Brandon Li
+DROP: e1894b0b : HADOOP-11041. VersionInfo specifies subversion (Tsuyoshi OZAWA via aw)
+HUNK: 89b8e0f0 : HADOOP-10373 create tools/hadoop-amazon for aws/EMR support
+DROP: 42849ceb : Fix hadoop-common-project/hadoop-common/src/main/native/README to current mail list and URL
+TEST: a6a96d13 : HDFS-6634. inotify in HDFS. Contributed by James Thomas.
+TEST: 1a3e71f4 : HDFS-6954. With crypto, no native lib systems are too verbose. Contributed by Charles Lamb.
+DROP: 0765bb5c : HADOOP-11033. shell scripts ignore JAVA_HOME on OS X. (aw)
+COMP: a3f8b319 : HDFS-4257. The ReplaceDatanodeOnFailure policies could have a forgiving option.  Contributed by szetszwo.
+TEST: 6bca3bd8 : HDFS-6942. Fix typos in log messages. Contributed by Ray Chiang.
+DROP: 81b49d4d : HDFS-6950. Add Additional unit tests for HDFS-6581. (Contributed by Xiaoyu Yao)
+DROP: 8d3546cd : HDFS-2975. Rename with overwrite flag true can make NameNode to stuck in safemode on NN (crash + restart). (Yi Liu via umamahesh)
+DROP: 81db8541 : HADOOP-10956. Fix create-release script to include docs and necessary txt files. (kasha)
+DROP: 032e3d99 : YARN-2394. FairScheduler: Configure fairSharePreemptionThreshold per queue. (Wei Yan via kasha)
+TEST: 23e6f418 : HDFS-6930. Improve replica eviction from RAM disk. (Arpit Agarwal)
+TEST: 81f642c3 : Merge trunk into HDFS-6581
+DROP: 68436f72 : HADOOP-11070. Create MiniKMS for testing. (tucu)
+DROP: 481a8999 : HADOOP-11069. KMSClientProvider should use getAuthenticationMethod() to determine if in proxyuser mode or not. (tucu)
+HUNK: 9f076312 : HDFS-6986. DistributedFileSystem must get delegation tokens from configured KeyProvider. (zhz via tucu)
+TEST: 1311c92f : HDFS-6940. Refactoring to allow ConsensusNode implementation. Contributed by Konstantin Shvachko.
+TEST: 914598ce : Merge trunk into HDFS-6581
+HUNK: 83a7c191 : HDFS-6977. Delete all copies when a block is deleted from the block space. (Arpit Agarwal)
+DROP: 14511cfd : YARN-2512. Allowed pattern matching for origins in CrossOriginFilter. Contributed by Jonathan Eagles.
+DROP: 3fbf48db : YARN-2507. Documented CrossOriginFilter configurations for the timeline server. Contributed by Jonathan Eagles.
+DROP: cbdb736d : YARN-2515. Updated ConverterUtils#toContainerId to parse epoch. Contributed by Tsuyoshi OZAWA
+DROP: 9c467b81 : Credential Provider related Unit Test Failure on Windows. Contributed by Xiaoyu Yao.
+TEST: 8dffb58f : HDFS-6991. Notify NN of evicted block before deleting it from RAM disk. (Arpit Agarwal)
+TEST: 139628d1 : HDFS-6943. Improve NN allocateBlock log to include replicas' datanode IPs. Contributed by Ming Ma.
+DROP: e477016d : HADOOP-11071. KMSClientProvider should drain the local generated EEK cache on key rollover. (tucu)
+DROP: c568382c : HDFS-7005. DFS input streams do not timeout. Contributed by Daryn Sharp.
+TEST: cf4feb85 : HDFS-6036. Forcibly timeout misbehaving DFSClients that try to do no-checksum reads that extend too long.  (cmccabe)
+HUNK: 967d9320 : HDFS-6893. crypto subcommand is not sorted properly in hdfs\'s hadoop_usage (David Luo via aw)
+DROP: 0aa1f8e2 : MAPREDUCE-5972. Fix typo 'programatically' in job.xml (and a few other places) (Akira AJISAKA via aw)
+TEST: cc6c73d8 : Merge branch 'trunk' into HDFS-6581
+DROP: 58856a0c : HDFS-6482. Fix CHANGES.txt in trunk
+DROP: 33d44f5d : Newly moved block replica been invalidated and deleted in TestBalancer. Contributed by Binglin Chang.
+DROP: 41b8a975 : Add missing YARN-1471 to the CHANGES.txt
+DROP: 03c79737 : HADOOP-10925. Change attribution in CHANGES.txt from trunk to 2.6.0.
+DROP: 837d3574 : YARN-2526. SLS can deadlock when all the threads are taken by AMSimulators. (Wei Yan via kasha)
+TEST: 4c663ab8 : Revert HDFS-6940.
+DROP: 686cf4dd : HADOOP-11057. checknative command to probe for winutils.exe on windows. Contributed by Xiaoyu Yao.
+DROP: 5a527d57 : HDFS-6776. Using distcp to copy data between insecure and secure cluster via webdhfs doesn't work. (yzhangal via tucu)
+DROP: 3f998940 : HADOOP-11077. NPE if hosts not specified in ProxyUsers. (gchanan via tucu)
+DROP: 2e1f6e21 : HADOOP-9989. Bug introduced in HADOOP-9374, which parses the -tokenCacheFile as binary file but set it to the configuration as JSON file. (zxu via tucu)
+DROP: f5a26319 : YARN-1458. FairScheduler: Zero weight can lead to livelock. (Zhihai Xu via kasha)
+DROP: 0964a04a : YARN-2448. Changed ApplicationMasterProtocol to expose RM-recognized resource types to the AMs. Contributed by Varun Vasudev.
+DROP: 486f841f : YARN-2459. RM crashes if App gets rejected for any reason and HA is enabled. Contributed by Jian He
+DROP: 971de06f : YARN-2158. Fixed TestRMWebServicesAppsModification#testSingleAppKill test failure. Contributed by Varun Vasudev
+HUNK: a3608ad5 : HADOOP-10758. KMS: add ACLs on per key basis. (tucu)
+DROP: c95f3f50 : Fix CHANGES.txt. Credit Mayank Bansal for his contributions on YARN-2459
+DROP: dfd76ca2 : MAPREDUCE-6075. HistoryServerFileSystemStateStore can create zero-length files. Contributed by Jason Lowe
+HUNK: 340110ba : HADOOP-11074. Move s3-related FS connector code to hadoop-aws. (David S. Wang via Colin Patrick McCabe)
+HUNK: 293d140c : YARN-415. Capture aggregate memory allocation at the app-level for chargeback. Contributed by Eric Payne & Andrey Klochkov
+HUNK: bde36ef8 : YARN-2440. Enabled Nodemanagers to limit the aggregate cpu usage across all containers to a preconfigured limit. Contributed by Varun Vasudev.
+DROP: bce68733 : MAPREDUCE-6070. yarn.app.am.resource.mb/cpu-vcores affects uber mode but is not documented. Contributed by Tsuyoshi OZAWA
+DROP: ec3da771 : HDFS-6966. Add additional unit tests for encryption zones. Contributed by Stephen Chu.
+TEST: d541aa82 : HDFS-6621. Hadoop Balancer prematurely exits iterations. Contributed by Rafal Wodjdyla and Benjamin Bowman.
+TEST: bac611d9 : HDFS-7045. Fix NameNode deadlock when opening file under /.reserved path. Contributed by Yi Liu.
+DROP: e4fab69a : HADOOP-9540: move CHANGES.txt entry to 2.6
+DROP: e6b34b43 : HADOOP-10373: move CHANGES.txt entry to branch-2.6
+DROP: 0b68461c : YARN-2534. FairScheduler: Potential integer overflow calculating totalMaxShare. (Zhihai Xu via kasha)
+HUNK: 50dc06a0 : HDFS-7042. Upgrade fails for Windows HA cluster due to file locks held during rename in JournalNode. Contributed by Chris Nauroth.
+DROP: 58385bbf : HADOOP-11085. Excessive logging by org.apache.hadoop.util.Progress when value is NaN. Contributed by Mit Desai
+DROP: dfb0d19d : HADOOP-11083. After refactoring of HTTP proxyuser to common, doAs param is case sensitive. (tucu)
+DROP: 2cccc186 : HADOOP-11074. Add JIRA to CHANGES.txt
+DROP: 435015ec : Update CHANGES.txt to set the release date for 2.5.1
+HUNK: 3b3a46f8 : YARN-2033. Merging generic-history into the Timeline Store (Contributed by Zhijie Shen)
+DROP: 36322021 : HDFS-7051. TestDataNodeRollingUpgrade#isBlockFileInPrevious assumes Unix file path separator. Contributed by Chris Nauroth.
+DROP: 2363931e : YARN-2541. Fixed ResourceManagerRest.apt.vm table syntax error. Contributed by Jian He
+DROP: 0fb28838 : YARN-2538. Added logs when RM sends roll-overed AMRMToken to AM. Contributed by Xuan Gong.
+DROP: baec6150 : YARN-2484. FileSystemRMStateStore#readFile/writeFile should close FSData(In|Out)putStream in final block. Contributed by Tsuyoshi OZAWA
+DROP: 3983ce3d : YARN-2229. Changed the integer field of ContainerId to be long type. Contributed by Tsuyoshi OZAWA
+DROP: 8ebed886 : Merge branch 'trunk' into HDFS-6581
+TEST: e0335892 : HDFS-6978. Directory scanner should correctly reconcile blocks on RAM disk. (Arpit Agarwal)
+DROP: 217328e1 : YARN-2528. Relaxed http response split vulnerability protection for the origins header and made it accept multiple origins in CrossOriginFilter. Contributed by Jonathan Eagles.
+HUNK: e8afb3c1 : YARN-611. Added an API to let apps specify an interval beyond which AM failures should be ignored towards counting max-attempts. Contributed by Xuan Gong.
+TEST: efe1f0ca : HDFS-7066. LazyWriter#evictBlocks misses a null check for replicaState. (Contributed by Xiaoyu Yao)
+DROP: a5a93225 : HDFS-7061. Add test to verify encryption zone creation after NameNode restart without saving namespace. Contributed by Stephen Chu.
+HUNK: 1e6b33c4 : HADOOP-10400. Incorporate new S3A FileSystem implementation. Contributed by Jordan Mendelson and Dave Wang.
+DROP: 15c65ee0 : HDFS-7032. Add WebHDFS support for reading and writing to encryption zones. Contributed by Charles Lamb.
+DROP: 39e28243 : YARN-2549. TestContainerLaunch fails due to classpath problem with hamcrest classes. Contributed by Chris Nauroth.
+DROP: ec4d990a : YARN-2529. Generic history service RPC interface doesn't work when service authorization is enabled. Contributed by Zhijie Shen
+DROP: bbb670c4 : YARN-2438. yarn-env.sh cleanup (aw)
+DROP: 570c5531 : HDFS-7059. HAadmin transtionToActive with forceActive option can show confusing message. Contributed by Rushabh Shah.
+DROP: e7079537 : HDFS-6912. SharedFileDescriptorFactory should not allocate sparse files (cmccabe)
+TEST: d2d0fad1 : Merge branch 'trunk' into HDFS-6581
+DROP: bbbbaa9e : HDFS-7064. Fix unit test failures in HDFS-6581 branch. (Contributed by Xiaoyu Yao)
+DROP: d70cd704 : HDFS-7006. Test encryption zones with KMS. (Anthony Young-Garner and tucu)
+DROP: b3b58cb0 : HADOOP-11022. User replaced functions get lost 2-3 levels deep (e.g., sbin) (aw)
+DROP: 53ad8664 : HDFS-6799. The invalidate method in SimulatedFSDataset failed to remove (invalidate) blocks from the file system. Contributed by Megasthenis Asteris.
+TEST: d5a10ce8 : HDFS-6851. Refactor EncryptionZoneWithId and EncryptionZone. (clamb via wang)
+DROP: 43a90137 : HDFS-6789. TestDFSClientFailover.testFileContextDoesntDnsResolveLogicalURI and TestDFSClientFailover.testDoesntDnsResolveLogicalURI failing on jdk7. Contributed by Akira Ajisaka.
+DROP: 2b46a81a : HADOOP-10922. User documentation for CredentialShell. Contributed by Larry McCay.
+HUNK: c2c95703 : YARN-1250. Generic history service should support application-acls. (Contributed by Zhijie Shen)
+DROP: 53aa1835 : HDFS-7079. Few more unit test fixes for HDFS-6581. (Arpit Agarwal)
+DROP: a7dc9f41 : YARN-1250. Addendum
+TEST: 6d4f68b7 : HADOOP-11096. KMS: KeyAuthorizationKeyProvider should verify the keyversion belongs to the keyname on decrypt. (tucu)
+DROP: 817d7dc6 : HADOOP-11097. kms docs say proxyusers, not proxyuser for config params. (clamb via tucu)
+DROP: e2eea757 : HADOOP-11062. CryptoCodec testcases requiring OpenSSL should be run only if -Pnative is used. (asuresh via tucu)
+DROP: ec8f72ab : HADOOP-11099. KMS return HTTP UNAUTHORIZED 401 on ACL failure. (tucu)
+HUNK: ef38fe8d : HADOOP-11016. KMS should support signing cookies with zookeeper secret manager. (tucu)
+HUNK: ae953936 : HADOOP-10982
+HUNK: f169784c : Revert "HADOOP-10982"
+HUNK: d757c281 : Revert "HADOOP-11016. KMS should support signing cookies with zookeeper secret manager. (tucu)"
+TEST: 58e36992 : HDFS-6705. Create an XAttr that disallows the HDFS admin from accessing a file. (clamb via wang)
+TEST: 9004e35a : Merge branch 'trunk' into HDFS-6581
+DROP: 2174b6e6 : YARN-2558. Updated ContainerTokenIdentifier#read/write to use ContainerId#getContainerId. Contributed by Tsuyoshi OZAWA.
+TEST: 81b42d25 : HDFS-7080. Fix finalize and upgrade unit test failures. (Arpit Agarwal)
+HUNK: 01f91c45 : HADOOP-11016. KMS should support signing cookies with zookeeper secret manager. (tucu)
+DROP: 24d0b5e0 : HADOOP-11040. Return value of read(ByteBuffer buf) in CryptoInputStream is incorrect in some cases. (Yi Liu via wang)
+DROP: 9c4b33f5 : Move some HDFS JIRAs to the correct CHANGES.txt
+TEST: 1d4929b5 : HDFS-7004. Update KeyProvider instantiation to create by URI. (wang)
+HUNK: 871e62ce : HDFS-7078. Fix listEZs to work correctly with snapshots. (wang)
+DROP: ffb3f52b : YARN-2559. Fixed NPE in SystemMetricsPublisher when retrieving FinalApplicationStatus. Contributed by Zhijie Shen
+DROP: cbbd855c : YARN-1779. Fixed AMRMClient to handle AMRMTokens correctly across ResourceManager work-preserving-restart or failover. Contributed by Jian He.
+DROP: 80e46a96 : YARN-2001. Added a time threshold for RM to wait before starting container allocations after restart/failover. Contributed by Jian He.
+TEST: 49cf925d : HDFS-7084. FsDatasetImpl#copyBlockFiles debug log can be improved. (Contributed by Xiaoyu Yao)
+DROP: 30e4161d : HDFS-7047. Expose FileStatus#isEncrypted in libhdfs (cmccabe)
+DROP: 950adc2d : YARN-2363. Submitted applications occasionally lack a tracking URL. Contributed by Jason Lowe
+DROP: 2c728956 : HADOOP-11084 jenkins patchprocess links are broken
+DROP: 18e86c2d : MAPREDUCE-6090. mapred hsadmin getGroups fails to connect in some cases. Contributed by Robert Kanter
+DROP: bba2139f : YARN-2561. MR job client cannot reconnect to AM after NM restart. Contributed by Junping Du
+DROP: 577661ad : YARN-2563. Fixed YarnClient to call getTimeLineDelegationToken only if the Token is not present. Contributed by Zhijie Shen
+DROP: 03c592ad : HADOOP-11106. Document considerations of HAR and Encryption. (clamb via wang)
+HUNK: 78040080 : HDFS-7003. Add NFS Gateway support for reading and writing to encryption zones. (clamb via wang)
+DROP: 0a9a9426 : MAPREDUCE-5891. Improved shuffle error handling across NM restarts. Contributed by Junping Du
+DROP: 56981bc4 : HADOOP-11105. MetricsSystemImpl could leak memory in registered callbacks. Contributed by Chuan Liu.
+DROP: 1447f273 : HADOOP-11105. Update CHANGES.txt.
+DROP: e81b59ee : MAPREDUCE-6086. mapreduce.job.credentials.binary should allow all URIs. (Zhihai Xu via kasha)
+HUNK: 5af3e54a : HDFS-7091. Add forwarding constructor for INodeFile for existing callers. (Arpit Agarwal)
+TEST: b9ad9c7f : Merge branch 'trunk' into HDFS-6581
+DROP: f3d1d61f : YARN-2568. Fixed the potential test failures due to race conditions when RM work-preserving recovery is enabled. Contributed by Jian He.
+TEST: 4743e867 : HDFS-6948. DN rejects blocks if it has older UC block. Contributed by Eric Payne.
+TEST: 6862de4b : HDFS-7065. Pipeline close recovery race can cause block corruption. Contributed by Kihwal Lee.
+DROP: f653b6d4 : HDFS-7096.  Fix TestRpcProgramNfs3 to use DFS_ENCRYPTION_KEY_PROVIDER_URI (clamb via cmccabe)
+DROP: 8f05e63f : YARN-2565. Fixed RM to not use FileSystemApplicationHistoryStore unless explicitly set. Contributed by Zhijie Shen
+COMP: 50abd421 : HADOOP-10946. Fix a bunch of typos in log messages (Ray Chiang via aw)
+DROP: fa80a64d : MAPREDUCE-6091. YARNRunner.getJobStatus() fails with ApplicationNotFoundException if the job rolled off the RM view. Contributed by Sangjin Lee
+DROP: 7247dac0 : YARN-2460. Remove obsolete entries from yarn-default.xml (Ray Chiang via aw)
+DROP: 1c913705 : HADOOP-10970. Cleanup KMS configuration keys. (wang)
+TEST: 5ec45648 : HDFS-7046. HA NN can NPE upon transition to active. Contributed by Kihwal Lee.
+DROP: 90f9dd60 : HADOOP-11112. TestKMSWithZK does not use KEY_PROVIDER_URI. (tucu via wang)
+DROP: 8e08d892 : HDFS-7105. Fix TestJournalNode#testFailToStartWithBadConfig to match log output change. Contributed by Ray Chiang.
+TEST: 9d7158bf : HDFS-7073. Allow falling back to a non-SASL connection on DataTransferProtocol in several edge cases. Contributed by Chris Nauroth.
+HUNK: 6f9316b1 : HADOOP-11017. KMS delegation token secret manager should be able to use zookeeper as store. (asuresh via tucu)
+TEST: 4fb916eb : HDFS-7100. Make eviction scheme pluggable. (Arpit Agarwal)
+DROP: d4dc9c7e : HDFS-7108. Fix unit test failures in SimulatedFsDataset. (Arpit Agarwal)
+TEST: 69141a36 : HDFS-7095. Archival Storage: TestStorageMover often fails in Jenkins. Contributed by Jing Zhao.
+DROP: 645cae83 : HDFS-7071. Updated editsStored and editsStored.xml to bump layout version and add LazyPersist flag. (Contributed by Xiaoyu Yao and Arpit Agarwal)
+DROP: c872dad9 : HDFS-7071. Undo accidental commit of binary file editsStored.
+COMP: 19be1c38 : HDFS-7107. Avoid Findbugs warning for synchronization on AbstractNNFailoverProxyProvider#fallbackToSimpleAuth. Contributed by Chris Nauroth.
+DROP: c78bdcaa : HDFS-7109. TestDataStorage does not release file locks between tests. Contributed by Chris Nauroth.
+DROP: b2cdb1ab : HDFS-7110. Skip tests related to short-circuit read on platforms that do not currently implement short-circuit read. Contributed by Chris Nauroth.
+DROP: f4b7b16c : YARN-2452. TestRMApplicationHistoryWriter fails with FairScheduler. (Zhihai Xu via kasha)
+TEST: e760ef24 : HDFS-6987. Move CipherSuite xattr information up to the encryption zone root. Contributed by Zhe Zhang.
+DROP: 122e1daf : HADOOP-10131. NetWorkTopology#countNumOfAvailableNodes() is returning wrong value if excluded nodes passed are not part of the cluster tree (Contributed by Vinayakumar B)
+DROP: 3098a12a : YARN-2453. TestProportionalCapacityPreemptionPolicy fails with FairScheduler. (Zhihai Xu via kasha)
+DROP: ce5dcbae : MAPREDUCE-6095. Enable DistributedCache for uber-mode Jobs. Contributed by Gera Shegalov
+DROP: f64fefd6 : HDFS-7115. TestEncryptionZones assumes Unix path separator for KMS key store path. Contributed by Xiaoyu Yao.
+DROP: ff2910c5 : MAPREDUCE-5279. Made MR headroom calculation honor cpu dimension when YARN scheduler resource type is memory plus cpu. Contributed by Peng Zhang and Varun Vasudev.
+HUNK: 69616913 : YARN-1372. Ensure all completed containers are reported to the AMs across RM restart. Contributed by Anubhav Dhoot
+DROP: aec10e96 : HDFS-7106. Reconfiguring DataNode volumes does not release the lock files in removed volumes. (cnauroth via cmccabe)
+DROP: 10fa8123 : YARN-2540. FairScheduler: Queue filters not working on scheduler page in RM UI. (Ashwin Shankar via kasha)
+DROP: 0e31b1a5 : YARN-2539. FairScheduler: Set the default value for maxAMShare to 0.5. (Wei Yan via kasha)
+DROP: c0dab5ce : HDFS-7001. Tests in TestTracing should not depend on the order of execution. (iwasakims via cmccabe)
+DROP: 4eaed4de : HDFS-6990. Add unit test for evict/delete RAM_DISK block with open handle. (Contributed by Xiaoyu Yao)
+DROP: 2056d1fd : YARN-2584. TestContainerManagerSecurity fails on trunk. (Contributed by Jian He)
+DROP: 3e36b1e4 : YARN-1959. Fix headroom calculation in FairScheduler. (Anubhav Dhoot via kasha)
+DROP: cbb0b382 : YARN-2252. Intermittent failure of TestFairScheduler.testContinuousScheduling. (Ratandeep Ratti and kasha via kasha)
+DROP: fa07cc81 : HADOOP-11111 MiniKDC to use locale EN_US for case conversions
+DROP: 6438ff47 : HADOOP-11111 MiniKDC to use locale EN_US for case conversions: hadoop-common/CHANGES.TXT
+DROP: 61e809ff : HDFS-7126. TestEncryptionZonesWithHA assumes Unix path separator for KMS key store path. Contributed by Xiaoyu Yao.
+DROP: d8870fdc : YARN-2569. Added the log handling APIs for the long running services. Contributed by Xuan Gong.
+DROP: 79db9aea : HADOOP-11092. hadoop shell commands should print usage if not given a class (aw)
+COMP: c2a1f386 : HDFS-7132. hdfs namenode -metadataVersion command does not honor configured name dirs. Contributed by Charles Lamb.
+DROP: 5302937c : HDFS-7130. TestDataTransferKeepalive fails intermittently on Windows. Contributed by Chris Nauroth.
+TEST: 26d391ff : Merge branch 'trunk' into HDFS-6581
+TEST: fea1ad2f : HDFS-7143. Fix findbugs warnings in HDFS-6581 branch. (Contributed by Tsz Wo Nicholas Sze)
+TEST: 569ed025 : HDFS-6932. Balancer and Mover tools should ignore replicas on RAM_DISK. (Contributed by Xiaoyu Yao)
+DROP: 62775d2c : HADOOP-11101. How about inputstream close statement from catch block to finally block in FileContext#copy() ( Contributed by skrho )
+DROP: 08ec21b0 : MAPREDUCE-6078. native-task: fix gtest build on macosx (Binglin Chang)
+COMP: 1a9d7f8f : HDFS-7118. Improve diagnostics on storage directory rename operations by using NativeIO#renameTo in Storage#rename. Contributed by Chris Nauroth.
+TEST: f3a2826b : HDFS-7144. Fix findbugs warnings in RamDiskReplicaTracker. (Contributed by Tsz Wo Nicholas Sze)
+DROP: 3b5b1ee3 : HDFS-7111. TestSafeMode assumes Unix line endings in safe mode tip. Contributed by Chris Nauroth.
+DROP: 8d9aeee5 : HDFS-7127. TestLeaseRecovery leaks MiniDFSCluster instances. Contributed by Chris Nauroth.
+DROP: 63c94133 : MAPREDUCE-6109. Fix minor typo in distcp -p usage text (Charles Lamb via aw)
+DROP: a5092cd7 : MAPREDUCE-6093. minor distcp doc edits (Charles Lamb via aw)
+TEST: e08d0c72 : Merge branch 'trunk' into HDFS-6581
+DROP: d94cc8e6 : Fix test build break after merging from trunk
+DROP: 0e74cd65 : Add HDFS-7148 to CHANGES.txt, branch-2 only commit.
+DROP: 105052bf : HADOOP-11140. hadoop-aws only need test-scoped dependency on hadoop-common's tests jar. Contributed by Juan Yu.
+DROP: 73584e62 : MAPREDUCE-5831. Make MR client ignore unknown counters received from AM. Contributed by Junping Du.
+DROP: a52e60b1 : CHANGES.txt: move HDFS-6584 and its subtasks to Release 2.6.0.
+TEST: c75b7ad2 : HDFS-6956. Allow dynamically changing the tracing level in Hadoop servers (cmccabe)
+DROP: e03d609a : YARN-2577. Clarify ACL delimiter and how to configure ACL groups only (Mikos Christine via aw)
+TEST: 19cc3dde : HDFS-7155. Bugfix in createLocatedFileStatus caused by bad merge. (Arpit Agarwal)
+DROP: 95f411b0 : HADOOP-8808. Update FsShell documentation to mention deprecation of some of the commands, and mention alternatives (Akira AJISAKA via aw)
+DROP: 74487940 : MAPREDUCE-6073. Description of mapreduce.job.speculative.slowtaskthreshold in mapred-default should be moved into description tags (Tsuyoshi OZAWA via aw)
+DROP: 6e307252 : HADOOP-10954. Adding site documents of hadoop-tools (Masatake Iwasaki via aw)
+DROP: 8e850c01 : HDFS-6664. HDFS permissions guide documentation states incorrect default group mapping class. (Ray Chiang via aw)
+DROP: 941728c0 : YARN-2372. There are Chinese Characters in the FairScheduler's document (Fengdong Yu via aw)
+DROP: 68d7d531 : HADOOP-11048. user/custom LogManager fails to load if the client classloader is enabled. Contributed by Sangjin Lee
+DROP: 0c7cc5dc : MAPREDUCE-5796. Use current version of the archive name in DistributedCacheDeploy document (Akira AJISAKA via aw)
+DROP: 21f89116 : MAPREDUCE-5945. Update the description of GenericOptionsParser -jt option (Akira AJISAKA via aw)
+DROP: 12eb4bf9 : HADOOP-10731. Remove @date JavaDoc comment in ProgramDriver class (Henry Saputra via aw)
+DROP: a6ce9f2b : HADOOP-10552. Fix usage and example at FileSystemShell.apt.vm (Kenji Kikushima via aw)
+DROP: 696ed975 : YARN-668. Changed NMTokenIdentifier/AMRMTokenIdentifier/ContainerTokenIdentifier to use protobuf object as the payload. Contributed by Junping Du.
+DROP: 0b5da852 : MAPREDUCE-6087. Fixed wrong config name of MRJobConfig#MR_CLIENT_TO_AM_IPC_MAX_RETRIES_ON_TIMEOUTS. Contributed by Akira AJISAKA
+DROP: af3fcacc : HADOOP-11143 NetUtils.wrapException loses inner stack trace on BindException
+DROP: 6fc3b28a : HDFS-7156. Update fsck documentation. Contributed by Masahiro Yamaguch.
+TEST: 1a89f0e4 : HDFS-7093. Add config key to restrict setStoragePolicy. (Arpit Agarwal)
+TEST: 3aa6b2a1 : HDFS-7153. Add storagePolicy to NN edit log during file creation. (Arpit Agarwal)
+DROP: 4e63d467 : YARN-1769. CapacityScheduler: Improve reservations. Contributed by Thomas Graves
+DROP: e3cade4d : HADOOP-11049. javax package system class default is too broad. Contributed by Sangjin Lee
+DROP: 7baab61a : MAPREDUCE-6072. Remove INSTALL document (Akira AJISAKA via aw)
+DROP: 173cdc9f : HDFS-6519. Document oiv_legacy command (Akira AJISAKA via aw)
+DROP: 9f17ec13 : HDFS-4227. Document dfs.namenode.resource.* (Daisuke Kobayashi via aw)
+DROP: 18ef705a : Move HDFS-4165 from trunk to 2.6.0 in CHANGES.txt.
+DROP: 9211ece2 : MAPREDUCE-6094. TestMRCJCFileInputFormat.testAddInputPath() fails on trunk. Contributed by Akira AJISAKA
+DROP: 180aa9ca : HADOOP-11084. Jenkins patchprocess links are broken. (Arpit Agarwal)
+DROP: b43cd662 : HDFS-7157. Using Time.now() for recording start/end time of reconfiguration tasks (Lei Xu via Colin Patrick McCabe)
+TEST: 352f2482 : HDFS-7104. Fix and clarify INodeInPath getter functions. Contributed by Zhe Zhang.
+DROP: 33fe7b0e : HADOOP-11110. JavaKeystoreProvider should not report a key as created if it was not flushed to the backing file. (Arun Suresh via wang)
+DROP: b5178716 : Move HDFS-7157 to HDFS CHANGES.txt
+TEST: 269a2fc3 : HDFS-7124. Remove EncryptionZoneManager.NULL_EZ. (clamb via wang)
+DROP: 7f7a6941 : YARN-2606. Application History Server tries to access hdfs before doing secure login (Mit Desai via jeagles)
+COMP: 430ed324 : HDFS-7122. Use of ThreadLocal<Random> results in poor block placement. (wang)
+DROP: 3ad213af : HADOOP-11153. Make number of KMS threads configurable. (wang)
+DROP: 3792f5ad : HADOOP-11130. NFS updateMaps OS check is reversed. Contributed by Brandon Li
+DROP: 940fe78d : HDFS-6779. Add missing version subcommand for hdfs. Contributed by Sasaki Toru.
+TEST: 41f5467f : HDFS-7159. Use block storage policy to set lazy persist preference. (Arpit Agarwal)
+TEST: c087b4fd : HDFS-7129. Metrics to track usage of memory for writes. (Contributed by Xiaoyu Yao)
+TEST: d417660f : Merge branch 'trunk' into HDFS-6581
+TEST: 58e1e625 : Merge branch 'trunk' into HDFS-6581
+TEST: 5c01ca50 : HDFS-7171. Fix Jenkins failures in HDFS-6581 branch. (Arpit Agarwal)
+DROP: d1981b84 : YARN-2179. [YARN-1492] Initial cache manager structure and context. (Chris Trezzo via kasha)
+DROP: 1ad51454 : HDFS-6754. TestNamenodeCapacityReport.testXceiverCount may sometimes fail due to lack of retry. Contributed by Mit Desai.
+DROP: e750d196 : HDFS-6581. Update CHANGES.txt in preparation for trunk merge

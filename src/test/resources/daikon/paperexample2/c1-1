@@ -1,0 +1,28 @@
+class A {
+    int f() {
+        B b = new B();
+        return b.g();
+    }
+}
+
+class B {
+    int x = 1;
+    //x
+    //is
+    //1
+    String s = "abc";
+    //s
+    //is
+    //abc
+
+    int g() {
+        int z = h(s, x);
+        return z;
+    }
+    
+    int h(String v, int t) {
+        return v == null ? 0 : t;
+    }
+    //m is
+    //a new method
+}

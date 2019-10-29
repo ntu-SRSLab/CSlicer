@@ -1,0 +1,232 @@
+[DEBUG] Picking d8309fe1b0dac3a4eec7b63afd0a7f5197e6736f : HDFS-6924. Add new RAM_DISK storage type. (Arpit Agarwal)
+[DEBUG] Picking 40935aeda42d5081ad79c02917ac023aebf29704 : HDFS-6922. Add LazyPersist flag to INodeFile, save it in FsImage and edit logs. (Arpit Agarwal)
+[DEBUG] Picking 23e888fd2406d66e3779ab884087cb782c756c73 : HDFS-6923. Propagate LazyPersist flag to DNs via DataTransferProtocol. (Arpit Agarwal)
+[DEBUG] Picking 9d75f7af0903dfd0fc75e12964e59cab6fe4eccd : HDFS-6925. DataNode should attempt to place replicas on transient storage first if lazyPersist flag is received. (Arpit Agarwal)
+[DEBUG] Picking f290816405e0401ba4bfcd5ff4c09b022570183c : HDFS-6926. DN support for saving replicas to persistent storage and evicting in-memory replicas. (Arpit Agarwal)
+[DEBUG] Picking 5c4abe9e3d97de7503424e10e23d947f7023ba9e : HDFS-6927. Initial unit tests for Lazy Persist files. (Arpit Agarwal)
+[DEBUG] Picking 59dfe5bde71b19aa290d55e6852d2b4922caf85e : HDFS-6929. NN periodically unlinks lazy persist files with missing replicas from namespace. (Arpit Agarwal)
+[DEBUG] Picking 77c13e87131f969e925ef871e8d5310f8e03a3b0 : HDFS-6928. 'hdfs put' command should accept lazyPersist flag for testing. (Arpit Agarwal)
+[DEBUG] Picking e807ae547902a5497ff56fce7a36ad537ee25f83 : HADOOP-10880. Move HTTP delegation tokens out of URL querystring to a header. (tucu)
+[DEBUG] Picking 8448ab5209bf4867a221928f40e1dca97b8a3f7f : Fixing CHANGES.txt, moving HADOOP-8815 to 2.6.0 release
+[DEBUG] Picking f1568e44cc23c0686c3cc35e4c094214a1749a10 : Fix up CHANGES.txt for HDFS-6134, HADOOP-10150 and related JIRAs following merge to branch-2
+[DEBUG] Picking 84be7c6c05bc1c022aac9bd9b73052a5ff1787dc : Fix typos in log messages. Contributed by Ray Chiang
+[DEBUG] Picking 6b349315f778d8a07f3f42d0641f209165f2f972 : Merge remote-tracking branch 'apache-commit/trunk' into HDFS-6581
+[DEBUG] Picking a1b4b6eb0f5f1a4a93eedabf4582dca0e411c2d0 : HDFS-6960. Bugfix in LazyWriter, fix test case and some refactoring. (Arpit Agarwal)
+[DEBUG] Picking fc90547890ac3319d95a6107aee236cbaad52707 : HDFS-6931. Move lazily persisted replicas to finalized directory on DN startup. (Arpit Agarwal)
+[DEBUG] Picking 861b624dbf6836f6e0fd360faad9ced2a2696f07 : Merge remote-tracking branch 'apache-commit/trunk' into HDFS-6581
+[DEBUG] Picking 81b49d4d0054086204ab42a607cb5c68e2827a85 : HDFS-6950. Add Additional unit tests for HDFS-6581. (Contributed by Xiaoyu Yao)
+[DEBUG] Picking 23e6f418a83db0400f82435d71e6230e6c0f73f7 : HDFS-6930. Improve replica eviction from RAM disk. (Arpit Agarwal)
+[DEBUG] Picking 0765bb5c5ace64283f2f8fcaa6250cf9ebc0c0a9 : HADOOP-11033. shell scripts ignore JAVA_HOME on OS X. (aw)
+[DEBUG] Picking a6a96d1395fbd021bb2fce39074f86c1f551fc9b : HDFS-6634. inotify in HDFS. Contributed by James Thomas.
+[DEBUG] Picking 1a3e71f4b0462e04263ede64124d059e2e66e75e : HDFS-6954. With crypto, no native lib systems are too verbose. Contributed by Charles Lamb.
+[DEBUG] Picking 8d3546cd04e572f7daf905414cce80889278d9ac : HDFS-2975. Rename with overwrite flag true can make NameNode to stuck in safemode on NN (crash + restart). (Yi Liu via umamahesh)
+[DEBUG] Picking ab2ba1532b14e8a74d1dfd8a5596c1f338ee0a42 : HADOOP-11001. Fix test-patch to work with the git repo. (kasha)
+[DEBUG] Picking 9c209cff369a31362f87e3b6354f4eb1d30837ab : HADOOP-11036. Add build directory to .gitignore (Tsuyoshi OZAWA via aw)
+[DEBUG] Picking 81fe002c6570d478ae154028044b86b806903e4f : HADOOP-11012. hadoop fs -text of zero-length file causes EOFException. Contributed by Eric Payne
+[DEBUG] Picking a3f8b3193cda104c537e737394c13f9bfed5d6bc : HDFS-4257. The ReplaceDatanodeOnFailure policies could have a forgiving option.  Contributed by szetszwo.
+[DEBUG] Picking 5053ad4f3540d595825ddd455587765b70d549e2 : HDFS-6972. TestRefreshUserMappings.testRefreshSuperUserGroupsConfiguration doesn't decode url correctly. Contributed by Yongjun Zhang.
+[DEBUG] Picking 6bca3bd868fe006fc8742c49656ac049123e5e08 : HDFS-6942. Fix typos in log messages. Contributed by Ray Chiang.
+[DEBUG] Picking bc560f9a600f4de356c7cd0af4a71ad3561960f6 : HADOOP-10994. KeyProviderCryptoExtension should use CryptoCodec for generation/decryption of keys. (tucu)
+[DEBUG] Picking 01eca7c432df7f89845d88d85f9186bee961b4e7 : Add CHANGES.txt for HADOOP-11021.
+[DEBUG] Picking f3ada6e9a4d8b7ff738bf30eeddbf369a55c07f2 : HADOOP-11030. Define a variable jackson.version instead of using constant at multiple places. (Juan Yu via kasha)
+[DEBUG] Picking 38db77fe98bef881a4455c33cd161a65b3a69c2a : HADOOP-10990. Add missed NFSv3 request and response classes. Contributed by Brandon Li
+[DEBUG] Picking 162a44f118b603a65a6659b260f8edf4da62c0b7 : YARN-2360. Fair Scheduler: Display dynamic fair share for queues on the scheduler page. (Ashwin Shankar and Wei Yan via kasha)
+[DEBUG] Picking 3a6468a37910e490562f4937cb4eae82b823cdd4 : YARN-1506. Changed RMNode/SchedulerNode to update resource with event notification. Contributed by Junping Du
+[DEBUG] Picking 81f642c3c2697d1fa4a532371e994b042b8555cb : Merge trunk into HDFS-6581
+[DEBUG] Picking 914598ce7444e94744aa7a69788369e6779c86ba : Merge trunk into HDFS-6581
+[DEBUG] Picking 83a7c1915e8afe9f98a3b129300ea779d56b76ea : HDFS-6977. Delete all copies when a block is deleted from the block space. (Arpit Agarwal)
+[DEBUG] Picking 8dffb58f189ddb39a4c13e5118a608d125e39205 : HDFS-6991. Notify NN of evicted block before deleting it from RAM disk. (Arpit Agarwal)
+[DEBUG] Picking 967d932040009fa0035ffeb926acb1af6bf0beaf : HDFS-6893. crypto subcommand is not sorted properly in hdfs\'s hadoop_usage (David Luo via aw)
+[DEBUG] Picking c568382c19e07664e494b91746d7a04577d6d330 : HDFS-7005. DFS input streams do not timeout. Contributed by Daryn Sharp.
+[DEBUG] Picking cc6c73d89d112c31c8878c23735afa9dd21bb9fb : Merge branch 'trunk' into HDFS-6581
+[DEBUG] Picking 1311c92feec94c52d9de069d00b5ab818cde6dbe : HDFS-6940. Refactoring to allow ConsensusNode implementation. Contributed by Konstantin Shvachko.
+[DEBUG] Picking 139628d1397677e9970e45726eb615f91c8baca8 : HDFS-6943. Improve NN allocateBlock log to include replicas' datanode IPs. Contributed by Ming Ma.
+[DEBUG] Picking cf4feb8555cbaf06322675d70405597fcb24ce65 : HDFS-6036. Forcibly timeout misbehaving DFSClients that try to do no-checksum reads that extend too long.  (cmccabe)
+[DEBUG] Picking 58856a0caf50a64465c9fce0c3aec6ab594f0eb6 : HDFS-6482. Fix CHANGES.txt in trunk
+[DEBUG] Picking 481a8999f7bb8da5adfd784d7b9f52f338923f50 : HADOOP-11069. KMSClientProvider should use getAuthenticationMethod() to determine if in proxyuser mode or not. (tucu)
+[DEBUG] Picking 9c467b811f4d7664ac12b2d5220348cb21b68a98 : Credential Provider related Unit Test Failure on Windows. Contributed by Xiaoyu Yao.
+[DEBUG] Picking e477016d1ea7a469c2120fd05d2b3dfa4e5c60af : HADOOP-11071. KMSClientProvider should drain the local generated EEK cache on key rollover. (tucu)
+[DEBUG] Picking 03c797377686c5effe19f7d81d51f03d12ab64bd : HADOOP-10925. Change attribution in CHANGES.txt from trunk to 2.6.0.
+[DEBUG] Picking 3f998940a66f53d7f740a8e263ba7b83fe9f2d20 : HADOOP-11077. NPE if hosts not specified in ProxyUsers. (gchanan via tucu)
+[DEBUG] Picking 2e1f6e21908ef4af8951392bdc9e8f1efa5c9dfb : HADOOP-9989. Bug introduced in HADOOP-9374, which parses the -tokenCacheFile as binary file but set it to the configuration as JSON file. (zxu via tucu)
+[DEBUG] Picking 58385bbf2cbc37cb11446ba1554525401c3f66d2 : HADOOP-11085. Excessive logging by org.apache.hadoop.util.Progress when value is NaN. Contributed by Mit Desai
+[DEBUG] Picking dfb0d19d1b8edd0f184ef4ec1c88bcd108674082 : HADOOP-11083. After refactoring of HTTP proxyuser to common, doAs param is case sensitive. (tucu)
+[DEBUG] Picking 14511cfd1ac1f770c1ae7f216856e81afef2ac4e : YARN-2512. Allowed pattern matching for origins in CrossOriginFilter. Contributed by Jonathan Eagles.
+[DEBUG] Picking 3fbf48dbda2bd2f5bfe0b4887612402c29bd573d : YARN-2507. Documented CrossOriginFilter configurations for the timeline server. Contributed by Jonathan Eagles.
+[DEBUG] Picking cbdb736de1eda7579256d69438821619fd35b102 : YARN-2515. Updated ConverterUtils#toContainerId to parse epoch. Contributed by Tsuyoshi OZAWA
+[DEBUG] Picking bf32e00591dbbe6c06b7da5e16d5b2256c31c48c : YARN-2395. FairScheduler: Preemption timeout should be configurable per queue. (Wei Yan via kasha)
+[DEBUG] Picking 032e3d993eeb17a5654560bba6f39b30a6d64df0 : YARN-2394. FairScheduler: Configure fairSharePreemptionThreshold per queue. (Wei Yan via kasha)
+[DEBUG] Picking 293d140ca7fcb36d03f9e018676e9c27be064507 : YARN-415. Capture aggregate memory allocation at the app-level for chargeback. Contributed by Eric Payne & Andrey Klochkov
+[DEBUG] Picking bde36ef8a3f0d9d8be4dd9a490f5ba5465009ca7 : YARN-2440. Enabled Nodemanagers to limit the aggregate cpu usage across all containers to a preconfigured limit. Contributed by Varun Vasudev.
+[DEBUG] Picking 3b3a46f8772c136b3df7af2ad2508768bc96b83e : YARN-2033. Merging generic-history into the Timeline Store (Contributed by Zhijie Shen)
+[DEBUG] Picking 0964a04a3485373027c14fa4fa75d41503d31450 : YARN-2448. Changed ApplicationMasterProtocol to expose RM-recognized resource types to the AMs. Contributed by Varun Vasudev.
+[DEBUG] Picking 0fb28838125e8e0f20169bec3cd67e33b487f577 : YARN-2538. Added logs when RM sends roll-overed AMRMToken to AM. Contributed by Xuan Gong.
+[DEBUG] Picking 3983ce3daadfda1457f077912f3e4081a2ea410a : YARN-2229. Changed the integer field of ContainerId to be long type. Contributed by Tsuyoshi OZAWA
+[DEBUG] Picking 0aa1f8e24deb23651335d41a9e60bf179c25825f : MAPREDUCE-5972. Fix typo 'programatically' in job.xml (and a few other places) (Akira AJISAKA via aw)
+[DEBUG] Picking 9f0763129308e45b329a88b5fee8fb8bd702c8a3 : HDFS-6986. DistributedFileSystem must get delegation tokens from configured KeyProvider. (zhz via tucu)
+[DEBUG] Picking 5a527d570ee0e4f1183c27a37055bd7f33d36bf0 : HDFS-6776. Using distcp to copy data between insecure and secure cluster via webdhfs doesn't work. (yzhangal via tucu)
+[DEBUG] Picking 50dc06a042370dd7b38105d8796033d18dca60bf : HDFS-7042. Upgrade fails for Windows HA cluster due to file locks held during rename in JournalNode. Contributed by Chris Nauroth.
+[DEBUG] Picking dfd76ca20e42e3853893c6b15a17512cc5134b25 : MAPREDUCE-6075. HistoryServerFileSystemStateStore can create zero-length files. Contributed by Jason Lowe
+[DEBUG] Picking bce68733706d8e726668a63b06286a8d20d120c5 : MAPREDUCE-6070. yarn.app.am.resource.mb/cpu-vcores affects uber mode but is not documented. Contributed by Tsuyoshi OZAWA
+[DEBUG] Picking 837d3574e3a40735f252e293e658519b522525fc : YARN-2526. SLS can deadlock when all the threads are taken by AMSimulators. (Wei Yan via kasha)
+[DEBUG] Picking f5a2631950d1e10905fbcbc02b2085f8c21f513b : YARN-1458. FairScheduler: Zero weight can lead to livelock. (Zhihai Xu via kasha)
+[DEBUG] Picking 486f841fa9f4693797c2bc7c2013a826356b84d9 : YARN-2459. RM crashes if App gets rejected for any reason and HA is enabled. Contributed by Jian He
+[DEBUG] Picking 971de06f6815d016f9645ef582802dcdf0471b31 : YARN-2158. Fixed TestRMWebServicesAppsModification#testSingleAppKill test failure. Contributed by Varun Vasudev
+[DEBUG] Picking 0b68461cca7a5e9d5a528b0e2b9abc8284749bcd : YARN-2534. FairScheduler: Potential integer overflow calculating totalMaxShare. (Zhihai Xu via kasha)
+[DEBUG] Picking 435015ec468d15785f4aaa745fe6892db3090118 : Update CHANGES.txt to set the release date for 2.5.1
+[DEBUG] Picking 81db854199ec367fea0ec460464a5755109cba44 : HADOOP-10956. Fix create-release script to include docs and necessary txt files. (kasha)
+[DEBUG] Picking 2363931efcc50e52b9dc7b7d8e6bd435ae0499aa : YARN-2541. Fixed ResourceManagerRest.apt.vm table syntax error. Contributed by Jian He
+[DEBUG] Picking baec6150c81634f854c60167d4ea435fc33c769e : YARN-2484. FileSystemRMStateStore#readFile/writeFile should close FSData(In|Out)putStream in final block. Contributed by Tsuyoshi OZAWA
+[DEBUG] Picking 8ebed8860822072ddd337c79d2c628ace9ca6804 : Merge branch 'trunk' into HDFS-6581
+[DEBUG] Picking e033589217c79b63e6c6d45239d1251624685a25 : HDFS-6978. Directory scanner should correctly reconcile blocks on RAM disk. (Arpit Agarwal)
+[DEBUG] Picking efe1f0cab7808b477f08ebd7b01b3bf875e105f9 : HDFS-7066. LazyWriter#evictBlocks misses a null check for replicaState. (Contributed by Xiaoyu Yao)
+[DEBUG] Picking a5a93225269f6abb0a545436f0b6df851e92e2ad : HDFS-7061. Add test to verify encryption zone creation after NameNode restart without saving namespace. Contributed by Stephen Chu.
+[DEBUG] Picking 570c55310a7a714a4a966acbd987bd12a5b3d8d2 : HDFS-7059. HAadmin transtionToActive with forceActive option can show confusing message. Contributed by Rushabh Shah.
+[DEBUG] Picking 68436f721a73e9f9b3187a7143eac710de558a41 : HADOOP-11070. Create MiniKMS for testing. (tucu)
+[DEBUG] Picking 686cf4dde5a374abf8e2cbfac4ced35e7f1c271c : HADOOP-11057. checknative command to probe for winutils.exe on windows. Contributed by Xiaoyu Yao.
+[DEBUG] Picking a3608ad5ba6bd75a0355bb0f76b50c234a4c5d2c : HADOOP-10758. KMS: add ACLs on per key basis. (tucu)
+[DEBUG] Picking e4fab69a6cd528eadf97751e6be46071825f223e : HADOOP-9540: move CHANGES.txt entry to 2.6
+[DEBUG] Picking e1894b0b1ea7102ed0dca558f802fc6c9ea3ed80 : HADOOP-11041. VersionInfo specifies subversion (Tsuyoshi OZAWA via aw)
+[DEBUG] Picking 89b8e0f0115b6ce41bbe0bfd5d5107aa0c9439fd : HADOOP-10373 create tools/hadoop-amazon for aws/EMR support
+[DEBUG] Picking e6b34b43dad187341da9bd04022554a9c6f01986 : HADOOP-10373: move CHANGES.txt entry to branch-2.6
+[DEBUG] Picking 2cccc18623cf8c8b0a5acdc86f5b515d781eceb8 : HADOOP-11074. Add JIRA to CHANGES.txt
+[DEBUG] Picking 33d44f5d805184245395fb8b9b99b38ea6e681a7 : Newly moved block replica been invalidated and deleted in TestBalancer. Contributed by Binglin Chang.
+[DEBUG] Picking ec3da77115c97d268a1f4e8db5ab83821ae17ceb : HDFS-6966. Add additional unit tests for encryption zones. Contributed by Stephen Chu.
+[DEBUG] Picking d541aa82cc0d737047283198972e740028a42613 : HDFS-6621. Hadoop Balancer prematurely exits iterations. Contributed by Rafal Wodjdyla and Benjamin Bowman.
+[DEBUG] Picking bac611d949263dbc700d8b0d217b017a07d8985f : HDFS-7045. Fix NameNode deadlock when opening file under /.reserved path. Contributed by Yi Liu.
+[DEBUG] Picking 15c65ee074c9c72085578f3dfc7d048484a94719 : HDFS-7032. Add WebHDFS support for reading and writing to encryption zones. Contributed by Charles Lamb.
+[DEBUG] Picking e8afb3c1e041975c0edffb3953cf4798b7cbf7c7 : YARN-611. Added an API to let apps specify an interval beyond which AM failures should be ignored towards counting max-attempts. Contributed by Xuan Gong.
+[DEBUG] Picking 340110bafc9ebe4b028195d0a04593a69d832773 : HADOOP-11074. Move s3-related FS connector code to hadoop-aws. (David S. Wang via Colin Patrick McCabe)
+[DEBUG] Picking 1e6b33c49b84405fd80b31baa7f36e1c4bcf9709 : HADOOP-10400. Incorporate new S3A FileSystem implementation. Contributed by Jordan Mendelson and Dave Wang.
+[DEBUG] Picking d2d0fad199e6b450c4ad139797161e69d3e89371 : Merge branch 'trunk' into HDFS-6581
+[DEBUG] Picking bbbbaa9eafacbf69045b9af3245e83a863ad5143 : HDFS-7064. Fix unit test failures in HDFS-6581 branch. (Contributed by Xiaoyu Yao)
+[DEBUG] Picking 53aa1835504f8164041294ee92f0dd804c940600 : HDFS-7079. Few more unit test fixes for HDFS-6581. (Arpit Agarwal)
+[DEBUG] Picking d70cd7044b63117d27e73ed34ff3348d098f9035 : HDFS-7006. Test encryption zones with KMS. (Anthony Young-Garner and tucu)
+[DEBUG] Picking d5a10ce819c94a467b50e457da541a8a93c1e088 : HDFS-6851. Refactor EncryptionZoneWithId and EncryptionZone. (clamb via wang)
+[DEBUG] Picking 2b46a81ae89e342132461bc1a63abda49773e896 : HADOOP-10922. User documentation for CredentialShell. Contributed by Larry McCay.
+[DEBUG] Picking e707953783eb3c5986d3875214a9a26dc4c8fa31 : HDFS-6912. SharedFileDescriptorFactory should not allocate sparse files (cmccabe)
+[DEBUG] Picking 9004e35abbcec73ab39173fe2e8dcf1fc6330ff2 : Merge branch 'trunk' into HDFS-6581
+[DEBUG] Picking 81b42d25f65405405e22ca042a515cb3c75e1b25 : HDFS-7080. Fix finalize and upgrade unit test failures. (Arpit Agarwal)
+[DEBUG] Picking 49cf925d079ada88b59fb87510601cc8484389a2 : HDFS-7084. FsDatasetImpl#copyBlockFiles debug log can be improved. (Contributed by Xiaoyu Yao)
+[DEBUG] Picking 5af3e54a610090adebfb54e63c2f660e40de5975 : HDFS-7091. Add forwarding constructor for INodeFile for existing callers. (Arpit Agarwal)
+[DEBUG] Picking ef38fe8d90470c8186d0276917939cfb0eb570dc : HADOOP-11016. KMS should support signing cookies with zookeeper secret manager. (tucu)
+[DEBUG] Picking ae953936d981aa2c097eee3078363f1ce75f4786 : HADOOP-10982
+[DEBUG] Picking f169784c2914660cc927f9e342d029a34d015ddb : Revert "HADOOP-10982"
+[DEBUG] Picking d757c28111c48f1ba65cd3cdc9a72e192ece3f46 : Revert "HADOOP-11016. KMS should support signing cookies with zookeeper secret manager. (tucu)"
+[DEBUG] Picking 01f91c45494dd06afa16953b8b52e34d2262ae2c : HADOOP-11016. KMS should support signing cookies with zookeeper secret manager. (tucu)
+[DEBUG] Picking 24d0b5e09d4a8019a5aa43b41f16ee86dea99d36 : HADOOP-11040. Return value of read(ByteBuffer buf) in CryptoInputStream is incorrect in some cases. (Yi Liu via wang)
+[DEBUG] Picking 43a90137aa44704862dfb1faf30fd1434e804402 : HDFS-6789. TestDFSClientFailover.testFileContextDoesntDnsResolveLogicalURI and TestDFSClientFailover.testDoesntDnsResolveLogicalURI failing on jdk7. Contributed by Akira Ajisaka.
+[DEBUG] Picking 58e369927b33678cbc85b3f76aa1bd6cf6425aaf : HDFS-6705. Create an XAttr that disallows the HDFS admin from accessing a file. (clamb via wang)
+[DEBUG] Picking 9c4b33f533771ecdafe2bd5446f528e0a3076083 : Move some HDFS JIRAs to the correct CHANGES.txt
+[DEBUG] Picking 871e62ce442ecf0f417d5bff8b1d9f59dae1c79e : HDFS-7078. Fix listEZs to work correctly with snapshots. (wang)
+[DEBUG] Picking 4c663ab871acc687bcd87161dc9d45b6804a54bd : Revert HDFS-6940.
+[DEBUG] Picking 1d4929b5d7263f01e394551d0c765d5d31da1827 : HDFS-7004. Update KeyProvider instantiation to create by URI. (wang)
+[DEBUG] Picking 30e4161d0edb92887f1a5e20351686a6fd2f865c : HDFS-7047. Expose FileStatus#isEncrypted in libhdfs (cmccabe)
+[DEBUG] Picking 7804008042c83e9a864357f2f6aa99a32744a4f0 : HDFS-7003. Add NFS Gateway support for reading and writing to encryption zones. (clamb via wang)
+[DEBUG] Picking 6d4f68b7a1f6dda7e6e8dca986739cdf4b90da5f : HADOOP-11096. KMS: KeyAuthorizationKeyProvider should verify the keyversion belongs to the keyname on decrypt. (tucu)
+[DEBUG] Picking 817d7dc63938ac8629767a65a0c43922e28cf667 : HADOOP-11097. kms docs say proxyusers, not proxyuser for config params. (clamb via tucu)
+[DEBUG] Picking e2eea7571f2c47a0f578f5936b61187bef769fce : HADOOP-11062. CryptoCodec testcases requiring OpenSSL should be run only if -Pnative is used. (asuresh via tucu)
+[DEBUG] Picking ec8f72abadd3c30423a62df35336b1414c81a0d5 : HADOOP-11099. KMS return HTTP UNAUTHORIZED 401 on ACL failure. (tucu)
+[DEBUG] Picking 1447f2730b0baa513ac02cd334d2d2272f19e72c : HADOOP-11105. Update CHANGES.txt.
+[DEBUG] Picking b9ad9c7f76efae2eed71be85d9a3d0ee61640e79 : Merge branch 'trunk' into HDFS-6581
+[DEBUG] Picking 4fb916eb482e964769d6b45621a7f63ed926d39b : HDFS-7100. Make eviction scheme pluggable. (Arpit Agarwal)
+[DEBUG] Picking d4dc9c7ec8defea51e7d9a6c76cd1bde2b3157a6 : HDFS-7108. Fix unit test failures in SimulatedFsDataset. (Arpit Agarwal)
+[DEBUG] Picking 645cae8342a9ca696aabfcd9eacaf395e5cce723 : HDFS-7071. Updated editsStored and editsStored.xml to bump layout version and add LazyPersist flag. (Contributed by Xiaoyu Yao and Arpit Agarwal)
+[DEBUG] Picking c872dad932100e5309c93e61eb385cbd06f49c1d : HDFS-7071. Undo accidental commit of binary file editsStored.
+[DEBUG] Picking 4eaed4dea7584355279a5d7cd19dbc8678c4ba12 : HDFS-6990. Add unit test for evict/delete RAM_DISK block with open handle. (Contributed by Xiaoyu Yao)
+[DEBUG] Picking 50abd4217825bd2f2f26e0b14577ed6a7badc68f : HADOOP-10946. Fix a bunch of typos in log messages (Ray Chiang via aw)
+[DEBUG] Picking 122e1daf08cc280077d90b181a07442e39b4405a : HADOOP-10131. NetWorkTopology#countNumOfAvailableNodes() is returning wrong value if excluded nodes passed are not part of the cluster tree (Contributed by Vinayakumar B)
+[DEBUG] Picking 69141a360ce7ddf74cb5d8cd46ce186a45018b86 : HDFS-7095. Archival Storage: TestStorageMover often fails in Jenkins. Contributed by Jing Zhao.
+[DEBUG] Picking 4743e867b1936a011c6eec838a85e3e1cec4fb2d : HDFS-6948. DN rejects blocks if it has older UC block. Contributed by Eric Payne.
+[DEBUG] Picking a7dc9f419a687c2350fd61e4b32c0d8d3a094071 : YARN-1250. Addendum
+[DEBUG] Picking d8870fdcbf1aa7415c855d0eb14f1639387ba22f : YARN-2569. Added the log handling APIs for the long running services. Contributed by Xuan Gong.
+[DEBUG] Picking 80e46a9681e98116ca69d08002f2b87d6b5b1f76 : YARN-2001. Added a time threshold for RM to wait before starting container allocations after restart/failover. Contributed by Jian He.
+[DEBUG] Picking 6961691380d069ece4fb87d497f56216eabfb82c : YARN-1372. Ensure all completed containers are reported to the AMs across RM restart. Contributed by Anubhav Dhoot
+[DEBUG] Picking c2c95703625209157e35a2a2d7abc9ff08ef728b : YARN-1250. Generic history service should support application-acls. (Contributed by Zhijie Shen)
+[DEBUG] Picking 217328e1d458600e6fbdf43940430379652e4c81 : YARN-2528. Relaxed http response split vulnerability protection for the origins header and made it accept multiple origins in CrossOriginFilter. Contributed by Jonathan Eagles.
+[DEBUG] Picking 39e2824327451126bd6359ed9ad3a38434c6ca64 : YARN-2549. TestContainerLaunch fails due to classpath problem with hamcrest classes. Contributed by Chris Nauroth.
+[DEBUG] Picking ec4d990ac175f9941e788a3ae3dbcd2ad3472a64 : YARN-2529. Generic history service RPC interface doesn't work when service authorization is enabled. Contributed by Zhijie Shen
+[DEBUG] Picking 2174b6e62f0cff884916b988c654f216dae98509 : YARN-2558. Updated ContainerTokenIdentifier#read/write to use ContainerId#getContainerId. Contributed by Tsuyoshi OZAWA.
+[DEBUG] Picking ffb3f52bef8ded91d3ddbc91b7ff0b721425f6be : YARN-2559. Fixed NPE in SystemMetricsPublisher when retrieving FinalApplicationStatus. Contributed by Zhijie Shen
+[DEBUG] Picking cbbd855c10c1c895e55439a94cc86536d99678f3 : YARN-1779. Fixed AMRMClient to handle AMRMTokens correctly across ResourceManager work-preserving-restart or failover. Contributed by Jian He.
+[DEBUG] Picking 950adc2d29ce909e6e6a3c204c427d5997970fbd : YARN-2363. Submitted applications occasionally lack a tracking URL. Contributed by Jason Lowe
+[DEBUG] Picking bba2139fdda02ee3ab3f64961dd62da3873f9662 : YARN-2561. MR job client cannot reconnect to AM after NM restart. Contributed by Junping Du
+[DEBUG] Picking 577661ad4790199b30c19321886fce2ed78df9d1 : YARN-2563. Fixed YarnClient to call getTimeLineDelegationToken only if the Token is not present. Contributed by Zhijie Shen
+[DEBUG] Picking f3d1d61f8e512c03b2a5b7bb469e731b01f4d8c2 : YARN-2568. Fixed the potential test failures due to race conditions when RM work-preserving recovery is enabled. Contributed by Jian He.
+[DEBUG] Picking 8f05e63f368c373e3b20811c9b0892df5e9d8821 : YARN-2565. Fixed RM to not use FileSystemApplicationHistoryStore unless explicitly set. Contributed by Zhijie Shen
+[DEBUG] Picking 7247dac0f67fdfb4264083e6a86a191ee8830829 : YARN-2460. Remove obsolete entries from yarn-default.xml (Ray Chiang via aw)
+[DEBUG] Picking f4b7b16c076f7952fc5286a3d866ebede8482f8b : YARN-2452. TestRMApplicationHistoryWriter fails with FairScheduler. (Zhihai Xu via kasha)
+[DEBUG] Picking 3098a12a17cedb497d36e41818cd929e2ef85921 : YARN-2453. TestProportionalCapacityPreemptionPolicy fails with FairScheduler. (Zhihai Xu via kasha)
+[DEBUG] Picking 10fa8123a5753b656684d22c16104c55dd162130 : YARN-2540. FairScheduler: Queue filters not working on scheduler page in RM UI. (Ashwin Shankar via kasha)
+[DEBUG] Picking 2056d1fde149400e9da764cbebc639583d871d89 : YARN-2584. TestContainerManagerSecurity fails on trunk. (Contributed by Jian He)
+[DEBUG] Picking cbb0b382dfcc08d5853698e9b8d2b11b14b3fff8 : YARN-2252. Intermittent failure of TestFairScheduler.testContinuousScheduling. (Ratandeep Ratti and kasha via kasha)
+[DEBUG] Picking 077c74ac87a457a03c6c46e27fa35aa2b70bd97e : HADOOP-11021. Configurable replication factor in the hadoop archive command. Contributed by Zhe Zhang.
+[DEBUG] Picking 03c592ad5665930bb25cdfea32e0c5a0dcfde906 : HADOOP-11106. Document considerations of HAR and Encryption. (clamb via wang)
+[DEBUG] Picking 1c913705cac28e1af55ce00e06bd5ed8764e8949 : HADOOP-10970. Cleanup KMS configuration keys. (wang)
+[DEBUG] Picking 6f9316b119a4196d2ef5522d4f94a9063bc61767 : HADOOP-11017. KMS delegation token secret manager should be able to use zookeeper as store. (asuresh via tucu)
+[DEBUG] Picking 36322021ba9018d79309c4a5311a0ad043d3e2aa : HDFS-7051. TestDataNodeRollingUpgrade#isBlockFileInPrevious assumes Unix file path separator. Contributed by Chris Nauroth.
+[DEBUG] Picking 8e08d8926efd824d6dbdeb5ae58cb433022a83d1 : HDFS-7105. Fix TestJournalNode#testFailToStartWithBadConfig to match log output change. Contributed by Ray Chiang.
+[DEBUG] Picking 9d7158bf96c853eef9db803f8edb0eff6abd792a : HDFS-7073. Allow falling back to a non-SASL connection on DataTransferProtocol in several edge cases. Contributed by Chris Nauroth.
+[DEBUG] Picking 19be1c38b909998ae716f4b306e67d91fc627cef : HDFS-7107. Avoid Findbugs warning for synchronization on AbstractNNFailoverProxyProvider#fallbackToSimpleAuth. Contributed by Chris Nauroth.
+[DEBUG] Picking c78bdcaa48bdc52ae9dc189c1fa3d53acedecfb5 : HDFS-7109. TestDataStorage does not release file locks between tests. Contributed by Chris Nauroth.
+[DEBUG] Picking b2cdb1ab81aaf2c43ed25bb068da0244e0f93866 : HDFS-7110. Skip tests related to short-circuit read on platforms that do not currently implement short-circuit read. Contributed by Chris Nauroth.
+[DEBUG] Picking f64fefd6a2f18d518204e2b80ae9157976ca8509 : HDFS-7115. TestEncryptionZones assumes Unix path separator for KMS key store path. Contributed by Xiaoyu Yao.
+[DEBUG] Picking 61e809ffbbb54deb79f01d855268731d8f11b944 : HDFS-7126. TestEncryptionZonesWithHA assumes Unix path separator for KMS key store path. Contributed by Xiaoyu Yao.
+[DEBUG] Picking 5302937c03b6f6b4e9477ea4550e0606585cf111 : HDFS-7130. TestDataTransferKeepalive fails intermittently on Windows. Contributed by Chris Nauroth.
+[DEBUG] Picking 18e86c2df162a53be910497f0804e9ef38511a84 : MAPREDUCE-6090. mapred hsadmin getGroups fails to connect in some cases. Contributed by Robert Kanter
+[DEBUG] Picking e81b59eeb5c8ef1239100940c63a1bb40d843879 : MAPREDUCE-6086. mapreduce.job.credentials.binary should allow all URIs. (Zhihai Xu via kasha)
+[DEBUG] Picking fa80a64de4b068cb3de6e2e27f6146d0a475fda8 : MAPREDUCE-6091. YARNRunner.getJobStatus() fails with ApplicationNotFoundException if the job rolled off the RM view. Contributed by Sangjin Lee
+[DEBUG] Picking ce5dcbae4b0d79eded0b628a0fe1020cfab1f7bc : MAPREDUCE-6095. Enable DistributedCache for uber-mode Jobs. Contributed by Gera Shegalov
+[DEBUG] Picking e760ef2422fb0942d5055ddb40ec1fb06472e872 : HDFS-6987. Move CipherSuite xattr information up to the encryption zone root. Contributed by Zhe Zhang.
+[DEBUG] Picking 26d391ff8dbfb4e285655f8b3d34f84e0ed60dc6 : Merge branch 'trunk' into HDFS-6581
+[DEBUG] Picking fea1ad2f19f4405893dde1736a5366d7f60a158d : HDFS-7143. Fix findbugs warnings in HDFS-6581 branch. (Contributed by Tsz Wo Nicholas Sze)
+[DEBUG] Picking 569ed02535de3089fd8a4827cc79020c9bec075f : HDFS-6932. Balancer and Mover tools should ignore replicas on RAM_DISK. (Contributed by Xiaoyu Yao)
+[DEBUG] Picking f3a2826b628adc46e691ba470b24128aa00b05c6 : HDFS-7144. Fix findbugs warnings in RamDiskReplicaTracker. (Contributed by Tsz Wo Nicholas Sze)
+[DEBUG] Picking 3b5b1ee336920a4bcf4fd4173b193baf461cfd21 : HDFS-7111. TestSafeMode assumes Unix line endings in safe mode tip. Contributed by Chris Nauroth.
+[DEBUG] Picking 8d9aeee5fc8e5f5e59a76b1d0b050d6c6da8bba9 : HDFS-7127. TestLeaseRecovery leaks MiniDFSCluster instances. Contributed by Chris Nauroth.
+[DEBUG] Picking 1a9d7f8fc95e113f92b174c816612a9167290551 : HDFS-7118. Improve diagnostics on storage directory rename operations by using NativeIO#renameTo in Storage#rename. Contributed by Chris Nauroth.
+[DEBUG] Picking e08d0c728c0e3962cbd861f254a9fd98e0da96f3 : Merge branch 'trunk' into HDFS-6581
+[DEBUG] Picking d94cc8e67416874dbfdfb220fb36ce3ba08435ce : Fix test build break after merging from trunk
+[DEBUG] Picking 19cc3dde9c3766995178f5225ec3430e52100787 : HDFS-7155. Bugfix in createLocatedFileStatus caused by bad merge. (Arpit Agarwal)
+[DEBUG] Picking 3aa6b2a11343863fad3fb2c3b05c43297e5e1097 : HDFS-7153. Add storagePolicy to NN edit log during file creation. (Arpit Agarwal)
+[DEBUG] Picking c75b7ad2da7179d6909310acbf33813281fd07b6 : HDFS-6956. Allow dynamically changing the tracing level in Hadoop servers (cmccabe)
+[DEBUG] Picking 6fc3b28a88361773da6d430447afbdeb69565413 : HDFS-7156. Update fsck documentation. Contributed by Masahiro Yamaguch.
+[DEBUG] Picking 1a89f0e40058fc132a9cac963ecd8ea4eaab50e6 : HDFS-7093. Add config key to restrict setStoragePolicy. (Arpit Agarwal)
+[DEBUG] Picking 41f5467fba7ee05fa3a3876e0b5bd18ca4df36a6 : HDFS-7159. Use block storage policy to set lazy persist preference. (Arpit Agarwal)
+[DEBUG] Picking c087b4fd3b894d3418f9b689464d0673946716fb : HDFS-7129. Metrics to track usage of memory for writes. (Contributed by Xiaoyu Yao)
+[DEBUG] Picking a52e60b1e44fd5cdc2070bda2e0fbb9a952f665e : CHANGES.txt: move HDFS-6584 and its subtasks to Release 2.6.0.
+[DEBUG] Picking 8e850c01a9a390abcb5eb905379037881904c0ad : HDFS-6664. HDFS permissions guide documentation states incorrect default group mapping class. (Ray Chiang via aw)
+[DEBUG] Picking 9f17ec1375374d0617b62bda8932f4384c5fce85 : HDFS-4227. Document dfs.namenode.resource.* (Daisuke Kobayashi via aw)
+[DEBUG] Picking 7f7a69416d592aa3d80084e74bb69eaf6650adcd : YARN-2606. Application History Server tries to access hdfs before doing secure login (Mit Desai via jeagles)
+[DEBUG] Picking 68d7d5314c4ea30265a85ca649f1a5b32d52a9b9 : HADOOP-11048. user/custom LogManager fails to load if the client classloader is enabled. Contributed by Sangjin Lee
+[DEBUG] Picking a6ce9f2bf692411b6ec1605c1f97cbb7778d192d : HADOOP-10552. Fix usage and example at FileSystemShell.apt.vm (Kenji Kikushima via aw)
+[DEBUG] Picking af3fcacc64dbcf55037d4d7750eaf4c6b5be8703 : HADOOP-11143 NetUtils.wrapException loses inner stack trace on BindException
+[DEBUG] Picking e3cade4dbd03d8cc19927057c2cfe44143e9e40d : HADOOP-11049. javax package system class default is too broad. Contributed by Sangjin Lee
+[DEBUG] Picking 105052bfaac1286bfdd4faebd0728ba069934833 : HADOOP-11140. hadoop-aws only need test-scoped dependency on hadoop-common's tests jar. Contributed by Juan Yu.
+[DEBUG] Picking b43cd662a25a5cac54a569bcbf113db1eeadcbc0 : HDFS-7157. Using Time.now() for recording start/end time of reconfiguration tasks (Lei Xu via Colin Patrick McCabe)
+[DEBUG] Picking 33fe7b0e69aa929d17e5edadf455832ff36a6ed3 : HADOOP-11110. JavaKeystoreProvider should not report a key as created if it was not flushed to the backing file. (Arun Suresh via wang)
+[DEBUG] Picking 3792f5ad7637a9052531a4d2b00bdf0e0088fe15 : HADOOP-11130. NFS updateMaps OS check is reversed. Contributed by Brandon Li
+[DEBUG] Picking 0e31b1a5ae8a1e42765154d26720d89e78a67004 : YARN-2539. FairScheduler: Set the default value for maxAMShare to 0.5. (Wei Yan via kasha)
+[DEBUG] Picking 3e36b1e4bb42f3e45350b4c22ca13af144452d8d : YARN-1959. Fix headroom calculation in FairScheduler. (Anubhav Dhoot via kasha)
+[DEBUG] Picking e03d609af07cacc5bbc05aedbf25498a309813d0 : YARN-2577. Clarify ACL delimiter and how to configure ACL groups only (Mikos Christine via aw)
+[DEBUG] Picking 941728c03b9c1f3085fffbdcb942529afe9c424f : YARN-2372. There are Chinese Characters in the FairScheduler's document (Fengdong Yu via aw)
+[DEBUG] Picking 696ed975217d897610c86841fa53c70dac7262db : YARN-668. Changed NMTokenIdentifier/AMRMTokenIdentifier/ContainerTokenIdentifier to use protobuf object as the payload. Contributed by Junping Du.
+[DEBUG] Picking 4e63d46754b5e373c4d906e803957d90241e062f : YARN-1769. CapacityScheduler: Improve reservations. Contributed by Thomas Graves
+[DEBUG] Picking 6862de4bcd88aa2620dff941f65c02c29f7cb69f : HDFS-7065. Pipeline close recovery race can cause block corruption. Contributed by Kihwal Lee.
+[DEBUG] Picking f653b6d43377fb2a7fd6f07ccdb5c9c4b9f51026 : HDFS-7096.  Fix TestRpcProgramNfs3 to use DFS_ENCRYPTION_KEY_PROVIDER_URI (clamb via cmccabe)
+[DEBUG] Picking 5ec4564826c516425be0a39acaf348527c03b7a7 : HDFS-7046. HA NN can NPE upon transition to active. Contributed by Kihwal Lee.
+[DEBUG] Picking aec10e963abb960798885b49169ea4d8853e889c : HDFS-7106. Reconfiguring DataNode volumes does not release the lock files in removed volumes. (cnauroth via cmccabe)
+[DEBUG] Picking c0dab5ce351a74c651b958f576f1930bb31b6bdb : HDFS-7001. Tests in TestTracing should not depend on the order of execution. (iwasakims via cmccabe)
+[DEBUG] Picking c2a1f3862dfe709ffbffdda469de19da4d6968ac : HDFS-7132. hdfs namenode -metadataVersion command does not honor configured name dirs. Contributed by Charles Lamb.
+[DEBUG] Picking 0e74cd6574d25afb9bd08c839cad054fef3bf35c : Add HDFS-7148 to CHANGES.txt, branch-2 only commit.
+[DEBUG] Picking b5178716935af9b25a43086effbc2507fbb859c2 : Move HDFS-7157 to HDFS CHANGES.txt
+[DEBUG] Picking 08ec21b09dfe2ab4e2e5d5dbc9073b5a3d2cebc0 : MAPREDUCE-6078. native-task: fix gtest build on macosx (Binglin Chang)
+[DEBUG] Picking d417660f9f03b24938bfaf4a21a51d424b0b8d31 : Merge branch 'trunk' into HDFS-6581
+[DEBUG] Picking 173cdc9faa943a292ab0a3d7524250098c0badea : HDFS-6519. Document oiv_legacy command (Akira AJISAKA via aw)
+[DEBUG] Picking 18ef705a71aae70c3aed5b0bd7ced3eee39cdda3 : Move HDFS-4165 from trunk to 2.6.0 in CHANGES.txt.
+[DEBUG] Picking 352f24824bd238eb6c6318b62a028fd3b7d70997 : HDFS-7104. Fix and clarify INodeInPath getter functions. Contributed by Zhe Zhang.
+[DEBUG] Picking 269a2fc3554e87e016404f3415ceb7e6fed94d8a : HDFS-7124. Remove EncryptionZoneManager.NULL_EZ. (clamb via wang)
+[DEBUG] Picking 940fe78d29f5a3312aeba31a2b030fc6188abfbe : HDFS-6779. Add missing version subcommand for hdfs. Contributed by Sasaki Toru.
+[DEBUG] Picking 58e1e6251f561c6e0f14d6903bc6ace903c0f3d8 : Merge branch 'trunk' into HDFS-6581
+[DEBUG] Picking 5c01ca50440dfbb07e9abe11b42627e2d4862403 : HDFS-7171. Fix Jenkins failures in HDFS-6581 branch. (Arpit Agarwal)
+[DEBUG] Picking e750d196cac5580782bab2f8b276ad5f446b4cbe : HDFS-6581. Update CHANGES.txt in preparation for trunk merge

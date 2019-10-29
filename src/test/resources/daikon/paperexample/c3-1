@@ -1,0 +1,29 @@
+class A {
+    int f() {
+        B b = new B();
+        return b.g();
+    }
+}
+
+class B {
+    int y = 2;
+    String s = "abc";
+
+    int g() {
+        int z = h(s, n(1));
+        z = false ? z : m();
+        return z;
+    }
+    
+    int h(String s, int t) {
+        return s != null ? 0 : t;
+    }
+
+    int m() {
+        return -- y;
+    }
+
+    int n(int z) {
+        return 2 * z;
+    }
+}

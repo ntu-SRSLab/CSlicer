@@ -1,0 +1,29 @@
+# 1
++ ./IO-275.log.phase1:[OUTPUT] |H*| = 1
+./PDFBOX-3307.log.phase1:[OUTPUT] |H*| = 1
+./PDFBOX-3069.log.phase1:[OUTPUT] |H*| = 1
+./FLUME-2628.log.phase1:[OUTPUT] |H*| = 1
+./CONFIGURATION-626.log.phase1:[OUTPUT] |H*| = 1
+./COMPRESS-375.log.phase1:[OUTPUT] |H*| = 1
+
+# 2
++./IO-288.log.phase1:[OUTPUT] |H*| = 2
+
+# 3
++./PDFBOX-3418.log.phase1:[OUTPUT] |H*| = 3
++./CSV-159.log.phase1:[OUTPUT] |H*| = 3
+
+# 5
+./IO-290.log.phase1:[OUTPUT] |H*| = 5
+
+# 6
+./LANG-993.log.phase1:[OUTPUT] |H*| = 6
+
+# 7
+./MNG-4910.log.phase1:[OUTPUT] |H*| = 7
+./MNG-4909.log.phase1:[OUTPUT] |H*| = 7
+./MNG-4904.log.phase1:[OUTPUT] |H*| = 7
+./NET-436.log.phase1:[OUTPUT] |H*| = 7
+
+# 8
+./CONFIGURATION-624.log.phase1:[OUTPUT] |H*| = 8

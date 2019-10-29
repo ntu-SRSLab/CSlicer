@@ -1,0 +1,36 @@
+class A {
+    int f() {
+        B b = new B();
+        return b.g();
+    }
+}
+
+class B {
+    int x = 2;
+    //x
+    //is
+    //1
+    String s = "abc";
+    //s
+    //is
+    //abc
+    int y = 2;
+
+    int g() {
+        int z = h(s, x);
+        z = false ? z : m();
+        return z;
+    }
+    
+    int h(String v, int t) {
+        return v != null ? 0 : t;
+    }
+	//m is
+    //a new method
+    int m() {
+        return ++ y;
+    }
+    //n is
+    //a new 
+    //method
+}

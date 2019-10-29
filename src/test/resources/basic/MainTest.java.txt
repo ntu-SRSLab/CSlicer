@@ -1,0 +1,34 @@
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+
+public class MainTest {
+
+	@Before
+	public void setUp() throws Exception {
+	}
+
+	@After
+	public void tearDown() throws Exception {
+	}
+
+	@Test
+	public void test1() {
+		assertEquals(5, Main.foo(15));
+	}
+	
+	@Test
+	public void test2() {
+		assertEquals(6, Main.foo(16));
+	}
+	
+	@Test
+	public void test3() {
+		Boo bobo = new Boo(2);
+		Boo.Foo lala = bobo.new Foo(10);
+		assertEquals("succ", lala.foo("lalala", 4));
+	}
+}

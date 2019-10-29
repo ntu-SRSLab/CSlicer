@@ -1,0 +1,10 @@
+class Boo {
+
+  // comment
+  int boo1()
+  {return 0;}
+}
+class Bar {
+  static int bar1(int x)
+  {return x + 1;}
+}

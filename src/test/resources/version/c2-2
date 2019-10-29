@@ -1,0 +1,9 @@
+class Bar {
+  static int f;
+  // bar1
+  static int bar1(int x)
+  {return x - 1;}
+  // bar2
+  static int bar2(int y1, int y2)
+  {return y1 + y2;}
+}

@@ -1,0 +1,121 @@
+class Management
+{	
+	public static final int WRONG = -1;
+	
+	public Management()
+	{
+		
+	}
+	
+	public int calculateSumSalary(int months, int position, int bonus)
+	{
+		int idealBonus = imagineAnIdealBonus(months, bonus);/////
+		
+		int salary = 0;
+		salary += calculateBasicSalary(months, position);
+		
+		if(position == Positions.EMPLOYEE || position == Positions.PROGRAMMER)
+		{
+			salary += bonus;
+			saySomethingAboutBonus(bonus);/////
+		}
+		
+		saySomethingAboutSalary(salary);
+		
+		return salary;
+	}
+	
+	public int calculateBasicSalary(int months, int position)
+	{
+		if(months <= 0)
+		{
+			return WRONG;
+		}
+		
+		int basicSalary = 0;
+		//switch a position
+		if(position == Positions.MANAGER)
+		{
+			basicSalary += months * 10000;
+		}
+		else if(position == Positions.EMPLOYEE)
+		{
+			basicSalary += months * 5000;
+		}
+		else if(position == Positions.DRIVER)
+		{
+			basicSalary += months * 8000;
+		}
+		else if(position == Positions.PROGRAMMER)
+		{
+			basicSalary += months * 30000;
+		}
+		else
+		{
+			return WRONG;
+		}
+		
+		return basicSalary;
+	}
+	
+	public int SumPeople(int[] people)
+	{
+		int count = 0;
+		
+		for(int p : people)
+		{
+			count++;
+		}
+		
+		return count;
+	}
+	
+	public int SumEmployees(int[] people)
+	{
+		int count = 0;
+		for(int p : people)
+		{
+			if(p == Positions.EMPLOYEE)
+			{
+				count++;
+			}
+		}
+		return count;
+	}
+	
+	public void printInfo()
+	{
+		System.out.println("Hahahahaha...");
+	}
+	
+	public void saySomethingAboutSalary(int salary)
+	{
+		if(salary/12 >= 10000)
+		{
+			System.out.println("Wow, You have a great salary!");
+			System.out.println();
+		}
+		else
+		{
+			System.out.println("Oh, your salary is kind of low...");
+			System.out.println();
+		}
+	}
+
+	public void saySomethingAboutBonus(int bonus)
+	{
+		if(bonus >= 2000)
+		{
+			System.out.println("Good bonus!");
+		}
+		else
+		{
+			System.out.println("No bonus!");
+		}
+	}
+
+	public int imagineAnIdealBonus(int months, int bonus)
+	{
+		return months * bonus;
+	}
+}

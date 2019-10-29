@@ -1,0 +1,14 @@
+class Boo {
+  int b;
+  int boo2()
+  {return Bar.bar1(b);}
+
+  // comment
+  int boo1()
+  {return (new Bar()).y;}
+}
+class Bar {
+  int y = 0;
+  static int bar1(int x)
+  {return x - 1;}
+}

@@ -1,0 +1,3 @@
+[submodule "cslicer-deps"]
+	path = cslicer-deps
+	url = https://liyistc@bitbucket.org/liyistc/cslicer-deps.git

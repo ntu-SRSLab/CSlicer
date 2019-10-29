@@ -1,0 +1,6 @@
+class Boo {
+  int boo1()
+  {return Bar.bar2(1, 2);}
+  int boo2()
+  {return Bar.bar1(2);}
+}

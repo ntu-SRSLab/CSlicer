@@ -1,0 +1,94 @@
+Daikon version 5.2.22, released February 1, 2016; http://plse.cs.washington.edu/daikon.
+Reading declaration files 
+[2:41:55 PM]:                                                                  
+                                                                               
+
+                                                                               
+Processing trace data; reading 1 dtrace file:
+
+[2:41:56 PM]: Reading /home/polaris/Desktop/gitslice/src/test/resources/daikon/
+[2:41:57 PM]: Reading /home/polaris/Desktop/gitslice/src/test/resources/daikon/
+[2:41:58 PM]: Reading /home/polaris/Desktop/gitslice/src/test/resources/daikon/
+[2:41:59 PM]: Reading /home/polaris/Desktop/gitslice/src/test/resources/daikon/
+[2:42:00 PM]: Reading /home/polaris/Desktop/gitslice/src/test/resources/daikon/
+No return from procedure observed 3 times.  Unmatched entries are ignored!
+Unterminated calls:
+  org.apache.maven.surefire.booter.ForkedBooter$1.run() : 1 invocation
+  org.apache.maven.surefire.booter.ForkedBooter.exit(int) : 1 invocation
+  org.apache.maven.surefire.booter.ForkedBooter.main(java.lang.String[]) : 1 invocation
+End of report for procedures not returned from.  Unmatched entries are ignored!
+
+[2:42:00 PM]: Finished reading /home/polaris/Desktop/gitslice/src/test/resource
+
+                                                                               
+
+                                                                               
+Daikon version 5.2.22, released February 1, 2016; http://plse.cs.washington.edu/daikon.
+Reading declaration files 
+                                                                               
+
+[2:42:07 PM]:                                                                  
+                                                                               
+Processing trace data; reading 1 dtrace file:
+
+[2:42:08 PM]: Reading /home/polaris/Desktop/gitslice/src/test/resources/daikon/
+[2:42:09 PM]: Reading /home/polaris/Desktop/gitslice/src/test/resources/daikon/
+[2:42:10 PM]: Reading /home/polaris/Desktop/gitslice/src/test/resources/daikon/
+No return from procedure observed 3 times.  Unmatched entries are ignored!
+Unterminated calls:
+  org.apache.maven.surefire.booter.ForkedBooter$1.run() : 1 invocation
+  org.apache.maven.surefire.booter.ForkedBooter.exit(int) : 1 invocation
+  org.apache.maven.surefire.booter.ForkedBooter.main(java.lang.String[]) : 1 invocation
+End of report for procedures not returned from.  Unmatched entries are ignored!
+
+[2:42:10 PM]: Finished reading /home/polaris/Desktop/gitslice/src/test/resource
+
+                                                                               
+
+                                                                               
+[DEBUG] {A.h():::EXIT
+<VarInfo return: type=int,file_rep_type=int,rep_type=int,comparability=no-comparability,value_index=2,varinfo_index=2,is_static_constant=false,static_constant_value=null,derived=null,derivees=[],ppt=A.h():::EXIT,canBeMissing=false,equal_to=Equality: size=2 leader: return with this.x[1] == return[2]L samples: 1,isCanonical()=true>
+return
+METHOD_POSTCOND}
+Soot started on Sun Mar 27 14:42:15 EDT 2016
+Unknown tag in constant pool: 16 at entry 39
+Warning: java.lang.CharSequence is a phantom class!
+Unknown tag in constant pool: 16 at entry 67
+Warning: java.lang.reflect.AnnotatedElement is a phantom class!
+Warning: java.dyn.InvokeDynamic is a phantom class!
+Transforming C... 
+[DEBUG] A.A()
+[DEBUG] A.h()
+Transforming B... 
+[DEBUG] java.lang.Object.Object()
+Transforming A... 
+[DEBUG] java.lang.Object.Object()
+Time measurements
+
+      Building graphs: 00.0s (00.3%)
+  Computing LocalDefs: 00.0s (00.9%)
+  Computing LocalUses: 00.0s (00.0%)
+     Cleaning up code: 00.0s (00.0%)
+Computing LocalCopies: 00.0s (00.0%)
+ Computing LiveLocals: 00.0s (01.5%)
+Coading coffi structs: 00.0s (00.0%)
+
+       Resolving classfiles: 00.0s (00.0%)
+ Bytecode -> jimple (naive): 00.0s (13.4%)
+        Splitting variables: 00.0s (02.9%)
+            Assigning types: 00.0s (02.0%)
+  Propagating copies & csts: 00.0s (00.3%)
+      Eliminating dead code: 00.0s (00.0%)
+                Aggregation: 00.0s (00.9%)
+            Coloring locals: 00.0s (00.0%)
+     Generating jasmin code: 00.0s (00.0%)
+          .jasmin -> .class: 00.0s (00.0%)
+totalTime:00.3s (100.0%)
+stmtCount: 23(67.05 stmt/s)
+totalFlowNodes: 147 totalFlowComputations: 147 avg: 1.0
+Soot finished on Sun Mar 27 14:42:15 EDT 2016
+Soot has run for 0 min. 0 sec.
+[DEBUG] {}
+[DEBUG] {h :  : []}
+[DEBUG] {}
+
