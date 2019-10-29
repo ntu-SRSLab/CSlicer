@@ -97,19 +97,27 @@ java -jar cslicer-XXX-jar-with-dependencies.jar -h
 ```
 
 ## Publications ##
-[Semantic Slicing of Software Version Histories](http://www.cs.toronto.edu/~liyi/host/posts/paper-accepted-by-tse/)   
+[Semantic Slicing of Software Version Histories](https://www.ntu.edu.sg/home/yi_li/posts/paper-accepted-by-tse/)   
 Yi Li, Chenguang Zhu, Julia Rubin and Marsha Chechik   
-In Transactions on Software Engineering (TSE), accepted
+In Transactions on Software Engineering (TSE), 44(2):182–201
 
-[Precise Semantic History Slicing through Dynamic Delta Refinement](http://www.cs.toronto.edu/~liyi/host/files/ase16.pdf)   
+[Precise Semantic History Slicing through Dynamic Delta Refinement](https://www.ntu.edu.sg/home/yi_li/posts/paper-accepted-by-ase-2016/)   
 Yi Li, Chenguang Zhu, Julia Rubin and Marsha Chechik   
 In Proceedings of the 31st IEEE/ACM International Conference on Automated Software Engineering (ASE 2016)
 
-[Semantic Slicing of Software Version Histories](http://www.cs.toronto.edu/~liyi/host/files/ase15.pdf)  
+[Semantic Slicing of Software Version Histories](https://www.ntu.edu.sg/home/yi_li/posts/paper-accepted-by-ase-2015/)  
 Yi Li, Julia Rubin and Marsha Chechik  
 In Proceedings of the 30th IEEE/ACM International Conference on
 Automated Software Engineering (ASE 2015)
 
-[A Dataset for Dynamic Discovery of Semantic Changes in Version Controlled Software Histories](http://www.cs.toronto.edu/~liyi/host/posts/paper-accepted-by-msr-2017/)   
+[A Dataset for Dynamic Discovery of Semantic Changes in Version Controlled Software Histories](https://www.ntu.edu.sg/home/yi_li/posts/paper-accepted-by-msr-2017/)   
 Chenguang Zhu, Yi Li, Julia Rubin and Marsha Chechik   
 In Proceedings of the 14th International Conference on Mining Software Repositories (MSR 2017)
+
+[CSlicerCloud: A Web-Based Semantic History Slicing Framework](https://www.ntu.edu.sg/home/yi_li/posts/paper-accepted-by-icse-2018/)   
+Yi Li, Chenguang Zhu, Julia Rubin, and Marsha Chechik   
+In Proceedings of 40th International Conference on Software Engineering (ICSE 2018)
+
+[FHistorian: Locating Features in Version Histories](ntu.edu.sg/home/yi_li/posts/paper-accepted-by-splc-2017/)    
+Yi Li, Chenguang Zhu, Julia Rubin and Marsha Chechik    
+In Proceedings of the 21st International Systems and Software Product Line Conference (SPLC 2017)
