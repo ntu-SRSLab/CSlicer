@@ -24,7 +24,7 @@ All required dependencies will be fetched and installed by Maven automatically.
 We use [ChangeDistiller](https://bitbucket.org/sealuzh/tools-changedistiller/wiki/Home) for categorizing and analyzing changes.
 A local copy of ChangeDistiller-SNAPSHOT-0.0.1 is included in the lib directory.
 
-* Daikon  
+* Daikon (optional)
 We use [Daikon](https://plse.cs.washington.edu/daikon) for dynamic invariant generation. A local copy of Daikon is included in the lib directory.
 
 ## Install DEFINER
@@ -37,8 +37,8 @@ Requirements:
 
 Get the source and external dependencies
 ```shell
-git clone https://liyistc@bitbucket.org/liyistc/gitslice.git definer
-cd definer
+git clone https://github.com/ntu-SRSLab/CSlicer.git cslicer
+cd cslicer
 git submodule init
 git submodule update
 ```
