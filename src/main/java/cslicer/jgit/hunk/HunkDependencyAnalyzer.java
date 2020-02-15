@@ -145,12 +145,12 @@ public class HunkDependencyAnalyzer {
 					continue;
 				} else {
 					// exclude certain paths when computing hunk dependencies
-					if (excludePaths.contains(diff.getOldPath())
-							|| diff.getOldPath().contains("src/test/")) {
-						PrintUtils.print(
-								"Excluding " + diff.getOldPath() + " ...");
-						continue;
-					}
+//					if (excludePaths.contains(diff.getOldPath())
+//							|| diff.getOldPath().contains("src/test/")) {
+//						PrintUtils.print(
+//								"Excluding " + diff.getOldPath() + " ...");
+//						continue;
+//					}
 
 					RawText oldRaw = new RawText(open(OLD, diff));
 					RawText newRaw = new RawText(open(NEW, diff));
