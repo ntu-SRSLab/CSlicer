@@ -12,7 +12,7 @@ import java.io.File;
  * / /___  ___/ // // // /__ /  __// /
  * \____/ /____//_//_/ \___/ \___//_/
  * %%
- * Copyright (C) 2014 - 2019 Department of Computer Science, University of Toronto
+ * Copyright (C) 2014 - 2020 Department of Computer Science, University of Toronto
  * %%
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -138,6 +138,10 @@ public class HistoryAnalyzer {
 
 	protected String fOutputPath;
 
+	protected String fOriginURL;
+
+	protected String fUpstreamURL;
+
 	protected final ProjectConfiguration fConfig;
 
 	public HistoryAnalyzer(ProjectConfiguration config)
@@ -152,6 +156,8 @@ public class HistoryAnalyzer {
 
 		fConfig = config;
 		fRepoPath = config.getRepositoryPath();
+		fOriginURL = config.getOriginURL();
+		fUpstreamURL = config.getUpstreamURL();
 		fJGit = new JGit(this.fRepoPath);
 		// initialization
 		fTests = config.getTestCases();
@@ -427,7 +433,9 @@ public class HistoryAnalyzer {
 
 			if (!fJGit.pickCommitsToBranch(snap.getName(), noStartPick, false,
 					excludes)) {
+
 				undoRemoveCommit(true);
+
 				return false;
 			}
 
@@ -437,6 +445,7 @@ public class HistoryAnalyzer {
 		} catch (CreateBranchFailedException e) {
 			e.printStackTrace();
 		}
+
 
 		return false;
 	}
@@ -476,6 +485,7 @@ public class HistoryAnalyzer {
 		} catch (CreateBranchFailedException e) {
 			e.printStackTrace();
 		}
+
 
 		return false;
 	}

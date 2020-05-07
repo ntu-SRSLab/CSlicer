@@ -9,7 +9,7 @@ package cslicer.analyzer;
  * / /___  ___/ // // // /__ /  __// /
  * \____/ /____//_//_/ \___/ \___//_/
  * %%
- * Copyright (C) 2014 - 2019 Department of Computer Science, University of Toronto
+ * Copyright (C) 2014 - 2020 Department of Computer Science, University of Toronto
  * %%
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -85,6 +85,7 @@ import cslicer.utils.StatsUtils;
 public class Slicer extends HistoryAnalyzer {
 
 	private final String fResultPath; // path to save slicing result
+	private final String fPullRequestDataPath; // path to save pull request data
 
 	// test touching set
 	private TouchSet fTestTouchSet;
@@ -111,6 +112,7 @@ public class Slicer extends HistoryAnalyzer {
 		initializeCompiler(config);
 
 		fResultPath = "/tmp/slice.res";
+		fPullRequestDataPath = "/tmp/pullrequestdata.bat";
 
 		fTestTouchSet = new TouchSet();
 		fTouchSetPath = config.getTouchSetPath();
@@ -557,7 +559,7 @@ public class Slicer extends HistoryAnalyzer {
 		return dIds;
 	}
 
-	public final SlicingResult getSlicingReseult() {
+	public final SlicingResult getSlicingResult() {
 		return fTracker.getSlicingResult();
 	}
 
@@ -608,7 +610,7 @@ public class Slicer extends HistoryAnalyzer {
 		FileOutputStream fileStream = FileUtils
 				.openOutputStream(FileUtils.getFile(fResultPath));
 		ObjectOutputStream objectStream = new ObjectOutputStream(fileStream);
-		objectStream.writeObject(getSlicingReseult());
+		objectStream.writeObject(getSlicingResult());
 		objectStream.close();
 		fileStream.close();
 	}
@@ -673,6 +675,62 @@ public class Slicer extends HistoryAnalyzer {
 		}
 
 		return res;
+	}
+
+	public void savePullRequestData(List<RevCommit> picks) throws IOException {
+		FileOutputStream fileStream = FileUtils
+				.openOutputStream(FileUtils.getFile(fPullRequestDataPath));
+		ObjectOutputStream objectStream = new ObjectOutputStream(fileStream);
+		objectStream.writeObject(getPullRequestData(picks));
+		objectStream.close();
+		fileStream.close();
+	}
+
+	public String getPullRequestData(List<RevCommit> picks){
+		String commandString = "incommit="+ this.fStart.abbreviate(8).name() +"\n" +
+				"upstream="+ this.fUpstreamURL +"\n" +
+				"origin="+this.fOriginURL +"\n" +
+				"repo="+this.fRepoPath+"\n" +
+				"finalcommit="+picks.get(picks.size()-1).abbreviate(8).name();
+		return commandString;
+	}
+
+	/**
+	 * Creates a File named pulldata.bat that is needed to load variables for the script pullrequest.bat
+	 * Attempts to perform verifyResultPicking on the picks specified by the input result and if successful creates a
+	 * file to hold the metadata needed for subsequent git commands
+	 *
+	 * @param result
+	 *            {@link SlicingResult} to make into a new branch and then a pull request
+	 * @return true iff successful in creating the new branch and a pull request file
+	 */
+	public boolean createPullRequestFile(SlicingResult result) {
+		PrintUtils.print("Attempting to Create Branch", TAG.DEBUG);
+		List<RevCommit> picks = result.getPicks();
+		if (picks.size() > 0){
+			if(this.verifyResultPicking(picks)){
+				PrintUtils.print("Successfully Picked Relevant Commits: Branch VERIFYTESTS Created. " +
+						"Attempting to save data to tmp/pullrequestdata.sh", TAG.DEBUG);
+				try {
+					this.savePullRequestData(picks);
+				} catch (IOException e) {
+					PrintUtils.print(e.getStackTrace());
+					PrintUtils.print("Error in File Saving and hence file was not created", TAG.WARNING);
+					return false;
+				}
+				PrintUtils.print("Pull Request Data Script Created at tmp/pullrequestdata.sh run " +
+						"pullrequest.sh to complete the pull request", TAG.DEBUG);
+				return true;
+			}
+			else {
+				PrintUtils.print("Picked commits alone could not be formed (cherrypicked) into a branch " +
+						"without errors and hence branch was not created", TAG.WARNING);
+				return false;
+			}
+		} else {
+			PrintUtils.print("Picked commits were empty and hence branch not created", TAG.WARNING);
+			return false;
+		}
 	}
 
 	/**

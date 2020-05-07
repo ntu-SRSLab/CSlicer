@@ -9,7 +9,7 @@ package cslicer.analyzer;
  * / /___  ___/ // // // /__ /  __// /
  * \____/ /____//_//_/ \___/ \___//_/
  * %%
- * Copyright (C) 2014 - 2019 Department of Computer Science, University of Toronto
+ * Copyright (C) 2014 - 2020 Department of Computer Science, University of Toronto
  * %%
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -86,6 +86,8 @@ public class ProjectConfiguration {
 	private static final boolean DEFAULT_ENABLE_JSON = false;
 	private static final String DEFAULT_JSON_PATH = null;
 	private static final String DEFAULT_TEST_CLASS_ROOT = null;
+	private static final String DEFAULT_UPSTREAM_URL = null;
+	private static final String DEFAULT_ORIGIN_URL = null;
 
 	private static final Set<String> DEFAULT_CHERRY_PICK_COMMITS = Collections.emptySet();
 
@@ -103,6 +105,9 @@ public class ProjectConfiguration {
 	private BUILD_SYSTEM fBuildSystem = DEFAULT_BUILD_SYSTEM; // optional
 	private boolean fMavenOutputEnabled = DEFAULT_MAVEN_OUTPUT_ENABLED; // optional
 	private String fJDKVersion = DEFAULT_JDK; // optional. default: 1.7
+	private String fUpstreamURL = DEFAULT_UPSTREAM_URL;
+	private String fOriginURL = DEFAULT_ORIGIN_URL;
+
 
 	/*
 	 * optional. default -1. the number of commits to trace back from end if
@@ -190,6 +195,10 @@ public class ProjectConfiguration {
 			this.setJsonPath(config.getProperty("jsonPath", null));
 			this.setCherryPickCommits(
 							config.getProperty("cherryPick", null));
+			this.setUpstreamURL(
+					config.getProperty("upstreamURL", null));
+			this.setOriginURL(
+					config.getProperty("originURL", null));
 
 		} catch (IOException e) {
 			PrintUtils.print("Error loading project configuration file at: "
@@ -643,6 +652,22 @@ public class ProjectConfiguration {
 	public ProjectConfiguration setTestClassRootPath(String testClassRootPath) {
 		this.fTestClassRootPath = FilenameUtils.normalize(testClassRootPath);
 		return this;
+	}
+
+	public String getUpstreamURL() {
+		return fUpstreamURL;
+	}
+
+	public void setUpstreamURL(String fUpstreamURL) {
+		this.fUpstreamURL = fUpstreamURL;
+	}
+
+	public String getOriginURL() {
+		return fOriginURL;
+	}
+
+	public void setOriginURL(String fOriginURL) {
+		this.fOriginURL = fOriginURL;
 	}
 
 }

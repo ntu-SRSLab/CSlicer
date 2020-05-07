@@ -9,7 +9,7 @@ package cslicer.analyzer;
  * / /___  ___/ // // // /__ /  __// /
  * \____/ /____//_//_/ \___/ \___//_/
  * %%
- * Copyright (C) 2014 - 2019 Department of Computer Science, University of Toronto
+ * Copyright (C) 2014 - 2020 Department of Computer Science, University of Toronto
  * %%
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -46,6 +46,10 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.List;
+
+
+// Temporary imports by Dhananjay
+import org.eclipse.jgit.lib.Ref;
 
 /**
  * Main entry for the GitRef tool.
@@ -93,6 +97,8 @@ public class Main {
 				"Select significance learning schemes: [default|noinv|nolearn|noprob|noinit|nocomp|combined|low3|neg|nonpos].");
 		Option i = new Option("i", "intersection", false, "Show the intersection result.");
 		Option j = new Option("j", "savetojson", false, "Save result to json file.");
+		Option b = new Option("b", "branch", false, "Create a new branch with only the results of the slicing.");
+
 
 		d.setRequired(false);
 		p.setRequired(false);
@@ -104,6 +110,7 @@ public class Main {
 		l.setRequired(false);
 		i.setRequired(false);
 		j.setRequired(false);
+		b.setRequired(false);
 
 		options2.addOption(d);
 		options2.addOption(t);
@@ -115,6 +122,7 @@ public class Main {
 		options2.addOption(l);
 		options2.addOption(i);
 		options2.addOption(j);
+		options2.addOption(b);
 
 		try {
 			CommandLine c1 = new DefaultParser().parse(options1, args, true);
@@ -280,6 +288,12 @@ public class Main {
 				// try shorten the slice
 				if (line.hasOption("short"))
 					refactor.shortenSlice(result);
+				if (line.hasOption("branch")) {
+				// try to create a file to hold data needed to run pullrequest.bat
+					refactor.createPullRequestFile(result);
+				}
+
+
 			}
 
 			refactor.cleanUp();
@@ -298,6 +312,7 @@ public class Main {
 			e.printStackTrace();
 		}
 	}
+
 
 	private static void invokeRefiner(CommandLine line, ProjectConfiguration config) {
 		try {
