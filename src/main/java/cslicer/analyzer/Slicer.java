@@ -25,11 +25,7 @@ package cslicer.analyzer;
  * #L%
  */
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -85,7 +81,7 @@ import cslicer.utils.StatsUtils;
 public class Slicer extends HistoryAnalyzer {
 
 	private final String fResultPath; // path to save slicing result
-	private final String fPullRequestDataPath; // path to save pull request data
+	private final String fPullRequestScriptPath; // path to save pull request data
 
 	// test touching set
 	private TouchSet fTestTouchSet;
@@ -112,7 +108,7 @@ public class Slicer extends HistoryAnalyzer {
 		initializeCompiler(config);
 
 		fResultPath = "/tmp/slice.res";
-		fPullRequestDataPath = "/tmp/pullrequestdata.bat";
+		fPullRequestScriptPath = "/tmp/pullrequest.sh";
 
 		fTestTouchSet = new TouchSet();
 		fTouchSetPath = config.getTouchSetPath();
@@ -679,7 +675,7 @@ public class Slicer extends HistoryAnalyzer {
 
 	public void savePullRequestData(List<RevCommit> picks) throws IOException {
 		FileOutputStream fileStream = FileUtils
-				.openOutputStream(FileUtils.getFile(fPullRequestDataPath));
+				.openOutputStream(FileUtils.getFile(fPullRequestScriptPath));
 		ObjectOutputStream objectStream = new ObjectOutputStream(fileStream);
 		objectStream.writeObject(getPullRequestData(picks));
 		objectStream.close();
@@ -691,8 +687,58 @@ public class Slicer extends HistoryAnalyzer {
 				"upstream="+ this.fUpstreamURL +"\n" +
 				"origin="+this.fOriginURL +"\n" +
 				"repo="+this.fRepoPath+"\n" +
-				"finalcommit="+picks.get(picks.size()-1).abbreviate(8).name();
+				"finalcommit="+picks.get(picks.size()-1).abbreviate(8).name()+"\n" +
+				"cd /"+"\n" +
+				"cd $repo"+"\n"+
+				"cd .."+"\n" +
+				"git remote set-url upstream $upstream"+"\n" +
+				"git remote set-url origin $origin" +"\n" +
+				"git push --set-upstream origin sliced_feature_branch"+"\n" +
+				"git request-pull $incommit origin $finalcommit"+"\n" +
+				"read -p \"Press any Key to Continue....\" inp";
 		return commandString;
+	}
+
+	/**
+	 * Runs the pullrequest.sh script
+	 *
+	 *
+	 * @return true iff process successful
+	 */
+	public boolean callPullRequest(){
+		ProcessBuilder processBuilder = new ProcessBuilder();
+		processBuilder.command(this.fPullRequestScriptPath);
+		try {
+
+			Process process = processBuilder.start();
+
+			StringBuilder output = new StringBuilder();
+
+			BufferedReader reader = new BufferedReader(
+					new InputStreamReader(process.getInputStream()));
+
+			String line;
+			while ((line = reader.readLine()) != null) {
+				output.append(line + "\n");
+			}
+
+			int exitVal = process.waitFor();
+			if (exitVal == 0) {
+				PrintUtils.print("Success in git pull request", TAG.DEBUG);
+				PrintUtils.print(output, TAG.OUTPUT);
+				return true;
+			} else {
+				PrintUtils.print("Error in Calling pull request script. Please manually create a pull request"
+						, TAG.WARNING);
+				return false;
+			}
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		return false;
 	}
 
 	/**
@@ -710,17 +756,21 @@ public class Slicer extends HistoryAnalyzer {
 		if (picks.size() > 0){
 			if(this.verifyResultPicking(picks)){
 				PrintUtils.print("Successfully Picked Relevant Commits: Branch VERIFYTESTS Created. " +
-						"Attempting to save data to tmp/pullrequestdata.sh", TAG.DEBUG);
+						"Attempting to save data to tmp/pullrequest.sh", TAG.DEBUG);
 				try {
 					this.savePullRequestData(picks);
+					if (this.callPullRequest()){
+						PrintUtils.print("Pull Request Created", TAG.DEBUG);
+						return true;
+					} else {
+						return false;
+					}
+
 				} catch (IOException e) {
 					PrintUtils.print(e.getStackTrace());
 					PrintUtils.print("Error in File Saving and hence file was not created", TAG.WARNING);
 					return false;
 				}
-				PrintUtils.print("Pull Request Data Script Created at tmp/pullrequestdata.sh run " +
-						"pullrequest.sh to complete the pull request", TAG.DEBUG);
-				return true;
 			}
 			else {
 				PrintUtils.print("Picked commits alone could not be formed (cherrypicked) into a branch " +

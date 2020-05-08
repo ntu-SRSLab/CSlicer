@@ -48,9 +48,6 @@ import java.util.Arrays;
 import java.util.List;
 
 
-// Temporary imports by Dhananjay
-import org.eclipse.jgit.lib.Ref;
-
 /**
  * Main entry for the GitRef tool.
  * 
