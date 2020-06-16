@@ -93,6 +93,8 @@ public class Main {
 				"Select significance learning schemes: [default|noinv|nolearn|noprob|noinit|nocomp|combined|low3|neg|nonpos].");
 		Option i = new Option("i", "intersection", false, "Show the intersection result.");
 		Option j = new Option("j", "savetojson", false, "Save result to json file.");
+		Option b = new Option("b", "branch", false, "Create a new branch with only the results of the slicing.");
+
 
 		d.setRequired(false);
 		p.setRequired(false);
@@ -104,6 +106,7 @@ public class Main {
 		l.setRequired(false);
 		i.setRequired(false);
 		j.setRequired(false);
+		b.setRequired(false);
 
 		options2.addOption(d);
 		options2.addOption(t);
@@ -115,6 +118,7 @@ public class Main {
 		options2.addOption(l);
 		options2.addOption(i);
 		options2.addOption(j);
+		options2.addOption(b);
 
 		try {
 			CommandLine c1 = new DefaultParser().parse(options1, args, true);
@@ -280,6 +284,9 @@ public class Main {
 				// try shorten the slice
 				if (line.hasOption("short"))
 					refactor.shortenSlice(result);
+				if (line.hasOption("branch")) {
+					refactor.createPullRequest(result);
+				}
 			}
 
 			refactor.cleanUp();
