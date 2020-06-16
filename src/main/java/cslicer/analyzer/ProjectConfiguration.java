@@ -86,6 +86,9 @@ public class ProjectConfiguration {
 	private static final boolean DEFAULT_ENABLE_JSON = false;
 	private static final String DEFAULT_JSON_PATH = null;
 	private static final String DEFAULT_TEST_CLASS_ROOT = null;
+	private static final String DEFAULT_UPSTREAM_REPO = null;
+	private static final String DEFAULT_ORIGIN_REPO = null;
+	private static final String DEFAULT_ORIGIN_BRANCH = "master";
 
 	private static final Set<String> DEFAULT_CHERRY_PICK_COMMITS = Collections.emptySet();
 
@@ -103,6 +106,9 @@ public class ProjectConfiguration {
 	private BUILD_SYSTEM fBuildSystem = DEFAULT_BUILD_SYSTEM; // optional
 	private boolean fMavenOutputEnabled = DEFAULT_MAVEN_OUTPUT_ENABLED; // optional
 	private String fJDKVersion = DEFAULT_JDK; // optional. default: 1.7
+	private String fUpstreamRepo = DEFAULT_UPSTREAM_REPO;
+	private String fOriginRepo = DEFAULT_ORIGIN_REPO;
+	private String fOriginBranch = DEFAULT_ORIGIN_BRANCH;
 
 	/*
 	 * optional. default -1. the number of commits to trace back from end if
@@ -190,7 +196,12 @@ public class ProjectConfiguration {
 			this.setJsonPath(config.getProperty("jsonPath", null));
 			this.setCherryPickCommits(
 							config.getProperty("cherryPick", null));
-
+			this.setUpstreamRepo(
+					config.getProperty("upstreamRepo", null));
+			this.setOriginRepo(
+					config.getProperty("originRepo", null));
+			this.setOriginBranch(
+					config.getProperty("originBranch", DEFAULT_ORIGIN_BRANCH));
 		} catch (IOException e) {
 			PrintUtils.print("Error loading project configuration file at: "
 					+ configPath, TAG.WARNING);
@@ -645,4 +656,23 @@ public class ProjectConfiguration {
 		return this;
 	}
 
+	public String getUpstreamRepo() {
+		return fUpstreamRepo;
+	}
+
+	public void setUpstreamRepo(String fUpstreamRepo) {
+		this.fUpstreamRepo = fUpstreamRepo;
+	}
+
+	public String getOriginRepo() {
+		return fOriginRepo;
+	}
+
+	public void setOriginRepo(String fOriginRepo) {
+		this.fOriginRepo = fOriginRepo;
+	}
+
+	public void setOriginBranch(String fOriginBranch){this.fOriginBranch = fOriginBranch;}
+
+	public String getOriginBranch(){return fOriginBranch;}
 }

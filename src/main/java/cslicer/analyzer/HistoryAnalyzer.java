@@ -138,6 +138,12 @@ public class HistoryAnalyzer {
 
 	protected String fOutputPath;
 
+	protected String fOriginRepo;
+
+	protected String fUpstreamRepo;
+
+	protected String fOriginBranch;
+
 	protected final ProjectConfiguration fConfig;
 
 	public HistoryAnalyzer(ProjectConfiguration config)
@@ -152,6 +158,9 @@ public class HistoryAnalyzer {
 
 		fConfig = config;
 		fRepoPath = config.getRepositoryPath();
+		fOriginRepo = config.getOriginRepo();
+		fUpstreamRepo = config.getUpstreamRepo();
+		fOriginBranch = config.getOriginBranch();
 		fJGit = new JGit(this.fRepoPath);
 		// initialization
 		fTests = config.getTestCases();
