@@ -81,6 +81,15 @@ import org.eclipse.jgit.treewalk.filter.PathFilter;
 import org.eclipse.jgit.treewalk.filter.PathSuffixFilter;
 import org.eclipse.jgit.treewalk.filter.TreeFilter;
 import org.eclipse.jgit.util.io.DisabledOutputStream;
+import org.eclipse.jgit.transport.UsernamePasswordCredentialsProvider;
+
+import org.eclipse.egit.github.core.PullRequest;
+import org.eclipse.egit.github.core.PullRequestMarker;
+import org.eclipse.egit.github.core.service.PullRequestService;
+import org.eclipse.egit.github.core.service.RepositoryService;
+import org.eclipse.egit.github.core.client.GitHubClient;
+import org.eclipse.egit.github.core.RepositoryId;
+
 
 import cslicer.jgit.hunk.HunkDependencyAnalyzer;
 import cslicer.utils.DependencyCache;
@@ -1373,6 +1382,37 @@ public class JGit {
 		fout.close();
 
 		return file;
+	}
+
+	public boolean pushUpstream(String username, String password){
+		try {
+			this.fGit.push().setRemote("upstream").setCredentialsProvider(new UsernamePasswordCredentialsProvider(username, password)).call();
+
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+		return false;
+	}
+
+	public boolean pullRequest(String username, String password, String upstreamRepo, String originRepo, String originBranch, String title, String body) throws IOException{
+
+		GitHubClient client = new GitHubClient().setCredentials(username, password);
+		PullRequestService service = new PullRequestService(client);
+		RepositoryService repoService = new RepositoryService(client);
+		org.eclipse.egit.github.core.Repository headRepo = repoService.getRepository(RepositoryId.createFromUrl(upstreamRepo));
+		org.eclipse.egit.github.core.Repository baseRepo = repoService.getRepository(RepositoryId.createFromUrl(originRepo));
+		RepositoryId idBase = RepositoryId.createFromUrl(originRepo);
+		PullRequestMarker head = new PullRequestMarker().setRepo(headRepo);
+		PullRequestMarker base = new PullRequestMarker().setRepo(baseRepo);
+		head.setLabel("VERIFYTEST");
+		base.setLabel(originBranch);
+		PullRequest request = new PullRequest().setBase(base).setHead(head);
+		request.setTitle(title);
+		request.setBody(body);
+		service.createPullRequest(idBase, request);
+		return true;
 	}
 
 }

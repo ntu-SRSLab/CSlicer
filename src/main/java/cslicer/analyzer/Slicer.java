@@ -682,59 +682,24 @@ public class Slicer extends HistoryAnalyzer {
 	}
 
 	/**
-	 * 
-	 *
-	 *
-	 * @return the string command to run for the pull-request
-	 */
-	public String getPullRequestCommand(){
-		String commandString =
-				"git push upstream"+" && " +
-				"hub pull-request -h $head:VERIFYTEST -b $base:$basebranch -m SingleFeature";
-		return commandString;
-	}
-	/**
-	 * Creates a process that runs the pull request command
+	 * Calls on the EGit pull request functionality
 	 *
 	 *
 	 * @return true iff process successful
 	 */
 	public boolean callPullRequest(List<RevCommit> picks){
-
-		ProcessBuilder processBuilder = new ProcessBuilder("echo", "Do not believe the void");
-		Map<String, String> environment = processBuilder.environment();
-		environment.put("head", this.fUpstreamRepo);
-		environment.put("base", this.fOriginRepo);
-		environment.put("basebranch", this.fOriginBranch);
-		processBuilder.command("/bin/bash", "-c", this.getPullRequestCommand());
-		processBuilder.directory((new File(this.fRepoPath)).getParentFile());
 		try {
-
-			Process process = processBuilder.start();
-
-			StringBuilder output = new StringBuilder();
-
-			BufferedReader reader = new BufferedReader(
-					new InputStreamReader(process.getInputStream()));
-
-			String line;
-			while ((line = reader.readLine()) != null) {
-				output.append(line + "\n");
-			}
-			int exitVal = process.waitFor();
-			if (exitVal == 0) {
-				PrintUtils.print("Success in git pull request. View and edit at URL: " + output, TAG.OUTPUT);
-				return true;
-			} else {
-				PrintUtils.print("Error in Calling pull request. Please manually create a pull request"
-						, TAG.WARNING);
-				return false;
-			}
-
-		} catch (IOException e) {
-			e.printStackTrace();
-		} catch (InterruptedException e) {
-			e.printStackTrace();
+			this.fJGit.pushUpstream(this.fUsername, this.fPassword);
+			this.fJGit.pullRequest(this.fUsername, this.fPassword, this.fUpstreamRepo,
+					this.fOriginRepo, this.fOriginBranch,
+					this.fTitle, this.fBody);
+			return true;
+		}
+		catch (Exception e) {
+			PrintUtils.print("Error in creating pull request. " +
+							"Please ensure input parameters of upstreamRepo, originRepo, " +
+							"branch to request merge from originRepo (originBranch),  GitHub Username and GitHub Password",
+					TAG.WARNING);
 		}
 		return false;
 	}

@@ -89,6 +89,10 @@ public class ProjectConfiguration {
 	private static final String DEFAULT_UPSTREAM_REPO = null;
 	private static final String DEFAULT_ORIGIN_REPO = null;
 	private static final String DEFAULT_ORIGIN_BRANCH = "master";
+	private static final String DEFAULT_USERNAME = null;
+	private static final String DEFAULT_PASSWORD = null;
+	private static final String DEFAULT_TITLE = "Single Feature Branch";
+	private static final String DEFAULT_BODY = "A Pull Request with a single feature sliced by CSlicer";
 
 	private static final Set<String> DEFAULT_CHERRY_PICK_COMMITS = Collections.emptySet();
 
@@ -109,6 +113,10 @@ public class ProjectConfiguration {
 	private String fUpstreamRepo = DEFAULT_UPSTREAM_REPO;
 	private String fOriginRepo = DEFAULT_ORIGIN_REPO;
 	private String fOriginBranch = DEFAULT_ORIGIN_BRANCH;
+	private String fUsername = DEFAULT_USERNAME;
+	private String fPassword = DEFAULT_PASSWORD;
+	private String fTitle = DEFAULT_TITLE;
+	private String fBody = DEFAULT_BODY;
 
 	/*
 	 * optional. default -1. the number of commits to trace back from end if
@@ -202,6 +210,15 @@ public class ProjectConfiguration {
 					config.getProperty("originRepo", null));
 			this.setOriginBranch(
 					config.getProperty("originBranch", DEFAULT_ORIGIN_BRANCH));
+			this.setUsername(
+					config.getProperty("username", DEFAULT_USERNAME));
+			this.setPassword(
+					config.getProperty("password", DEFAULT_PASSWORD));
+			this.setTitle(
+					config.getProperty("title", DEFAULT_TITLE));
+			this.setBody(
+					config.getProperty("body", DEFAULT_BODY));
+
 		} catch (IOException e) {
 			PrintUtils.print("Error loading project configuration file at: "
 					+ configPath, TAG.WARNING);
@@ -675,4 +692,28 @@ public class ProjectConfiguration {
 	public void setOriginBranch(String fOriginBranch){this.fOriginBranch = fOriginBranch;}
 
 	public String getOriginBranch(){return fOriginBranch;}
+
+	public String getUsername(){return fUsername;}
+
+	public void setUsername(String username){this.fUsername = username;}
+
+	public String getPassword(){return fPassword;}
+
+	public void setPassword(String password){this.fPassword = password;}
+
+	public String getTitle() {
+		return fTitle;
+	}
+
+	public void setTitle(String fTitle) {
+		this.fTitle = fTitle;
+	}
+
+	public String getBody() {
+		return fBody;
+	}
+
+	public void setBody(String fBody) {
+		this.fBody = fBody;
+	}
 }
