@@ -1384,7 +1384,7 @@ public class JGit {
 		return file;
 	}
 
-	public boolean pushUpstream(String username, String password){
+	public boolean pushForked(String username, String password){
 		try {
 			this.fGit.push().setRemote("upstream").setCredentialsProvider(new UsernamePasswordCredentialsProvider(username, password)).call();
 

@@ -138,11 +138,11 @@ public class HistoryAnalyzer {
 
 	protected String fOutputPath;
 
-	protected String fOriginRepo;
+	protected String fTargetRepo;
 
-	protected String fUpstreamRepo;
+	protected String fForkedRepo;
 
-	protected String fOriginBranch;
+	protected String fTargetBranch;
 
 	protected String fUsername;
 
@@ -167,9 +167,9 @@ public class HistoryAnalyzer {
 
 		fConfig = config;
 		fRepoPath = config.getRepositoryPath();
-		fOriginRepo = config.getOriginRepo();
-		fUpstreamRepo = config.getUpstreamRepo();
-		fOriginBranch = config.getOriginBranch();
+		fTargetRepo = config.getTargetRepo();
+		fForkedRepo = config.getForkedRepo();
+		fTargetBranch = config.getTargetBranch();
 		fUsername = config.getUsername();
 		fPassword = config.getPassword();
 		fTitle = config.getTitle();
@@ -192,7 +192,7 @@ public class HistoryAnalyzer {
 			Files.createDirectory(Paths.get(fOutputPath));
 		} catch (FileAlreadyExistsException e) {
 			PrintUtils.print(String.format("%s exists, files inside it will be overridden.", fOutputPath),
-					PrintUtils.TAG.WARNING);
+					TAG.WARNING);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

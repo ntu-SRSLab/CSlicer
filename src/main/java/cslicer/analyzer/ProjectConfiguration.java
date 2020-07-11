@@ -86,9 +86,9 @@ public class ProjectConfiguration {
 	private static final boolean DEFAULT_ENABLE_JSON = false;
 	private static final String DEFAULT_JSON_PATH = null;
 	private static final String DEFAULT_TEST_CLASS_ROOT = null;
-	private static final String DEFAULT_UPSTREAM_REPO = null;
-	private static final String DEFAULT_ORIGIN_REPO = null;
-	private static final String DEFAULT_ORIGIN_BRANCH = "master";
+	private static final String DEFAULT_FORKED_REPO = null;
+	private static final String DEFAULT_TARGET_REPO = null;
+	private static final String DEFAULT_TARGET_BRANCH = "master";
 	private static final String DEFAULT_USERNAME = null;
 	private static final String DEFAULT_PASSWORD = null;
 	private static final String DEFAULT_TITLE = "Single Feature Branch";
@@ -110,9 +110,9 @@ public class ProjectConfiguration {
 	private BUILD_SYSTEM fBuildSystem = DEFAULT_BUILD_SYSTEM; // optional
 	private boolean fMavenOutputEnabled = DEFAULT_MAVEN_OUTPUT_ENABLED; // optional
 	private String fJDKVersion = DEFAULT_JDK; // optional. default: 1.7
-	private String fUpstreamRepo = DEFAULT_UPSTREAM_REPO;
-	private String fOriginRepo = DEFAULT_ORIGIN_REPO;
-	private String fOriginBranch = DEFAULT_ORIGIN_BRANCH;
+	private String fForkedRepo = DEFAULT_FORKED_REPO;
+	private String fTargetRepo = DEFAULT_TARGET_REPO;
+	private String fTargetBranch = DEFAULT_TARGET_BRANCH;
 	private String fUsername = DEFAULT_USERNAME;
 	private String fPassword = DEFAULT_PASSWORD;
 	private String fTitle = DEFAULT_TITLE;
@@ -204,12 +204,12 @@ public class ProjectConfiguration {
 			this.setJsonPath(config.getProperty("jsonPath", null));
 			this.setCherryPickCommits(
 							config.getProperty("cherryPick", null));
-			this.setUpstreamRepo(
-					config.getProperty("upstreamRepo", null));
-			this.setOriginRepo(
-					config.getProperty("originRepo", null));
-			this.setOriginBranch(
-					config.getProperty("originBranch", DEFAULT_ORIGIN_BRANCH));
+			this.setForkedRepo(
+					config.getProperty("forkedRepo", null));
+			this.setTargetRepo(
+					config.getProperty("targetRepo", null));
+			this.setTargetBranch(
+					config.getProperty("targetBranch", DEFAULT_TARGET_BRANCH));
 			this.setUsername(
 					config.getProperty("username", DEFAULT_USERNAME));
 			this.setPassword(
@@ -673,25 +673,25 @@ public class ProjectConfiguration {
 		return this;
 	}
 
-	public String getUpstreamRepo() {
-		return fUpstreamRepo;
+	public String getForkedRepo() {
+		return fForkedRepo;
 	}
 
-	public void setUpstreamRepo(String fUpstreamRepo) {
-		this.fUpstreamRepo = fUpstreamRepo;
+	public void setForkedRepo(String fUpstreamRepo) {
+		this.fForkedRepo = fUpstreamRepo;
 	}
 
-	public String getOriginRepo() {
-		return fOriginRepo;
+	public String getTargetRepo() {
+		return fTargetRepo;
 	}
 
-	public void setOriginRepo(String fOriginRepo) {
-		this.fOriginRepo = fOriginRepo;
+	public void setTargetRepo(String fOriginRepo) {
+		this.fTargetRepo = fOriginRepo;
 	}
 
-	public void setOriginBranch(String fOriginBranch){this.fOriginBranch = fOriginBranch;}
+	public void setTargetBranch(String fOriginBranch){this.fTargetBranch = fOriginBranch;}
 
-	public String getOriginBranch(){return fOriginBranch;}
+	public String getTargetBranch(){return fTargetBranch; }
 
 	public String getUsername(){return fUsername;}
 

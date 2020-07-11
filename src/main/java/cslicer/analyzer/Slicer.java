@@ -30,10 +30,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.File;
-import java.util.Map;
 import java.util.Comparator;
 import java.util.HashSet;
 import java.util.HashMap;
@@ -689,9 +685,9 @@ public class Slicer extends HistoryAnalyzer {
 	 */
 	public boolean callPullRequest(List<RevCommit> picks){
 		try {
-			this.fJGit.pushUpstream(this.fUsername, this.fPassword);
-			this.fJGit.pullRequest(this.fUsername, this.fPassword, this.fUpstreamRepo,
-					this.fOriginRepo, this.fOriginBranch,
+			this.fJGit.pushForked(this.fUsername, this.fPassword);
+			this.fJGit.pullRequest(this.fUsername, this.fPassword, this.fForkedRepo,
+					this.fTargetRepo, this.fTargetBranch,
 					this.fTitle, this.fBody);
 			return true;
 		}
