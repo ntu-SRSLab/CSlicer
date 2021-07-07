@@ -30,14 +30,14 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
-import java.util.HashMap;
 import java.util.HashSet;
+import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
+import java.util.Collections;
 
 import org.apache.commons.io.FileUtils;
 import org.eclipse.jgit.revwalk.RevCommit;
@@ -85,6 +85,7 @@ import cslicer.utils.StatsUtils;
 public class Slicer extends HistoryAnalyzer {
 
 	private final String fResultPath; // path to save slicing result
+	
 
 	// test touching set
 	private TouchSet fTestTouchSet;
@@ -111,6 +112,7 @@ public class Slicer extends HistoryAnalyzer {
 		initializeCompiler(config);
 
 		fResultPath = "/tmp/slice.res";
+		
 
 		fTestTouchSet = new TouchSet();
 		fTouchSetPath = config.getTouchSetPath();
@@ -676,6 +678,71 @@ public class Slicer extends HistoryAnalyzer {
 	}
 
 	/**
+	 * Calls on the EGit pull request functionality
+	 *
+	 *
+	 * @return true iff process successful
+	 */
+	public boolean callPullRequest(List<RevCommit> picks){
+		try {
+			this.fJGit.pushForked(this.fUsername, this.fPassword);
+			this.fJGit.pullRequest(this.fUsername, this.fPassword, this.fForkedRepo,
+					this.fTargetRepo, this.fTargetBranch,
+					this.fTitle, this.fBody);
+			return true;
+		}
+		catch (Exception e) {
+			PrintUtils.print("Error in creating pull request. " +
+							"Please ensure input parameters of upstreamRepo, originRepo, " +
+							"branch to request merge from originRepo (originBranch),  GitHub Username and GitHub Password",
+					TAG.WARNING);
+		}
+		return false;
+	}
+
+	/**
+	 * Creates a pull request with head upstreamRepo:VERIFYTEST and base originRepo:master
+	 * Attempts to perform verifyResultPicking on the picks specified by the input result and if successful creates a
+	 * branch which is then given as a pull request after pushing to upstreamRepo
+	 *
+	 * @param result
+	 *            {@link SlicingResult} to make into a new branch and then a pull request
+	 * @return true iff successful in creating the new branch and pull request
+	 */
+	public boolean createPullRequest(SlicingResult result) {
+		PrintUtils.print("Attempting to Create Branch", TAG.DEBUG);
+		List<RevCommit> picks = result.getPicks();
+		if (picks.size() > 0){
+			if(this.verifyResultPicking(picks)){
+				PrintUtils.print("Successfully Picked Relevant Commits: Branch VERIFYTESTS Created. " +
+						"Attempting to create pull request", TAG.DEBUG);
+				try {
+					if (this.callPullRequest(picks)){
+						PrintUtils.print("Pull Request Created", TAG.DEBUG);
+						return true;
+					} else {
+						return false;
+					}
+
+
+				} catch (Exception e) {
+					PrintUtils.print(e.getStackTrace());
+					PrintUtils.print("Error pull request failed", TAG.WARNING);
+					return false;
+				}
+			}
+			else {
+				PrintUtils.print("Picked commits alone could not be formed (cherrypicked) into a branch " +
+						"without errors and hence branch was not created", TAG.WARNING);
+				return false;
+			}
+		} else {
+			PrintUtils.print("Picked commits were empty and hence branch not created", TAG.WARNING);
+			return false;
+		}
+	}
+
+	 /**
 	 * Display AST differencing results for a commit.
 	 * 
 	 * @param commitID

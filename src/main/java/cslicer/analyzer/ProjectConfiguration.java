@@ -86,6 +86,13 @@ public class ProjectConfiguration {
 	private static final boolean DEFAULT_ENABLE_JSON = false;
 	private static final String DEFAULT_JSON_PATH = null;
 	private static final String DEFAULT_TEST_CLASS_ROOT = null;
+	private static final String DEFAULT_FORKED_REPO = null;
+	private static final String DEFAULT_TARGET_REPO = null;
+	private static final String DEFAULT_TARGET_BRANCH = "master";
+	private static final String DEFAULT_USERNAME = null;
+	private static final String DEFAULT_PASSWORD = null;
+	private static final String DEFAULT_TITLE = "Single Feature Branch";
+	private static final String DEFAULT_BODY = "A Pull Request with a single feature sliced by CSlicer";
 
 	private static final Set<String> DEFAULT_CHERRY_PICK_COMMITS = Collections.emptySet();
 
@@ -103,6 +110,13 @@ public class ProjectConfiguration {
 	private BUILD_SYSTEM fBuildSystem = DEFAULT_BUILD_SYSTEM; // optional
 	private boolean fMavenOutputEnabled = DEFAULT_MAVEN_OUTPUT_ENABLED; // optional
 	private String fJDKVersion = DEFAULT_JDK; // optional. default: 1.7
+	private String fForkedRepo = DEFAULT_FORKED_REPO;
+	private String fTargetRepo = DEFAULT_TARGET_REPO;
+	private String fTargetBranch = DEFAULT_TARGET_BRANCH;
+	private String fUsername = DEFAULT_USERNAME;
+	private String fPassword = DEFAULT_PASSWORD;
+	private String fTitle = DEFAULT_TITLE;
+	private String fBody = DEFAULT_BODY;
 
 	/*
 	 * optional. default -1. the number of commits to trace back from end if
@@ -190,6 +204,20 @@ public class ProjectConfiguration {
 			this.setJsonPath(config.getProperty("jsonPath", null));
 			this.setCherryPickCommits(
 							config.getProperty("cherryPick", null));
+			this.setForkedRepo(
+					config.getProperty("forkedRepo", null));
+			this.setTargetRepo(
+					config.getProperty("targetRepo", null));
+			this.setTargetBranch(
+					config.getProperty("targetBranch", DEFAULT_TARGET_BRANCH));
+			this.setUsername(
+					config.getProperty("username", DEFAULT_USERNAME));
+			this.setPassword(
+					config.getProperty("password", DEFAULT_PASSWORD));
+			this.setTitle(
+					config.getProperty("title", DEFAULT_TITLE));
+			this.setBody(
+					config.getProperty("body", DEFAULT_BODY));
 
 		} catch (IOException e) {
 			PrintUtils.print("Error loading project configuration file at: "
@@ -645,4 +673,47 @@ public class ProjectConfiguration {
 		return this;
 	}
 
+	public String getForkedRepo() {
+		return fForkedRepo;
+	}
+
+	public void setForkedRepo(String fUpstreamRepo) {
+		this.fForkedRepo = fUpstreamRepo;
+	}
+
+	public String getTargetRepo() {
+		return fTargetRepo;
+	}
+
+	public void setTargetRepo(String fOriginRepo) {
+		this.fTargetRepo = fOriginRepo;
+	}
+
+	public void setTargetBranch(String fOriginBranch){this.fTargetBranch = fOriginBranch;}
+
+	public String getTargetBranch(){return fTargetBranch; }
+
+	public String getUsername(){return fUsername;}
+
+	public void setUsername(String username){this.fUsername = username;}
+
+	public String getPassword(){return fPassword;}
+
+	public void setPassword(String password){this.fPassword = password;}
+
+	public String getTitle() {
+		return fTitle;
+	}
+
+	public void setTitle(String fTitle) {
+		this.fTitle = fTitle;
+	}
+
+	public String getBody() {
+		return fBody;
+	}
+
+	public void setBody(String fBody) {
+		this.fBody = fBody;
+	}
 }
